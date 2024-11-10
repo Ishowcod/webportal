@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDBC</title>
+     <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <nav class="navbar background">
+        <ul class="navlist">
+            <a href="index.html">Home</a></li> 
+  
+            <a href="Array.html">ARRAYS</a></li>
+            
+            <a href="2Darray.html" >2D-ARRAYS</a></li>
+            
+            <a href="Applet.html">APPLETS</a></li>
+            
+            <a href="bpc.html">BASIC PROGAMMING CONSTRUCTS</a></li>
+            
+            <a href="Data Conversion.html">DATA CONSVERSION</a></li>
+            
+            <a href="DEM.html">DELEGATION EVENT MODEL</a></li>
+            
+            <a href="Exception Handling.html">EXCEPTION HANDLING</a></li>
+            
+            <a href="Functions.html">FUNCTIONS</a></li>
+            
+            <a href="GUI AWT.html">GRAPHICAL USER INTERFACE (AWT)</a></li>
+            
+            <a href="Inheritance.html">INHERITANCE</a></li>
+            
+            <a href="IO.html">INPUT/OUTPUT</a></li>
+            
+            <a href="Interface.html">INTERFACES</a></li>
+            
+            <a href="JDBC.html">JAVA DATABASE CONECTIVITY</a></li>
+            
+            <a href="Threads.html">MULTITHREADING</a></li>
+            
+            <a href="OOP.html">OBJECT ORIENTED PROGRAMMING</a></li>
+            
+            <a href="Packages.html">PACKAGES</a></li>
+          
+            <a href="StringHandling.html">STRING HANDLING</a></li>  </ul>
+    </nav>
+    <div style="display: flex; margin: 0; max-height: 100vh;">
+    <div class="sidebar">
+        <h2>Programs</h2>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 1&#39;)">1. Create the connection with MySQL Database and manage the driver.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 2&#39;)">2. Create the table in the database from Java API.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 3&#39;)">3. Insert the row in the table in the database from Java API.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 4&#39;)">4. Update the row in the table in the database from Java API.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 5&#39;)">5. Delete the row in the table in the database from Java API.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 6&#39;)">6. Select multiple rows from the database table in Java API and show the result on the screen.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 7&#39;)">7. Create a Scrollable Read-only ResultSet and ask the row number from the user and display that row on the screen.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 8&#39;)">8. Create a Scrollable Updatable ResultSet and insert a new row, update an existing row, and delete the row from ResultSet. Also, make changes to the database. The values should be inserted, updated, and deleted by the user only.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 9&#39;)">9. Create a Java Program to show, insert, update, and delete the table in Java API through PreparedStatement.</div>
+    </div>
+
+    <div class="content" id="programContent">
+       <h2>Please select program from the list!</h2>
+    </div>
+</div>
+    
+    <script>
+        const programs = {
+"Program 1": {
+    output: `0000`,
+    code: `
+import java.sql.*;
+        
+          class A {
+              public static void main(String st[]) throws java.lang.ClassNotFoundException, SQLException {
+                  Class.forName("com.mysql.cj.jdbc.Driver");
+                  Connection c1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/examination", "root", "root");
+              }
+          }
+`
+},
+"Program 2": {
+    output: `0000`,
+    code: `
+import java.sql.*;
+                        class A
+                        {
+                        public static void main(String s[]) throws java.lang.ClassNotFoundException,SQLException
+                        {
+                        
+                        Class.forName("com.mysql.cj.jdbc.Driver");
+                        Connection c1=DriverManager.getConnection("jdbc:mysql://localhost:3306/examination","root","root");
+                        Statement st=c1.createStatement();
+                        System.out.println(st.executeUpdate("create table student(Rollno int,Name varchar(8))"));
+                        c1.close();
+                        
+                        }
+                        }
+`
+},
+"Program 3": {
+    output: `0000`,
+    code: `
+import java.sql.*;
+            class first{
+            public static void main(String x[]) throws ClassNotFoundException,SQLException{
+            Class.forName("com.mysql.cj.jdbc.Driver"); 
+            Connection c=DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","root");//throws sql exception
+            Statement st=c.createStatement();
+            int i = st.executeUpdate("INSERT INTO stu (name, roll_no) VALUES ('Radha', 1)");System.out.println(i);
+            c.close();
+            }
+            }
+`
+},
+"Program 4": {
+    output: `2 rows are updated`,
+    code: `
+import java.sql.*;
+            class first{
+            public static void main(String x[]) throws ClassNotFoundException , SQLException{
+            Class.forName("com.mysql.cj.jdbc.Driver"); 
+            Connection c=DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","root");//throws sql exception
+            Statement st=c.createStatement();
+            int i = st.executeUpdate("UPDATE stu SET name = 'ABC'  WHERE roll_no=3;");
+            System.out.println(i+" rows are updated");
+            c.close();
+            }
+            }
+`
+},
+"Program 5": {
+    output: `2 rows are deleted`,
+    code: `
+import java.sql.*;
+            class first{
+            public static void main(String x[]) throws ClassNotFoundException , SQLException{
+            Class.forName("com.mysql.cj.jdbc.Driver"); 
+            Connection c=DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","root");//throws sql exception
+            Statement st=c.createStatement();
+            int i = st.executeUpdate("delete from stu WHERE roll_no=3;");
+            System.out.println(i+" rows are deleted");
+            c.close();
+            }
+            }
+`
+},
+"Program 6": {
+    output: `4   khvjh
+            2   kjbkjvb
+            4   khvjh
+            2   kjbkjvb`,
+    code: `
+import java.sql.*;
+            class first{
+            public static void main(String x[]) throws ClassNotFoundException , SQLException{
+            Class.forName("com.mysql.cj.jdbc.Driver"); 
+            Connection c=DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","root");//throws sql exception
+            Statement st=c.createStatement();
+            ResultSet rs = st.executeQuery("Select * from stu");
+            while(rs.next()){
+            System.out.println(rs.getInt(2)+"   "+rs.getString(1));
+            }
+            c.close();
+            }
+            }
+`
+},
+"Program 7": {
+    output: `Enter the row number:
+            4
+            Row 4:
+            Column 1: Naina
+            Column 2: 1`,
+    code: `
+import java.sql.*;
+            import java.io.*;
+            class first{
+            public static void main(String x[]) throws ClassNotFoundException , SQLException,IOException{
+            Class.forName("com.mysql.cj.jdbc.Driver"); 
+            Connection c=DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","root");//throws sql exception
+            Statement st=c.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            InputStreamReader isr= new InputStreamReader(System.in);
+            BufferedReader br= new BufferedReader(isr);
+            System.out.println("Enter the row number:");
+            int row= Integer.parseInt(br.readLine());
+            ResultSet rs = st.executeQuery("Select * from stu");
+            if (rs.absolute(row)) {
+                              System.out.println("Row " + row + ":");
+                            System.out.println("Column 1: " + rs.getString(1));
+                            System.out.println("Column 2: " + rs.getInt(2));
+                          
+                        } else {
+                            System.out.println("Row number " + row + " does not exist.");
+                        }
+            c.close();
+            }
+            }
+`
+},
+"Program 8": {
+    output: `0000`,
+    code: `
+import java.sql.*;
+import java.util.Scanner;
+
+public class ScrollableUpdateableResultSet {
+    public static void main(String[] args) {
+        String url = "jdbc:mysql://localhost:3306/your_database";
+        String user = "your_username";
+        String password = "your_password";
+
+        try (Connection connection = DriverManager.getConnection(url, user, password);
+             Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM Employees")) {
+
+            Scanner scanner = new Scanner(System.in);
+            // Inserting a new row
+            System.out.print("Enter ID for new employee: ");
+            int newId = scanner.nextInt();
+            System.out.print("Enter name for new employee: ");
+            String newName = scanner.next();
+            System.out.print("Enter age for new employee: ");
+            int newAge = scanner.nextInt();
+
+            resultSet.moveToInsertRow();
+            resultSet.updateInt("id", newId);
+            resultSet.updateString("name", newName);
+            resultSet.updateInt("age", newAge);
+            resultSet.insertRow();
+
+            // Updating an existing row
+            System.out.print("Enter ID to update: ");
+            int updateId = scanner.nextInt();
+            resultSet.beforeFirst();
+            while (resultSet.next()) {
+                if (resultSet.getInt("id") == updateId) {
+                    System.out.print("Enter new age for employee: ");
+                    int updateAge = scanner.nextInt();
+                    resultSet.updateInt("age", updateAge);
+                    resultSet.updateRow();
+                    break;
+                }
+            }
+
+            // Deleting a row
+            System.out.print("Enter ID to delete: ");
+            int deleteId = scanner.nextInt();
+            resultSet.beforeFirst();
+            while (resultSet.next()) {
+                if (resultSet.getInt("id") == deleteId) {
+                    resultSet.deleteRow();
+                    break;
+                }
+            }
+
+            System.out.println("Changes have been applied to the database.");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+`
+},
+"Program 9": {
+    output: `0000`,
+    code: `
+import java.sql.*;
+
+public class PreparedStatementExample {
+    public static void main(String[] args) {
+        String url = "jdbc:mysql://localhost:3306/your_database";
+        String user = "your_username";
+        String password = "your_password";
+
+        try (Connection connection = DriverManager.getConnection(url, user, password)) {
+            // Show all employees
+            String selectSQL = "SELECT * FROM Employees";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(selectSQL);
+                 ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    int id = resultSet.getInt("id");
+                    String name = resultSet.getString("name");
+                    int age = resultSet.getInt("age");
+                    System.out.println("ID: " + id + ", Name: " + name + ", Age: " + age);
+                }
+            }
+
+            // Insert a new employee
+            String insertSQL = "INSERT INTO Employees (id, name, age) VALUES (?, ?, ?)";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(insertSQL)) {
+                preparedStatement.setInt(1, 2);
+                preparedStatement.setString(2, "Jane Doe");
+                preparedStatement.setInt(3, 28);
+                preparedStatement.executeUpdate();
+            }
+
+            // Update an existing employee
+            String updateSQL = "UPDATE Employees SET age = ? WHERE id = ?";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(updateSQL)) {
+                preparedStatement.setInt(1, 29);
+                preparedStatement.setInt(2, 2);
+                preparedStatement.executeUpdate();
+            }
+
+            // Delete an employee
+            String deleteSQL = "DELETE FROM Employees WHERE id = ?";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(deleteSQL)) {
+                preparedStatement.setInt(1, 2);
+                preparedStatement.executeUpdate();
+            }
+
+            System.out.println("Database operations completed successfully.");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+`
+}
+        };
+
+        function showProgram(programName) {
+            const program = programs[programName];
+            if (program) {
+                if(program.output == "0000"){
+                    document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                `;
+                }
+                else{
+                document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                    <h2>Output:</h2>
+                    <div class="code-block">${program.output}</div>
+                `;
+            }    
+                }
+                 else {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>Program not found</h2>
+                    <p>Details for this program are not available.</p>
+                `;
+            }
+        }
+    </script>
+
+</body></html>
