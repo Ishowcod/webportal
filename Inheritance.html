@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <nav class="navbar background">
+        <ul class="navlist">
+            <a href="index.html">Home</a></li> 
+  
+            <a href="Array.html">ARRAYS</a></li>
+            
+            <a href="2Darray.html" >2D-ARRAYS</a></li>
+            
+            <a href="Applet.html">APPLETS</a></li>
+            
+            <a href="bpc.html">BASIC PROGAMMING CONSTRUCTS</a></li>
+            
+            <a href="Data Conversion.html">DATA CONSVERSION</a></li>
+            
+            <a href="DEM.html">DELEGATION EVENT MODEL</a></li>
+            
+            <a href="Exception Handling.html">EXCEPTION HANDLING</a></li>
+            
+            <a href="Functions.html">FUNCTIONS</a></li>
+            
+            <a href="GUI AWT.html">GRAPHICAL USER INTERFACE (AWT)</a></li>
+            
+            <a href="Inheritance.html">INHERITANCE</a></li>
+            
+            <a href="IO.html">INPUT/OUTPUT</a></li>
+            
+            <a href="Interface.html">INTERFACES</a></li>
+            
+            <a href="JDBC.html">JAVA DATABASE CONECTIVITY</a></li>
+            
+            <a href="Threads.html">MULTITHREADING</a></li>
+            
+            <a href="OOP.html">OBJECT ORIENTED PROGRAMMING</a></li>
+            
+            <a href="Packages.html">PACKAGES</a></li>
+          
+            <a href="StringHandling.html">STRING HANDLING</a></li>
+</ul>
+    </nav>
+    <div style="display: flex; margin: 0; max-height: 100vh;">
+    <div class="sidebar">
+        <h2>Programs</h2>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 1&#39;)">1. Write a Java program to create a class called Animal with a method called makeSound(). Create a subclass called Cat that overrides the makeSound() method to bark.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 2&#39;)">2. Write a Java program to create a class called Vehicle with a method called drive(). Create a subclass called Car that overrides the drive() method to print "Repairing a car".</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 3&#39;)">3. Write a Java program to create a class called Shape with a method called getArea(). Create a subclass called Rectangle that overrides the getArea() method to calculate the area of a rectangle.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 4&#39;)">4. Write a Java program to create a class called Employee with methods called work() and getSalary(). Create a subclass called HRManager that overrides the work() method and adds a new method called addEmployee().</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 5&#39;)">5. Write a Java program to create a class known as "BankAccount" with methods called deposit() and withdraw(). Create a subclass called SavingsAccount that overrides the withdraw() method to prevent withdrawals if the account balance falls below one hundred.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 6&#39;)">6. Write a Java program to create a class called Animal with a method named move(). Create a subclass called Cheetah that overrides the move() method to run.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 7&#39;)">7. Write a Java program to create a class known as Person with methods called getFirstName() and getLastName(). Create a subclass called Employee that adds a new method named getEmployeeId() and overrides the getLastName() method to include the employee's job title.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 8&#39;)">8. Write a Java program to create a class called Shape with methods called getPerimeter() and getArea(). Create a subclass called Circle that overrides the getPerimeter() and getArea() methods to calculate the area and perimeter of a circle.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 9&#39;)">9. Write a Java program to create a vehicle class hierarchy. The base class should be Vehicle, with subclasses Truck, Car and Motorcycle. Each subclass should have properties such as make, model, year, and fuel type. Implement methods for calculating fuel efficiency, distance traveled, and maximum speed.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 10&#39;)">10. Write a Java program that creates a class hierarchy for employees of a company. The base class should be Employee, with subclasses Manager, Developer, and Programmer. Each subclass should have properties such as name, address, salary, and job title. Implement methods for calculating bonuses, generating performance reports, and managing projects.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 11&#39;)">11. Create a program, showing an example of the super keyword.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 12&#39;)">12. Create a program, showing an example of the super function.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 13&#39;)">13. Create a program, showing an example of method overriding.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 14&#39;)">14. Create a program, showing an example of dynamic method dispatch.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 15&#39;)">15. Write a Java program to create an abstract class Animal with an abstract method called sound(). Create subclasses Lion and Tiger that extend the Animal class and implement the sound() method to make a specific sound for each animal.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 16&#39;)">16. Write a Java program to create an abstract class Shape with abstract methods calculateArea() and calculatePerimeter(). Create subclasses Circle and Triangle that extend the Shape class and implement the respective methods to calculate the area and perimeter of each shape.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 17&#39;)">17. Write a Java program to create an abstract class BankAccount with abstract methods deposit() and withdraw(). Create subclasses: SavingsAccount and CurrentAccount that extend the BankAccount class and implement the respective methods to handle deposits and withdrawals for each account type.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 18&#39;)">18. Write a Java program to create an abstract class Animal with abstract methods eat() and sleep(). Create subclasses Lion, Tiger, and Deer that extend the Animal class and implement the eat() and sleep() methods differently based on their specific behavior.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 19&#39;)">19. Write a Java program to create an abstract class Employee with abstract methods calculateSalary() and displayInfo(). Create subclasses Manager and Programmer that extend the Employee class and implement the respective methods to calculate salary and display information for each role.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 20&#39;)">20. Write a Java program to create an abstract class Shape3D with abstract methods calculateVolume() and calculateSurfaceArea(). Create subclasses Sphere and Cube that extend the Shape3D class and implement the respective methods to calculate the volume and surface area of each shape.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 21&#39;)">21. Write a Java program to create an abstract class Vehicle with abstract methods startEngine() and stopEngine(). Create subclasses Car and Motorcycle that extend the Vehicle class and implement the respective methods to start and stop the engines for each vehicle type.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 22&#39;)">22. Write a Java program to create an abstract class Person with abstract methods eat() and exercise(). Create subclasses Athlete and LazyPerson that extend the Person class and implement the respective methods to describe how each person eats and exercises.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 23&#39;)">23. Write a Java program to create an abstract class Instrument with abstract methods play() and tune(). Create subclasses for Glockenspiel and Violin that extend the Instrument class and implement the respective methods to play and tune each instrument.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 24&#39;)">24. Write a Java program to create an abstract class Shape2D with abstract methods draw() and resize(). Create subclasses Rectangle and Circle that extend the Shape2D class and implement the respective methods to draw and resize each shape.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 25&#39;)">25. Write a Java program to create an abstract class Bird with abstract methods fly() and makeSound(). Create subclasses Eagle and Hawk that extend the Bird class and implement the respective methods to describe how each bird flies and makes a sound.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 26&#39;)">26. Write a Java program to create an abstract class GeometricShape with abstract methods area() and perimeter(). Create subclasses Triangle and Square that extend the GeometricShape class and implement the respective methods to calculate the area and perimeter of each shape.</div>
+    </div>
+
+    <div class="content" id="programContent">
+       <h2>Please select program from the list!</h2>
+    </div>
+</div>
+    
+    <script>
+        const programs = {
+
+    "Program 1": {
+        output: `0000`,
+        code: `class Animal {
+                void makeSound() {
+                    System.out.println("Animal makes a sound");
+                }
+            }
+            
+            class Cat extends Animal {
+                @Override
+                void makeSound() {
+                    System.out.println("Bark");
+                }
+            }
+            
+            public class Main {
+                public static void main(String[] args) {
+                    Animal myAnimal = new Animal();
+                    myAnimal.makeSound();  // Output: Animal makes a sound
+            
+                    Cat myCat = new Cat();
+                    myCat.makeSound();  // Output: Bark
+                }
+            }`
+    },
+    "Program 2": {
+        output: `0000`,
+        code: `class Vehicle {
+                void drive() {
+                    System.out.println("Driving the vehicle");
+                }
+            }
+            
+            class Car extends Vehicle {
+                @Override
+                void drive() {
+                    System.out.println("Repairing a car");
+                }
+            }
+            
+            public class Main {
+                public static void main(String[] args) {
+                    Vehicle myVehicle = new Vehicle();
+                    myVehicle.drive();  // Output: Driving the vehicle
+            
+                    Car myCar = new Car();
+                    myCar.drive();  // Output: Repairing a car
+                }
+            }`
+    },
+    "Program 3": {
+        output: `0000`,
+        code: `class Shape {
+                double getArea() {
+                    return 0;
+                }
+            }
+            
+            class Rectangle extends Shape {
+                double length;
+                double width;
+                
+                Rectangle(double length, double width) {
+                    this.length = length;
+                    this.width = width;
+                }
+                
+                @Override
+                double getArea() {
+                    return length * width;
+                }
+            }
+            
+            public class Main {
+                public static void main(String[] args) {
+                    Rectangle rect = new Rectangle(5, 3);
+                    System.out.println("Area of Rectangle: " + rect.getArea());  // Output: Area of Rectangle: 15.0
+                }
+            }`
+    },
+    "Program 4": {
+        output: `0000`,
+        code: `class Employee {
+                void work() {
+                    System.out.println("Employee is working");
+                }
+                
+                double getSalary() {
+                    return 30000;
+                }
+            }
+            
+            class HRManager extends Employee {
+                @Override
+                void work() {
+                    System.out.println("HR Manager is managing employees");
+                }
+                
+                void addEmployee() {
+                    System.out.println("Adding a new employee");
+                }
+            }
+            
+            public class Main {
+                public static void main(String[] args) {
+                    HRManager hr = new HRManager();
+                    hr.work();  // Output: HR Manager is managing employees
+                    hr.addEmployee();  // Output: Adding a new employee
+                    System.out.println("Salary: " + hr.getSalary());  // Output: Salary: 30000.0
+                }
+            }`
+    },
+    "Program 5": {
+        output: `0000`,
+        code: `class BankAccount {
+                double balance;
+                
+                void deposit(double amount) {
+                    balance += amount;
+                    System.out.println("Deposited: " + amount);
+                }
+                
+                void withdraw(double amount) {
+                    if (amount <= balance) {
+                        balance -= amount;
+                        System.out.println("Withdrawn: " + amount);
+                    } else {
+                        System.out.println("Insufficient funds");
+                    }
+                }
+            }
+            
+            class SavingsAccount extends BankAccount {
+                @Override
+                void withdraw(double amount) {
+                    if (balance - amount < 100) {
+                        System.out.println("Cannot withdraw, balance cannot go below 100");
+                    } else {
+                        super.withdraw(amount);
+                    }
+                }
+            }
+            
+            public class Main {
+                public static void main(String[] args) {
+                    SavingsAccount sa = new SavingsAccount();
+                    sa.deposit(500);
+                    sa.withdraw(450);  // Output: Withdrawn: 450.0
+                    sa.withdraw(10);  // Output: Cannot withdraw, balance cannot go below 100
+                }
+            }`
+    },
+    "Program 6": {
+        output: `0000`,
+        code: `class Animal {
+                void move() {
+                    System.out.println("Animal moves");
+                }
+            }
+            
+            class Cheetah extends Animal {
+                @Override
+                void move() {
+                    System.out.println("Cheetah runs fast");
+                }
+            }
+            
+            public class Main {
+                public static void main(String[] args) {
+                    Cheetah myCheetah = new Cheetah();
+                    myCheetah.move();  // Output: Cheetah runs fast
+                }
+            }`
+    },
+    "Program 7": {
+        output: `0000`,
+        code: `class Person {
+                String firstName;
+                String lastName;
+
+                Person(String firstName, String lastName) {
+                    this.firstName = firstName;
+                    this.lastName = lastName;
+                }
+
+                String getFirstName() {
+                    return firstName;
+                }
+
+                String getLastName() {
+                    return lastName;
+                }
+            }
+
+            class Employee extends Person {
+                String jobTitle;
+
+                Employee(String firstName, String lastName, String jobTitle) {
+                    super(firstName, lastName);
+                    this.jobTitle = jobTitle;
+                }
+
+                @Override
+                String getLastName() {
+                    return lastName + " (" + jobTitle + ")";
+                }
+
+                String getEmployeeId() {
+                    return "EMP123";
+                }
+            }
+
+            public class Main {
+                public static void main(String[] args) {
+                    Employee emp = new Employee("John", "Doe", "Developer");
+                    System.out.println("First Name: " + emp.getFirstName());
+                    System.out.println("Last Name: " + emp.getLastName());  // Output: Doe (Developer)
+                    System.out.println("Employee ID: " + emp.getEmployeeId());
+                }
+            }`
+    },
+    "Program 8": {
+        output: `Area of the circle is 153.86
+            Perimeter of the circle is 43.96`,
+        code: `class Shape{
+                void getArea(int r){}
+                void getPerimeter(int r){}
+                }
+                class Circle extends Shape{
+                void getArea(int r){
+                double area;
+                area= 3.14*r*r;
+                System.out.println("Area of the circle is "+area); 
+                }
+                void getPerimeter(int r){
+                double perimeter;
+                perimeter = 2*3.14*r;
+                System.out.println("Perimeter of the circle is "+perimeter); 
+                
+                }
+                public static void main(String x[]){
+                Circle obj = new Circle();
+                obj.getArea(7);
+                obj.getPerimeter(7);
+                }
+                }`
+    },
+    "Program 9": {
+        output: `Truck Fuel Efficiency: 15.0
+Truck Max Speed: 120.0
+Car Fuel Efficiency: 25.0
+Car Max Speed: 150.0
+Motorcycle Fuel Efficiency: 40.0
+Motorcycle Max Speed: 180.0`,
+        code: `class Vehicle {
+                String make;
+                String model;
+                int year;
+                String fuelType;
+
+                Vehicle(String make, String model, int year, String fuelType) {
+                    this.make = make;
+                    this.model = model;
+                    this.year = year;
+                    this.fuelType = fuelType;
+                }
+
+                double calculateFuelEfficiency() {
+                    return 0; // Placeholder
+                }
+
+                double distanceTraveled(double fuelUsed) {
+                    return calculateFuelEfficiency() * fuelUsed;
+                }
+
+                double maxSpeed() {
+                    return 0; // Placeholder
+                }
+            }
+
+            class Truck extends Vehicle {
+                Truck(String make, String model, int year, String fuelType) {
+                    super(make, model, year, fuelType);
+                }
+
+                @Override
+                double calculateFuelEfficiency() {
+                    return 15; // Example value
+                }
+
+                @Override
+                double maxSpeed() {
+                    return 120; // Example value
+                }
+            }
+
+            class Car extends Vehicle {
+                Car(String make, String model, int year, String fuelType) {
+                    super(make, model, year, fuelType);
+                }
+
+                @Override
+                double calculateFuelEfficiency() {
+                    return 25; // Example value
+                }
+
+                @Override
+                double maxSpeed() {
+                    return 150; // Example value
+                }
+            }
+
+            class Motorcycle extends Vehicle {
+                Motorcycle(String make, String model, int year, String fuelType) {
+                    super(make, model, year, fuelType);
+                }
+
+                @Override
+                double calculateFuelEfficiency() {
+                    return 40; // Example value
+                }
+
+                @Override
+                double maxSpeed() {
+                    return 180; // Example value
+                }
+            }
+
+            public class Main {
+                public static void main(String[] args) {
+                    Truck myTruck = new Truck("Ford", "F-150", 2020, "Gasoline");
+                    System.out.println("Truck Fuel Efficiency: " + myTruck.calculateFuelEfficiency());
+                    System.out.println("Truck Max Speed: " + myTruck.maxSpeed());
+
+                    Car myCar = new Car("Honda", "Civic", 2019, "Gasoline");
+                    System.out.println("Car Fuel Efficiency: " + myCar.calculateFuelEfficiency());
+                    System.out.println("Car Max Speed: " + myCar.maxSpeed());
+
+                    Motorcycle myMotorcycle = new Motorcycle("Yamaha", "YZF-R3", 2021, "Gasoline");
+                    System.out.println("Motorcycle Fuel Efficiency: " + myMotorcycle.calculateFuelEfficiency());
+                    System.out.println("Motorcycle Max Speed: " + myMotorcycle.maxSpeed());
+                }
+            }`
+    },
+    "Program 10": {
+        output: `Alice is managing projects.
+Bonus: 8000.0
+Alice's performance report.
+Bob is developing software.
+Bonus: 6000.0
+Bob's performance report.
+Charlie is writing code.
+Bonus: 5000.0
+Charlie's performance report.`,
+        code: `class Employee {
+                String name;
+                String address;
+                double salary;
+                String jobTitle;
+
+                Employee(String name, String address, double salary, String jobTitle) {
+                    this.name = name;
+                    this.address = address;
+                    this.salary = salary;
+                    this.jobTitle = jobTitle;
+                }
+
+                double calculateBonus() {
+                    return salary * 0.1; // Example calculation
+                }
+
+                void generatePerformanceReport() {
+                    System.out.println(name + "'s performance report.");
+                }
+            }
+
+            class Manager extends Employee {
+                Manager(String name, String address, double salary) {
+                    super(name, address, salary, "Manager");
+                }
+
+                void manageProjects() {
+                    System.out.println(name + " is managing projects.");
+                }
+            }
+
+            class Developer extends Employee {
+                Developer(String name, String address, double salary) {
+                    super(name, address, salary, "Developer");
+                }
+
+                void developSoftware() {
+                    System.out.println(name + " is developing software.");
+                }
+            }
+
+            class Programmer extends Employee {
+                Programmer(String name, String address, double salary) {
+                    super(name, address, salary, "Programmer");
+                }
+
+                void writeCode() {
+                    System.out.println(name + " is writing code.");
+                }
+            }
+
+            public class Main {
+                public static void main(String[] args) {
+                    Manager manager = new Manager("Alice", "123 Street", 80000);
+                    manager.manageProjects();
+                    System.out.println("Bonus: " + manager.calculateBonus());
+                    manager.generatePerformanceReport();
+
+                    Developer developer = new Developer("Bob", "456 Avenue", 60000);
+                    developer.developSoftware();
+                    System.out.println("Bonus: " + developer.calculateBonus());
+                    developer.generatePerformanceReport();
+
+                    Programmer programmer = new Programmer("Charlie", "789 Boulevard", 50000);
+                    programmer.writeCode();
+                    System.out.println("Bonus: " + programmer.calculateBonus());
+                    programmer.generatePerformanceReport();
+                }
+            }`
+    },
+    "Program 11": {
+        output: `Hello from class A
+            Hello from class B`,
+        code: `class A{
+                void display(){
+                System.out.println("Hello from class A");
+                }
+                }
+                class B extends A{
+                void display(){
+                super.display();
+                System.out.println("Hello from class B");
+                }
+                public static void main(String x[]){
+                B obj=new B();
+                obj.display();
+                }
+                }`
+    },
+    "Program 12": {
+        output: `8
+            Hello from class B`,
+        code: `class A{
+                A(int x){
+                int a;
+                a=x;
+                System.out.println(a);
+                }
+                }
+                class B extends A{
+                B(){
+                super(8);
+                System.out.println("Hello from class B");
+                }
+                public static void main(String x[]){
+                B obj=new B();
+                }
+                }`
+    },
+    "Program 13": {
+        output: `Hello from class B`,
+        code: `class A{
+                void display(){
+                System.out.println("Hello from class A");
+                }
+                }
+                class B extends A{
+                void display(){
+                System.out.println("Hello from class B");
+                }
+                public static void main(String x[]){
+                B obj= new B();
+                obj.display();
+                }
+                }`
+    },
+    "Program 14": {
+        output: `Playing the Glockenspiel.
+            Tuning the Glockenspiel.
+            Playing the Violin .
+            Tuning the Violin.`,
+        code: `abstract class Instrument {
+                abstract void play();
+                abstract void tune();
+            }
+            
+            class Glockenspiel extends Instrument {
+              
+                void play() {
+                    System.out.println("Playing the Glockenspiel.");
+                }
+            
+                void tune() {
+                    System.out.println("Tuning the Glockenspiel.");
+                }
+            }
+            
+            class Violin extends Instrument {
+             
+                void play() {
+                    System.out.println("Playing the Violin .");
+                }
+            
+                 void tune() {
+                    System.out.println("Tuning the Violin.");
+                }
+            }
+            class Main {
+                public static void main(String[] args) {
+                    Instrument obj = new Glockenspiel();
+                    Instrument obj2 = new Violin();
+            
+                    obj.play();
+                    obj.tune();
+            
+                    obj2.play();
+                    obj2.tune();
+                }
+            }`
+    },
+    "Program 15": {
+        output: `Roar of lion
+            Roar of tiger`,
+        code: `abstract class Animal{
+                abstract void sound();
+                }
+                class Lion extends Animal{
+                void sound(){
+                System.out.println("Roar of lion");
+                }
+                }
+                class Tiger extends Animal{
+                void sound(){
+                System.out.println("Roar of tiger");
+                }
+                }
+                class Main{
+                public static void main(String x[]){
+                Lion obj= new Lion();
+                obj.sound();
+                Tiger obj2 = new Tiger();
+                obj2.sound();
+                }
+                }`
+    },
+    "Program 16": {
+        output: `Area of the circle is 153.86002
+            Perimeter of the circle is 43.960003
+            Area of the triangle is 20.0
+            Perimeter of the triangle is 15`,
+        code: `abstract class Shape{
+                abstract void calculateArea();
+                abstract void calculatePerimeter();
+                }
+                class Circle extends Shape{
+                void calculateArea(){
+                int r=7;
+                float area;
+                area=3.14f*r*r;
+                System.out.println("Area of the circle is "+area);
+                }
+                void calculatePerimeter(){
+                int r=7;
+                float perimeter;
+                perimeter=2*3.14f*r;
+                System.out.println("Perimeter of the circle is "+perimeter);
+                }
+                }
+                class Triangle extends Shape{
+                void calculateArea(){
+                int height=5;
+                int base=8;
+                float area= (base*height)/2f;
+                System.out.println("Area of the triangle is "+ area);
+                }
+                void calculatePerimeter(){
+                int a=6;
+                int b=4;
+                int c=5;
+                int perimeter=a+b+c;
+                System.out.println("Perimeter of the triangle is "+ perimeter);}
+                }
+                
+                class Main{
+                public static void main(String x[]){
+                Circle obj = new Circle();
+                obj.calculateArea();
+                obj.calculatePerimeter();
+                Triangle obj2 = new Triangle();
+                obj2.calculateArea();
+                obj2.calculatePerimeter();
+                
+                }
+                }`
+    },
+    "Program 17": {
+        output: `Deposited 1500.0 into SavingsAccount. New balance: 2000.0
+            Insufficient funds or minimum balance requirement not met.
+            Withdrew 400.0 from SavingsAccount. New balance: 1600.0
+            Deposited 1000.0 into CurrentAccount. New balance: 2200.0
+            Withdrew 190.0 from CurrentAccount. New balance: 2010.0
+            Withdrew 650.0 from CurrentAccount. New balance: 1360.0`,
+        code: `abstract class BankAccount {
+                double balance;
+                public abstract void deposit(double amount);
+                public abstract void withdraw(double amount);
+            
+                public double getBalance() {
+                    return balance;
+                }
+            }
+            
+            class SavingsAccount extends BankAccount {
+                static final double MIN_BALANCE = 100.0;
+            
+                
+                public SavingsAccount(double b) {
+                    balance = b;
+                }
+            
+                  public void deposit(double amount) {
+                    if (amount > 0) {
+                        balance += amount;
+                        System.out.println("Deposited " + amount + " into SavingsAccount. New balance: " + balance);
+                    } else {
+                        System.out.println("Deposit amount must be positive.");
+                    }
+                }
+            
+                
+                public void withdraw(double amount) {
+                    if (amount > 0 && balance - amount >= MIN_BALANCE) {
+                        balance -= amount;
+                        System.out.println("Withdrew " + amount + " from SavingsAccount. New balance: " + balance);
+                    } else if (amount > 0) {
+                        System.out.println("Insufficient funds or minimum balance requirement not met.");
+                    } else {
+                        System.out.println("Withdrawal amount must be positive.");
+                    }
+                }
+            }
+            class CurrentAccount extends BankAccount {
+              
+                public CurrentAccount(double b) {
+                    balance = b;
+                }
+            
+                public void deposit(double amount) {
+                    if (amount > 0) {
+                        balance += amount;
+                        System.out.println("Deposited " + amount + " into CurrentAccount. New balance: " + balance);
+                    } else {
+                        System.out.println("Deposit amount must be positive.");
+                    }
+                }
+            
+                public void withdraw(double amount) {
+                    if (amount > 0 ) {
+                        balance -= amount;
+                        System.out.println("Withdrew " + amount + " from CurrentAccount. New balance: " + balance);
+                    }         
+            else {
+                        System.out.println("Withdrawal amount must be positive.");
+                    }
+                }
+            }
+            class A {
+                public static void main(String[] args) {
+                     BankAccount savings = new SavingsAccount(500.0);
+                    BankAccount current = new CurrentAccount(1200.0);
+            
+                     savings.deposit(1500.0);
+                    savings.withdraw(4000.0);
+                    savings.withdraw(400.0);
+            
+                            current.deposit(1000.0);
+                    current.withdraw(190.0);
+                    current.withdraw(650.0);
+                }
+            }`
+    },
+    "Program 18": {
+        output: `Eating grass
+            Deer is sleeping
+            Eating zebra
+            Lion is sleeping
+            Eating deer
+            Tiger is sleeping`,
+        code: `abstract class Animal{
+                abstract void eat();
+                abstract void sleep();
+                }
+                class Deer extends Animal{
+                void eat(){
+                System.out.println("Eating grass");
+                }
+                void sleep(){
+                System.out.println("Deer is sleeping");
+                }
+                }
+                class Tiger extends Animal{
+                void eat(){
+                System.out.println("Eating deer");
+                }
+                void sleep(){
+                System.out.println("Tiger is sleeping");
+                }
+                }
+                class Lion extends Animal{
+                void eat(){
+                System.out.println("Eating zebra");
+                }
+                void sleep(){
+                System.out.println("Lion is sleeping");
+                }
+                }
+                class Main{
+                public static void main(String x[]){
+                Deer obj= new Deer();
+                obj.eat();
+                obj.sleep();
+                Lion obj2= new Lion();
+                obj2.eat();
+                obj2.sleep();
+                Tiger obj3= new Tiger();
+                obj3.eat();
+                obj3.sleep();
+                }
+                }`
+    },
+    "Program 19": {
+        output: `Name:shanaya
+    ID=890
+    Total Salary:96000.0
+
+    Name:anaya
+    ID=910
+    Total Salary:63000.0`,
+        code: `abstract class Employee
+    {
+         protected String name;
+         protected int id;
+         abstract double calculateSalary();
+         abstract void displayInfo();
+     public Employee(String n,int Id)
+      { 
+          name=n;
+          id=Id;
+      }
+    }
+    
+    class Manager extends Employee
+    {
+        private double salary;
+        private double bonus;
+    
+     public Manager(String n,int Id,double s,double b)
+      {
+         super(n,Id);
+         salary=s;
+          bonus=b;
+    }
+    
+        double calculateSalary()
+          {
+              return salary+bonus;
+           }  
+       void displayInfo()
+         {
+            System.out.println("\nManager Information:-");
+            System.out.println("Name:" + name);
+            System.out.println("Id:" + id);
+            System.out.println("Total Salary:"+calculateSalary());
+         }
+    }
+    class Programmer extends Employee
+    {
+        private double salary;
+        private int overtime;
+        private double bonus;
+    public Programmer(String n,int Id,double s,double b,int o)
+      {
+         super(n,Id);
+         salary=s;
+          bonus=b;
+         overtime=o;
+    }
+    
+        double calculateSalary()
+          {
+              return salary+bonus+overtime;
+           }  
+       void displayInfo()
+         {
+            System.out.println("\nProgrammer Information:-");
+            System.out.println("Name:" + name);
+            System.out.println("Id:" + id);
+            System.out.println("Total Salary:"+calculateSalary());
+         }
+    }
+    class main
+    { 
+       public static void main(String st[])
+    {
+       Manager obj=new Manager("shanaya" , 890,90000,6000);
+                       obj.displayInfo();
+    Programmer obj1=new Programmer("anaya" ,910,60000,2000,1000);
+                       obj1.displayInfo();
+    
+    }
+    }`
+    },
+    "Program 20": {
+        output: `Volume of Sphere is 25.12
+            Surface area of Sphere is 50.24
+            Volume of Cube is 8.0
+            Surface area of  Cube is 8.0`,
+        code: `abstract class Shape3D{
+                abstract double calculateVolume(int r);
+                abstract double calculateSurfaceArea(int r);
+                }
+                class Sphere extends Shape3D{
+                double calculateVolume(int r){
+                return ((4/3)*3.14*r*r*r);
+                
+                }
+                double calculateSurfaceArea(int r){
+                return (4*3.14*r*r);
+                }
+                
+                }
+                
+                class Cube extends Shape3D{
+                double calculateVolume(int r){
+                return (r*r*r);
+                
+                }
+                double calculateSurfaceArea(int r){
+                return (4*r);
+                }
+                }
+                class Main{
+                public static void main(String s[]){
+                Sphere obj=new Sphere();
+                Cube obj2=new Cube();
+                System.out.println("Volume of Sphere is " + obj. calculateVolume(2));
+                System.out.println("Surface area of Sphere is " + obj.calculateSurfaceArea(2));
+                System.out.println("Volume of Cube is " + obj2. calculateVolume(2));
+                System.out.println("Surface area of  Cube is " + obj2. calculateSurfaceArea(2));
+                
+                }
+                }`
+    },
+    "Program 21": {
+        output: `Car engine started.
+            Motorcycle engine stopped.
+            Car engine started.
+            Motorcycle engine stopped.`,
+        code: `abstract class Vehicle {
+  
+                abstract void startEngine();
+                abstract void stopEngine();
+            }
+            
+            class Car extends Vehicle {
+                
+                void startEngine() {
+                    System.out.println("Car engine started.");
+                }
+            
+                public void stopEngine() {
+                    System.out.println("Car engine stopped.");
+                }
+            }
+            
+            class Motorcycle extends Vehicle {
+              
+                public void startEngine() {
+                    System.out.println("Motorcycle engine started.");
+                }
+            
+                public void stopEngine() {
+                    System.out.println("Motorcycle engine stopped.");
+                }
+            }
+            class Main {
+                public static void main(String[] args) {
+                    Vehicle obj = new Car();
+                    Vehicle obj2 = new Motorcycle();
+            
+                    obj.startEngine();
+                    obj2.stopEngine();
+            
+                    obj.startEngine();
+                    obj2.stopEngine();
+                }
+            }`
+    },
+    "Program 22": {
+        output: `Athlete eats a balanced diet.
+            Athlete exercises daily.
+            Lazy person eats fast food.
+            Exercises once in a month.`,
+        code: `abstract class Person {
+   
+                abstract void eat();
+                abstract void exercise();
+           }
+           class Athlete extends Person {
+             
+              void eat() {
+                   System.out.println("Athlete eats a balanced diet.");
+               }
+           
+               
+               void exercise() {
+                   System.out.println("Athlete exercises daily.");
+               }
+           }
+           
+           class LazyPerson extends Person {
+              
+               void eat() {
+                   System.out.println("Lazy person eats fast food.");
+               }
+           
+               
+               void exercise() {
+                   System.out.println("Exercises once in a month.");
+               }
+           }
+            class Main {
+               public static void main(String[] args) {
+                   Person athlete = new Athlete();
+                   Person lazyPerson = new LazyPerson();
+           
+                   
+                   athlete.eat();
+                   athlete.exercise();
+           
+                           lazyPerson.eat();
+                   lazyPerson.exercise();
+               }
+           }`
+    },
+    "Program 23": {
+        output: `Playing the Glockenspiel.
+            Tuning the Glockenspiel.
+            Playing the Violin .
+            Tuning the Violin.`,
+        code: `abstract class Instrument {
+                abstract void play();
+                abstract void tune();
+            }
+            
+            class Glockenspiel extends Instrument {
+              
+                void play() {
+                    System.out.println("Playing the Glockenspiel.");
+                }
+            
+                void tune() {
+                    System.out.println("Tuning the Glockenspiel.");
+                }
+            }
+            
+            class Violin extends Instrument {
+             
+                void play() {
+                    System.out.println("Playing the Violin .");
+                }
+            
+                 void tune() {
+                    System.out.println("Tuning the Violin.");
+                }
+            }
+            class Main {
+                public static void main(String[] args) {
+                    Instrument obj = new Glockenspiel();
+                    Instrument obj2 = new Violin();
+            
+                    obj.play();
+                    obj.tune();
+            
+                    obj2.play();
+                    obj2.tune();
+                }
+            }`
+    },
+    "Program 24": {
+        output: `Drawing a circle of radius=7
+            Resizing the circle to radius=8
+            Drawing a rectangle of length=20 and breadth=40
+            Resizing the rectangle to length=21 and breadth=41`,
+        code: `abstract class Shape2D {
+                abstract void draw();   
+                abstract void resize();
+            }
+            
+            class Rectangle extends Shape2D {
+                int length;
+                int breadth;
+            
+                Rectangle(int l, int b) {
+                    length = l;
+                    breadth = b;
+                }
+            
+                void draw() {
+                    System.out.println("Drawing a rectangle of length=" + length + " and breadth=" + breadth);
+                }
+            
+                void resize() {
+                    length += 1;
+                    breadth += 1;
+                    System.out.println("Resizing the rectangle to length=" + length + " and breadth=" + breadth);
+                }
+            }
+            
+            class Circle extends Shape2D {
+                int radius;
+            
+               Circle(int r) {
+                    radius = r;
+                }
+            
+                void draw() {
+                    System.out.println("Drawing a circle of radius=" + radius);
+                }
+            
+                void resize() {
+             
+                    radius += 1;
+                    System.out.println("Resizing the circle to radius=" + radius);
+                }
+            }
+            
+            class Main {
+                public static void main(String[] args) {
+                    Circle obj = new Circle(7);
+                    obj.draw();      
+                    obj.resize();    
+            
+                    Rectangle obj2 = new Rectangle(20, 40);
+                    obj2.draw();            
+                    obj2.resize(); 
+                 }
+            }`
+    },
+    "Program 25": {
+        output: `The eagle flies very high.
+            The eagle screeches loudly.
+            The hawk glides swiftly through the sky.
+            The hawk makes a sharp call.`,
+        code: `abstract class Bird {
+                abstract void fly();
+                abstract void makeSound();
+            }
+            
+            class Eagle extends Bird {
+                void fly() {
+                    System.out.println("The eagle flies very high.");
+                }
+            
+                 void makeSound() {
+                    System.out.println("The eagle screeches loudly.");
+                }
+            }
+            
+            class Hawk extends Bird {
+                void fly() {
+                    System.out.println("The hawk glides swiftly through the sky.");
+                }
+            
+                    public void makeSound() {
+                    System.out.println("The hawk makes a sharp call.");
+                }
+            }
+            
+            
+            class Main {
+                public static void main(String[] args) {
+                    Bird obj = new Eagle();
+                    Bird obj2 = new Hawk();
+            
+                     obj.fly();
+                    obj.makeSound();
+            
+                    obj2.fly();
+                    obj2.makeSound();
+                }
+            }`
+    },
+"Program 26": {
+        output: `Area of triangle:47.53
+    Perimeter of triangle:14.6
+
+    Area of square:169.0
+    perimeter of square:76.0`,
+        code: `abstract class GeometricShape
+    {
+        abstract double area() ;
+       abstract double perimeter();
+    }
+    class Triangle extends GeometricShape
+    {
+         double area() 
+          {
+               double height=9.8;
+             double base=9.7;
+             double area=(height*base)/2;
+           System.out.println("\nArea of triangle:"+area);
+    return area;
+        }
+      double  perimeter()
+        {
+               double a=6.1;
+               double b=4.6;
+               double c=3.9;
+               double perimeter=a+b+c;
+           System.out.println("Perimeter of triangle:"+perimeter);
+    return perimeter;
+       }
+    }
+    class Square extends GeometricShape
+    {
+          double area() 
+          {
+               double side=13;
+               double area1=side*side;
+               System.out.println("\nArea of square:"+area1);
+    return area1;
+           }
+         double  perimeter()
+           {
+                double side=19;
+                double perimeter1=4*side;
+            System.out.println("perimeter of square:"+perimeter1);
+    return perimeter1;
+          }
+    }
+    class main
+    {
+      public static void main(String st[])
+        {
+            GeometricShape obj=new Triangle();
+                                      obj.area();
+                                     obj.perimeter();
+           GeometricShape obj1=new Square();
+                                      obj1.area();
+                                     obj1.perimeter();
+    
+      }
+    }`
+    }
+        };
+
+        function showProgram(programName) {
+            const program = programs[programName];
+            if (program) {
+                if(program.output == "0000"){
+                    document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                `;
+                }
+                else{
+                document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                    <h2>Output:</h2>
+                    <div class="code-block">${program.output}</div>
+                `;
+            }    
+                }
+                 else {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>Program not found</h2>
+                    <p>Details for this program are not available.</p>
+                `;
+            }
+        }
+    </script>
+
+</body></html>
