@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>String Handling</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <nav class="navbar background">
+        <ul class="navlist">
+            <a href="index.html">Home</a></li> 
+  
+            <a href="Array.html">ARRAYS</a></li>
+            
+            <a href="2Darray.html" >2D-ARRAYS</a></li>
+            
+            <a href="Applet.html">APPLETS</a></li>
+            
+            <a href="bpc.html">BASIC PROGAMMING CONSTRUCTS</a></li>
+            
+            <a href="Data Conversion.html">DATA CONSVERSION</a></li>
+            
+            <a href="DEM.html">DELEGATION EVENT MODEL</a></li>
+            
+            <a href="Exception Handling.html">EXCEPTION HANDLING</a></li>
+            
+            <a href="Functions.html">FUNCTIONS</a></li>
+            
+            <a href="GUI AWT.html">GRAPHICAL USER INTERFACE (AWT)</a></li>
+            
+            <a href="Inheritance.html">INHERITANCE</a></li>
+            
+            <a href="IO.html">INPUT/OUTPUT</a></li>
+            
+            <a href="Interface.html">INTERFACES</a></li>
+            
+            <a href="JDBC.html">JAVA DATABASE CONECTIVITY</a></li>
+            
+            <a href="Threads.html">MULTITHREADING</a></li>
+            
+            <a href="OOP.html">OBJECT ORIENTED PROGRAMMING</a></li>
+            
+            <a href="Packages.html">PACKAGES</a></li>
+          
+            <a href="StringHandling.html">STRING HANDLING</a></li>
+        </ul>
+    </nav>
+    <div style="display: flex; margin: 0; max-height: 100vh;">
+    <div class="sidebar">
+        <h2>Programs</h2>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 1&#39;)">1. Program to Check if a String contains only digits</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 2&#39;)">2. Program to perform Deep Copy for String</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 3&#39;)">3. Program to prove String is immutable programmatically</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 4&#39;)">4. Program to remove all occurrences of a given character from input String</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 5&#39;)">5. Program to append the string using StringBuffer class</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 6&#39;)">6. Program to insert the string using StringBuffer class</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 7&#39;)">7. Program to Add Characters to a String</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 8&#39;)">8. Program to Add Characters to a String</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 9&#39;)">9. Program to Check Anagram</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 10&#39;)">10. Program to check whether a string is a Palindrome</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 11&#39;)">11. Program to Convert Enum to String</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 12&#39;)">12. Program to Convert String to String Array</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 13&#39;)">13. Program to count number of words in a String</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 14&#39;)">14. Program to count the total number of characters in a string</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 15&#39;)">15. Program to count the total number of punctuation characters exists in a String</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 16&#39;)">16. Program to count the total number of vowels and consonants in a string</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 17&#39;)">17. Program to determine whether a given string is palindrome</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 18&#39;)">18. Program to determine whether one string is a rotation of another</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 19&#39;)">19. Program to divide a string in 'N' equal parts</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 20&#39;)">20. Program to find all subsets of a string</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 21&#39;)">21. Program to find all the permutations of a string</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 22&#39;)">22. Program to find maximum and minimum occurring character in a string</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 23&#39;)">23. Program to find Reverse of the string</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 24&#39;)">24. Program to find the duplicate characters in a string</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 25&#39;)">25. Program to find the duplicate words in a string</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 26&#39;)">26. Program to find the frequency of characters</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 27&#39;)">27. Program to find the largest and smallest word in a string</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 28&#39;)">28. Program to find the longest repeating sequence in a string</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 29&#39;)">29. Program to find the most repeated word in a text file</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 30&#39;)">30. Program to find the number of the words in the given text file</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 31&#39;)">31. Program to Get a Character From the Given String</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 32&#39;)">32. Program to Insert a string into another string</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 33&#39;)">33. Program to Iterate Over Characters in String</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 34&#39;)">34. Program to Print a New Line in String</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 35&#39;)">35. Program to Print even length words</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 36&#39;)">36. Program to print smallest and biggest possible palindrome word in a given string</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 37&#39;)">37. Program to remove all the white spaces from a string</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 38&#39;)">38. Program to replace lower-case characters with upper-case and vice-versa</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 39&#39;)">39. Program to replace the spaces of a string with a specific character</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 40&#39;)">40. Program to separate the Individual Characters from a String</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 41&#39;)">41. Program to Splitting into a number of sub-strings</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 42&#39;)">42. Program to swap two string variables without using third or temp variable</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 43&#39;)">43. Program to Swapping Pair of Characters</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 44&#39;)">44. Read two String user input and check if first contains second</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 45&#39;)">45. Reverse String without reverse() function</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 46&#39;)">46. Reverse String Word by Word</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 47&#39;)">47. Write a program to check if two Strings are created with same characters</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 48&#39;)">48. Write a program to find out first non-repeated character from input String</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 49&#39;)">49. Create an object StringBuffer class to reverse the string</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 50&#39;)">50. Create an object StringBuffer class to show functionality of insert, append, delete and replace functions</div>
+
+    </div>
+
+    <div class="content" id="programContent">
+                    <h2>Program 1</h2>
+                    
+                    <div class="code-block">        public class CheckDigits {
+            public static void main(String[] args) {
+                String input = "123456";
+                boolean isDigit = input.chars().allMatch(Character::isDigit);
+                System.out.println("Contains only digits: " + isDigit);
+            }
+        }
+</div>
+                    <h2>Output:</h2>
+                    <div class="code-block">Contains only digits: true</div>
+                </div>
+</div>
+    
+    <script>
+        const programs = {
+
+    "Program 1": {
+        output: `Contains only digits: true`,
+        code: `        public class CheckDigits {
+            public static void main(String[] args) {
+                String input = "123456";
+                boolean isDigit = input.chars().allMatch(Character::isDigit);
+                System.out.println("Contains only digits: " + isDigit);
+            }
+        }
+`
+    },
+    "Program 2": {
+        output: `Original: Hello; Deep Copy: Hello`,
+        code: `        public class DeepCopyString {
+            public static void main(String[] args) {
+                String original = "Hello";
+                String deepCopy = new String(original);
+                System.out.println("Original: " + original);
+                System.out.println("Deep Copy: " + deepCopy);
+            }
+        `
+    },
+    "Program 3": {
+        output: `Modified String: Immutable String`,
+        code: `        public class StringImmutable {
+            public static void main(String[] args) {
+                String str = "Immutable";
+                str = str + " String";
+                System.out.println("Modified String: " + str);
+            }
+        }`
+    },
+    "Program 4": {
+        output: `Result: Hell Wrld`,
+        code: `        public class RemoveCharacter {
+            public static void main(String[] args) {
+                String input = "Hello World";
+                char charToRemove = 'o';
+                String result = input.replace(Character.toString(charToRemove), "");
+                System.out.println("Result: " + result);
+            }
+        }`
+    },
+    "Program 5": {
+        output: `Appended String: Hello World`,
+        code: `        public class AppendStringBuffer {
+            public static void main(String[] args) {
+                StringBuffer sb = new StringBuffer("Hello");
+                sb.append(" World");
+                System.out.println("Appended String: " + sb);
+            }
+        }`
+    },
+    "Program 6": {
+        output: `Inserted String: Hello Java World`,
+        code: `        public class InsertStringBuffer {
+            public static void main(String[] args) {
+                StringBuffer sb = new StringBuffer("Hello World");
+                sb.insert(6, "Java ");
+                System.out.println("Inserted String: " + sb);
+            }
+        }`
+    },
+    "Program 7": {
+        output: `Added Characters: Hello!`,
+        code: `        public class AddCharacters {
+            public static void main(String[] args) {
+                StringBuilder sb = new StringBuilder("Hello");
+                sb.append('!');
+                System.out.println("Added Characters: " + sb);
+            }
+        }`
+    },
+    "Program 8": {
+        output: `Final String: Good Morning!`,
+        code: `        public class AddMoreCharacters {
+            public static void main(String[] args) {
+                StringBuilder sb = new StringBuilder("Good");
+                sb.append(' ');
+                sb.append("Morning!");
+                System.out.println("Final String: " + sb);
+            }
+        }`
+    },
+    "Program 9": {
+        output: `Is Anagrams: true`,
+        code: `        import java.util.Arrays;
+
+        public class CheckAnagram {
+            public static void main(String[] args) {
+                String str1 = "listen";
+                String str2 = "silent";
+                boolean isAnagram = Arrays.equals(
+                    str1.chars().sorted().toArray(),
+                    str2.chars().sorted().toArray()
+                );
+                System.out.println("Is Anagrams: " + isAnagram);
+            }
+        }`
+    },
+    "Program 10": {
+        output: `Is Palindrome: true`,
+        code: `        public class CheckPalindrome {
+            public static void main(String[] args) {
+                String str = "madam";
+                String reversed = new StringBuilder(str).reverse().toString();
+                boolean isPalindrome = str.equals(reversed);
+                System.out.println("Is Palindrome: " + isPalindrome);
+            }
+        }`
+    },
+    "Program 11": {
+        output: `Day as String: MONDAY`,
+        code: `        enum Day { SUNDAY, MONDAY, TUESDAY }
+
+        public class EnumToString {
+            public static void main(String[] args) {
+                Day day = Day.MONDAY;
+                String dayString = day.toString();
+                System.out.println("Day as String: " + dayString);
+            }
+        }`
+    },
+    "Program 12": {
+        output: `String Array: [Hello, World]`,
+        code: `        public class StringToArray {
+            public static void main(String[] args) {
+                String str = "Hello, World";
+                String[] strArray = str.split(" ");
+                System.out.println("String Array: " + Arrays.toString(strArray));
+            }
+        }`
+    },
+    "Program 13": {
+        output: `Number of words: 2`,
+        code: `        public class CountWords {
+            public static void main(String[] args) {
+                String str = "Hello World!";
+                String[] words = str.split(" ");
+                System.out.println("Number of words: " + words.length);
+            }
+        }`
+    },
+    "Program 14": {
+        output: `Total Characters: 11`,
+        code: `        public class CountCharacters {
+            public static void main(String[] args) {
+                String str = "Hello World";
+                System.out.println("Total Characters: " + str.length());
+            }
+        }`
+    },
+    "Program 15": {
+        output: `Punctuation Count: 2`,
+        code: `        public class CountPunctuation {
+            public static void main(String[] args) {
+                String str = "Hello, World!";
+                long punctuationCount = str.chars()
+                    .filter(ch -> !Character.isLetterOrDigit(ch) && !Character.isWhitespace(ch))
+                    .count();
+                System.out.println("Punctuation Count: " + punctuationCount);
+            }
+        }`
+    },
+    "Program 16": {
+        output: `Vowels: 3, Consonants: 7`,
+        code: `        public class CountVowelsConsonants {
+            public static void main(String[] args) {
+                String str = "Hello World";
+                int vowels = 0, consonants = 0;
+                for (char ch : str.toCharArray()) {
+                    if (Character.isLetter(ch)) {
+                        if ("AEIOUaeiou".indexOf(ch) != -1) {
+                            vowels++;
+                        } else {
+                            consonants++;
+                        }
+                    }
+                }
+                System.out.println("Vowels: " + vowels + ", Consonants: " + consonants);
+            }
+        }`
+    },
+    "Program 17": {
+        output: `Is Palindrome: true`,
+        code: `        public class DeterminePalindrome {
+            public static void main(String[] args) {
+                String str = "radar";
+                boolean isPalindrome = str.equals(new StringBuilder(str).reverse().toString());
+                System.out.println("Is Palindrome: " + isPalindrome);
+            }
+        }`
+    },
+    "Program 18": {
+        output: `Is Rotation: true`,
+        code: `        public class CheckRotation {
+            public static void main(String[] args) {
+                String str1 = "abcde";
+                String str2 = "deabc";
+                boolean isRotation = (str1.length() == str2.length()) && 
+                    (str1 + str1).contains(str2);
+                System.out.println("Is Rotation: " + isRotation);
+            }
+        }`
+    },
+    "Program 19": {
+        output: `Hello; World`,
+        code: `        public class DivideString {
+            public static void main(String[] args) {
+                String str = "HelloWorld";
+                int n = 5; // Number of parts
+                int len = str.length();
+                for (int i = 0; i < len; i += n) {
+                    System.out.println(str.substring(i, Math.min(len, i + n)));
+                }
+            }
+        }`
+    },
+    "Program 20": {
+        output: `Subsets: [, a, b, c, ab, ac, bc, abc]`,
+        code: `        import java.util.ArrayList;
+
+        public class AllSubsets {
+            public static void main(String[] args) {
+                String str = "abc";
+                ArrayList subsets = new ArrayList<>();
+                generateSubsets(str, "", subsets);
+                System.out.println("Subsets: " + subsets);
+            }
+
+            static void generateSubsets(String str, String current, ArrayList subsets) {
+                if (str.length() == 0) {
+                    subsets.add(current);
+                    return;
+                }
+                generateSubsets(str.substring(1), current + str.charAt(0), subsets);
+                generateSubsets(str.substring(1), current, subsets);
+            }
+        }`
+    },
+    "Program 21": {
+        output: `Permutations: [abc, acb, bac, bca, cab, cba]`,
+        code: `        import java.util.HashSet;
+
+        public class AllPermutations {
+            public static void main(String[] args) {
+                String str = "abc";
+                HashSet permutations = new HashSet<>();
+                permute(str, "", permutations);
+                System.out.println("Permutations: " + permutations);
+            }
+
+            static void permute(String str, String prefix, HashSet permutations) {
+                int n = str.length();
+                if (n == 0) {
+                    permutations.add(prefix);
+                } else {
+                    for (int i = 0; i < n; i++) {
+                        permute(str.substring(0, i) + str.substring(i + 1), prefix + str.charAt(i), permutations);
+                    }
+                }
+            }
+        }`
+    },
+    "Program 22": {
+        output: `Max Occurring Character: a; Min Occurring Character: b`,
+        code: `        import java.util.HashMap;
+
+        public class MaxMinCharacter {
+            public static void main(String[] args) {
+                String str = "aabcc";
+                HashMap frequencyMap = new HashMap<>();
+                for (char ch : str.toCharArray()) {
+                    frequencyMap.put(ch, frequencyMap.getOrDefault(ch, 0) + 1);
+                }
+                char maxChar = 0, minChar = 0;
+                int maxCount = Integer.MIN_VALUE, minCount = Integer.MAX_VALUE;
+
+                for (char key : frequencyMap.keySet()) {
+                    int count = frequencyMap.get(key);
+                    if (count > maxCount) {
+                        maxCount = count;
+                        maxChar = key;
+                    }
+                    if (count < minCount) {
+                        minCount = count;
+                        minChar = key;
+                    }
+                }
+
+                System.out.println("Max Occurring Character: " + maxChar);
+                System.out.println("Min Occurring Character: " + minChar);
+            }
+        }`
+    },
+    "Program 23": {
+        output: `Reversed String: olleH`,
+        code: `        public class ReverseString {
+            public static void main(String[] args) {
+                String str = "Hello";
+                String reversed = new StringBuilder(str).reverse().toString();
+                System.out.println("Reversed String: " + reversed);
+            }
+        }`
+    },
+    "Program 24": {
+        output: `Duplicate Characters: l o`,
+        code: `        import java.util.HashMap;
+
+        public class DuplicateCharacters {
+            public static void main(String[] args) {
+                String str = "Hello World";
+                HashMap charCount = new HashMap<>();
+                for (char ch : str.toCharArray()) {
+                    charCount.put(ch, charCount.getOrDefault(ch, 0) + 1);
+                }
+                System.out.print("Duplicate Characters: ");
+                charCount.forEach((k, v) -> {
+                    if (v > 1) {
+                        System.out.print(k + " ");
+                    }
+                });
+            }
+        }`
+    },
+    "Program 25": {
+        output: `Duplicate Words: hello`,
+        code: `        import java.util.HashMap;
+
+        public class DuplicateWords {
+            public static void main(String[] args) {
+                String str = "hello world hello";
+                HashMap wordCount = new HashMap<>();
+                String[] words = str.split(" ");
+                for (String word : words) {
+                    wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
+                }
+                System.out.print("Duplicate Words: ");
+                wordCount.forEach((k, v) -> {
+                    if (v > 1) {
+                        System.out.print(k + " ");
+                    }
+                });
+            }
+        }`
+    },
+    "Program 26": {
+        output: `Character Frequencies: {a=3, b=1, n=2}`,
+        code: `        import java.util.HashMap;
+
+        public class CharacterFrequency {
+            public static void main(String[] args) {
+                String str = "banana";
+                HashMap frequencyMap = new HashMap<>();
+                for (char ch : str.toCharArray()) {
+                    frequencyMap.put(ch, frequencyMap.getOrDefault(ch, 0) + 1);
+                }
+                System.out.println("Character Frequencies: " + frequencyMap);
+            }
+        }`
+    },
+    "Program 27": {
+        output: `Largest Word: smallest; Smallest Word: a`,
+        code: `        public class LargestSmallestWord {
+            public static void main(String[] args) {
+                String str = "Find the largest and smallest word";
+                String[] words = str.split(" ");
+                String largest = "", smallest = words[0];
+
+                for (String word : words) {
+                    if (word.length() > largest.length()) {
+                        largest = word;
+                    }
+                    if (word.length() < smallest.length()) {
+                        smallest = word;
+                    }
+                }
+
+                System.out.println("Largest Word: " + largest);
+                System.out.println("Smallest Word: " + smallest);
+            }
+        }`
+    },
+    "Program 28": {
+        output: `Longest Repeating Sequence: abc`,
+        code: `        public class LongestRepeatingSequence {
+            public static void main(String[] args) {
+                String str = "abcabcabc";
+                int maxLength = 0;
+                String longest = "";
+
+                for (int i = 0; i < str.length(); i++) {
+                    for (int j = i + 1; j < str.length(); j++) {
+                        String subStr = str.substring(i, j);
+                        if (str.indexOf(subStr, j) != -1 && subStr.length() > maxLength) {
+                            maxLength = subStr.length();
+                            longest = subStr;
+                        }
+                    }
+                }
+
+                System.out.println("Longest Repeating Sequence: " + longest);
+            }
+        }`
+    },
+    "Program 29": {
+        output: `Most Repeated Word: hello`,
+        code: `        import java.io.BufferedReader;
+        import java.io.FileReader;
+        import java.io.IOException;
+        import java.util.HashMap;
+
+        public class MostRepeatedWord {
+            public static void main(String[] args) throws IOException {
+                String filePath = "textfile.txt";
+                HashMap wordCount = new HashMap<>();
+                try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+                    String line;
+                    while ((line = br.readLine()) != null) {
+                        String[] words = line.split(" ");
+                        for (String word : words) {
+                            wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
+                        }
+                    }
+                }
+
+                String mostRepeatedWord = null;
+                int maxCount = 0;
+                for (String word : wordCount.keySet()) {
+                    if (wordCount.get(word) > maxCount) {
+                        maxCount = wordCount.get(word);
+                        mostRepeatedWord = word;
+                    }
+                }
+                System.out.println("Most Repeated Word: " + mostRepeatedWord);
+            }
+        }`
+    },
+    "Program 30": {
+        output: `Total Words: 5`,
+        code: `        import java.io.BufferedReader;
+        import java.io.FileReader;
+        import java.io.IOException;
+
+        public class CountWordsInFile {
+            public static void main(String[] args) throws IOException {
+                String filePath = "textfile.txt";
+                int wordCount = 0;
+                try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+                    String line;
+                    while ((line = br.readLine()) != null) {
+                        wordCount += line.split(" ").length;
+                    }
+                }
+                System.out.println("Total Words: " + wordCount);
+            }
+        }`
+    },
+    "Program 31": {
+        output: `Character at index 1: e`,
+        code: `        public class GetCharacter {
+            public static void main(String[] args) {
+                String str = "Hello World";
+                char ch = str.charAt(1); // Get the second character
+                System.out.println("Character at index 1: " + ch);
+            }
+        }`
+    },
+    "Program 32": {
+        output: `Resulting String: HelloWorld`,
+        code: `        public class InsertString {
+            public static void main(String[] args) {
+                String str1 = "Hello";
+                String str2 = "World";
+                int index = 5; // Insert after "Hello"
+                String result = str1.substring(0, index) + str2 + str1.substring(index);
+                System.out.println("Resulting String: " + result);
+            }
+        }`
+    },
+    "Program 33": {
+        output: `Character at index 0: H; Character at index 1: e; Character at index 2: l; Character at index 3: l; Character at index 4: o`,
+        code: `        public class IterateCharacters {
+            public static void main(String[] args) {
+                String str = "Hello";
+                for (int i = 0; i < str.length(); i++) {
+                    System.out.println("Character at index " + i + ": " + str.charAt(i));
+                }
+            }
+        }`
+    },
+    "Program 34": {
+        output: `String with New Line:
+
+Hello
+
+World`,
+        code: `        public class NewLineInString {
+            public static void main(String[] args) {
+                String str = "Hello\nWorld";
+                System.out.println("String with New Line:\n" + str);
+            }
+        }`
+    },
+    "Program 35": {
+        output: `Even Length Words: Hello Java`,
+        code: `        public class EvenLengthWords {
+            public static void main(String[] args) {
+                String str = "Hello World Java Programming";
+                String[] words = str.split(" ");
+                System.out.print("Even Length Words: ");
+                for (String word : words) {
+                    if (word.length() % 2 == 0) {
+                        System.out.print(word + " ");
+                    }
+                }
+            }
+        }`
+    },
+    "Program 36": {
+        output: `Smallest Palindrome: c
+        Biggest Palindrome: civic`,
+        code: `        public class SmallestBiggestPalindrome {
+            public static void main(String[] args) {
+                String str = "civic";
+                String smallest = String.valueOf(str.charAt(0));
+                String biggest = str;
+
+                System.out.println("Smallest Palindrome: " + smallest);
+                System.out.println("Biggest Palindrome: " + biggest);
+            }
+        }`
+    },
+    "Program 37": {
+        output: `String without white spaces: HelloWorld`,
+        code: `        public class RemoveWhiteSpaces {
+            public static void main(String[] args) {
+                String str = "Hello World";
+                String result = str.replaceAll("\\s+", "");
+                System.out.println("String without white spaces: " + result);
+            }
+        }`
+    },
+    "Program 38": {
+        output: `Replaced Case: hELLO wORLD`,
+        code: `        public class ReplaceCase {
+            public static void main(String[] args) {
+                String str = "Hello World";
+                StringBuilder result = new StringBuilder();
+                for (char ch : str.toCharArray()) {
+                    if (Character.isLowerCase(ch)) {
+                        result.append(Character.toUpperCase(ch));
+                    } else {
+                        result.append(Character.toLowerCase(ch));
+                    }
+                }
+                System.out.println("Replaced Case: " + result);
+            }
+        }`
+    },
+    "Program 39": {
+        output: `String with replaced spaces: Hello-World`,
+        code: `        public class ReplaceSpaces {
+            public static void main(String[] args) {
+                String str = "Hello World";
+                char replacement = '-';
+                String result = str.replace(' ', replacement);
+                System.out.println("String with replaced spaces: " + result);
+            }
+        }`
+    },
+    "Program 40": {
+        output: `H
+        e
+        l
+        l
+        o`,
+        code: `        public class SeparateCharacters {
+            public static void main(String[] args) {
+                String str = "Hello";
+                for (char ch : str.toCharArray()) {
+                    System.out.println(ch);
+                }
+            }
+        }`
+    },
+    "Program 41": {
+        output: `Sub-strings
+        Hello
+        World
+        Java`,
+        code: ` public class SplitSubStrings {
+            public static void main(String[] args) {
+                String str = "Hello World Java";
+                String[] parts = str.split(" ");
+                System.out.println("Sub-strings: ");
+                for (String part : parts) {
+                    System.out.println(part);
+                }
+            }
+        }`
+    },
+    "Program 42": {
+        output: `Word Occurrences: {Hello=2, World=1}`,
+        code: `        import java.util.HashMap;
+
+        public class WordOccurrence {
+            public static void main(String[] args) {
+                String str = "Hello Hello World";
+                HashMap wordCount = new HashMap<>();
+                String[] words = str.split(" ");
+                for (String word : words) {
+                    wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
+                }
+                System.out.println("Word Occurrences: " + wordCount);
+            }
+        }`
+    },
+    "Program 43": {
+        output: `Contains Only Digits: true`,
+        code: `        public class CheckDigits {
+            public static void main(String[] args) {
+                String str = "12345";
+                boolean containsOnlyDigits = str.matches("\\d+");
+                System.out.println("Contains Only Digits: " + containsOnlyDigits);
+            }
+        }`
+    },
+    "Program 44": {
+        output: `Is Numeric: true`,
+        code: `        public class CheckNumeric {
+            public static void main(String[] args) {
+                String str = "123.45";
+                boolean isNumeric = str.matches("-?\\d+(\\.\\d+)?");
+                System.out.println("Is Numeric: " + isNumeric);
+            }
+        }`
+    },
+    "Program 45": {
+        output: `Is Empty: true`,
+        code: `        public class CheckEmpty {
+            public static void main(String[] args) {
+                String str = "";
+                boolean isEmpty = str.isEmpty();
+                System.out.println("Is Empty: " + isEmpty);
+            }
+        }`
+    },
+    "Program 46": {
+        output: `Is Blank: true`,
+        code: `        public class CheckBlank {
+            public static void main(String[] args) {
+                String str = "   ";
+                boolean isBlank = str.isBlank();
+                System.out.println("Is Blank: " + isBlank);
+            }
+        }`
+    },
+    "Program 47": {
+        output: `Lowercase: hello world`,
+        code: `        public class ConvertToLowerCase {
+            public static void main(String[] args) {
+                String str = "Hello World";
+                String lowerCase = str.toLowerCase();
+                System.out.println("Lowercase: " + lowerCase);
+            }
+        }`
+    },
+    "Program 48": {
+        output: `Uppercase: HELLO WORLD`,
+        code: `        public class ConvertToUpperCase {
+            public static void main(String[] args) {
+                String str = "Hello World";
+                String upperCase = str.toUpperCase();
+                System.out.println("Uppercase: " + upperCase);
+            }
+        }`
+    },
+    "Program 49": {
+        output: `Capitalized String: Hello World`,
+        code: `        public class CapitalizeFirstCharacter {
+            public static void main(String[] args) {
+                String str = "hello world";
+                String[] words = str.split(" ");
+                StringBuilder capitalized = new StringBuilder();
+
+                for (String word : words) {
+                    capitalized.append(Character.toUpperCase(word.charAt(0)))
+                               .append(word.substring(1))
+                               .append(" ");
+                }
+
+                System.out.println("Capitalized String: " + capitalized.toString().trim());
+            }
+        }`
+    },
+    "Program 50": {
+        output: `Vowels: 3
+        Consonants: 7`,
+        code: `        public class CountVowelsConsonants {
+            public static void main(String[] args) {
+                String str = "Hello World";
+                int vowels = 0, consonants = 0;
+
+                for (char ch : str.toCharArray()) {
+                    if (Character.isLetter(ch)) {
+                        if ("AEIOUaeiou".indexOf(ch) != -1) {
+                            vowels++;
+                        } else {
+                            consonants++;
+                        }
+                    }
+                }
+
+                System.out.println("Vowels: " + vowels);
+                System.out.println("Consonants: " + consonants);
+            }
+        }`
+    }
+
+        };
+
+        function showProgram(programName) {
+            const program = programs[programName];
+            if (program) {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                    <h2>Output:</h2>
+                    <div class="code-block">${program.output}</div>
+                `;
+            } else {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>Program not found</h2>
+                    <p>Details for this program are not available.</p>
+                `;
+            }
+        }
+    </script>
+
+</body></html>
