@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUI AWT</title>
+    <link rel="stylesheet" href="style2.css">
+    
+</head>
+
+<body>
+    <nav class="navbar background">
+        <ul class="navlist">
+            <a href="ind.html">Home</a></li> 
+  
+            <a href="Array.html">ARRAYS</a></li>
+            
+            <a href="2Darray.html" >2D-ARRAYS</a></li>
+            
+            <a href="Applet.html">APPLETS</a></li>
+            
+            <a href="bpc.html">BASIC PROGAMMING CONSTRUCTS</a></li>
+            
+            <a href="Data Conversion.html">DATA CONSVERSION</a></li>
+            
+            <a href="DEM.html">DELEGATION EVENT MODEL</a></li>
+            
+            <a href="Exception Handling.html">EXCEPTION HANDLING</a></li>
+            
+            <a href="Functions.html">FUNCTIONS</a></li>
+            
+            <a href="GUI AWT.html">GRAPHICAL USER INTERFACE (AWT)</a></li>
+            
+            <a href="Inheritance.html">INHERITANCE</a></li>
+            
+            <a href="IO.html">INPUT/OUTPUT</a></li>
+            
+            <a href="Interface.html">INTERFACES</a></li>
+            
+            <a href="JDBC.html">JAVA DATABASE CONECTIVITY</a></li>
+            
+            <a href="Threads.html">MULTITHREADING</a></li>
+            
+            <a href="OOP.html">OBJECT ORIENTED PROGRAMMING</a></li>
+            
+            <a href="Packages.html">PACKAGES</a></li>
+          
+            <a href="StringHandling.html">STRING HANDLING</a></li>
+        </ul>
+    </nav>
+    <div style="display: flex; margin: 0; max-height: 100vh;">
+    <div class="sidebar">
+        <h2>Programs</h2>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 1&#39;)">Program 1: Create a simple AWT application that displays a button with FlowLayout manager.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 2&#39;)">Program 2: Create a simple AWT application that displays a button with Custom Layout.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 3&#39;)">Program 3: Create a simple AWT application that displays multiple buttons with BorderLayout manager (North, East, West, South, Center).</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 4&#39;)">Program 4: Create a simple AWT application that displays a TextField with FlowLayout manager.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 5&#39;)">Program 5: Create a simple AWT application that displays a TextField with Custom Layout.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 6&#39;)">Program 6: Create a simple AWT application that displays a Checkbox with FlowLayout manager.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 7&#39;)">Program 7: Create a simple AWT application that displays a Checkbox with Custom Layout.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 8&#39;)">Program 8: Create a simple AWT application that displays a Label with FlowLayout manager.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 9&#39;)">Program 9: Create a simple AWT application that displays a Label with Custom Layout.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 10&#39;)">Program 10: Create a simple AWT application that displays a Choice with FlowLayout manager.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 11&#39;)">Program 11: Create a simple AWT application that displays a Choice with Custom Layout.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 12&#39;)">Program 12: Create a simple AWT application that displays a CheckboxGroup with FlowLayout manager.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 13&#39;)">Program 13: Create a simple AWT application that displays a CheckboxGroup with Custom Layout.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 14&#39;)">Program 14: Create a simple AWT application that displays a List with FlowLayout manager.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 15&#39;)">Program 15: Create a simple AWT application that displays a List with Custom Layout.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 16&#39;)">Program 16: Create a simple AWT application that displays a TextArea with FlowLayout manager.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 17&#39;)">Program 17: Create a simple AWT application that displays a TextArea with Custom Layout.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 18&#39;)">Program 18: Create a simple AWT application design a calculator that displays buttons, TextField with GridLayout manager.</div>
+        
+
+
+    </div>
+
+    <div class="content" id="programContent">
+        <h2>Please select program from the list!</h2>
+    </div>
+</div>
+    
+    <script>
+        const programs = {
+    "Program 1": { 
+    output: `0000`, 
+    code: `
+    import java.awt.*;
+    import java.awt.event.*;
+
+    public class FlowLayoutExample {
+        public static void main(String[] args) {
+            Frame frame = new Frame("FlowLayout Example");
+            Button button = new Button("Click Me");
+            frame.setLayout(new FlowLayout());
+            frame.add(button);
+            frame.setSize(300, 200);
+            frame.setVisible(true);
+            frame.addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent we) {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+    `
+},
+"Program 2": { 
+    output: `0000`, 
+    code: `
+    import java.awt.*;
+    import java.awt.event.*;
+
+    public class CustomLayoutExample {
+        public static void main(String[] args) {
+            Frame frame = new Frame("Custom Layout Example");
+            Button button = new Button("Click Me");
+            Panel panel = new Panel();
+            panel.setLayout(new GridLayout(1, 1)); // Custom layout example
+            panel.add(button);
+            frame.add(panel);
+            frame.setSize(300, 200);
+            frame.setVisible(true);
+            frame.addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent we) {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+    `
+},
+"Program 3": { 
+    output: `0000`, 
+    code: `
+    import java.awt.*;
+    import java.awt.event.*;
+
+    public class BorderLayoutExample {
+        public static void main(String[] args) {
+            Frame frame = new Frame("BorderLayout Example");
+            frame.setLayout(new BorderLayout());
+            frame.add(new Button("North"), BorderLayout.NORTH);
+            frame.add(new Button("South"), BorderLayout.SOUTH);
+            frame.add(new Button("East"), BorderLayout.EAST);
+            frame.add(new Button("West"), BorderLayout.WEST);
+            frame.add(new Button("Center"), BorderLayout.CENTER);
+            frame.setSize(300, 200);
+            frame.setVisible(true);
+            frame.addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent we) {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+    `
+},
+"Program 4": { 
+    output: `0000`, 
+    code: `
+    import java.awt.*;
+    import java.awt.event.*;
+
+    public class TextFieldFlowLayout {
+        public static void main(String[] args) {
+            Frame frame = new Frame("TextField with FlowLayout");
+            TextField textField = new TextField(20);
+            frame.setLayout(new FlowLayout());
+            frame.add(textField);
+            frame.setSize(300, 200);
+            frame.setVisible(true);
+            frame.addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent we) {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+    `
+},
+"Program 5": { 
+    output: `0000`, 
+    code: `
+    import java.awt.*;
+    import java.awt.event.*;
+
+    public class TextFieldCustomLayout {
+        public static void main(String[] args) {
+            Frame frame = new Frame("TextField with Custom Layout");
+            TextField textField = new TextField(20);
+            Panel panel = new Panel();
+            panel.setLayout(new FlowLayout());
+            panel.add(textField);
+            frame.add(panel);
+            frame.setSize(300, 200);
+            frame.setVisible(true);
+            frame.addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent we) {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+    `
+},
+"Program 6": { 
+    output: `0000`, 
+    code: `
+    import java.awt.*;
+    import java.awt.event.*;
+
+    public class CheckboxFlowLayout {
+        public static void main(String[] args) {
+            Frame frame = new Frame("Checkbox with FlowLayout");
+            Checkbox checkbox = new Checkbox("Accept Terms");
+            frame.setLayout(new FlowLayout());
+            frame.add(checkbox);
+            frame.setSize(300, 200);
+            frame.setVisible(true);
+            frame.addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent we) {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+    `
+},
+"Program 7": { 
+    output: `0000`, 
+    code: `
+    import java.awt.*;
+    import java.awt.event.*;
+
+    public class CheckboxCustomLayout {
+        public static void main(String[] args) {
+            Frame frame = new Frame("Checkbox with Custom Layout");
+            Checkbox checkbox = new Checkbox("Accept Terms");
+            Panel panel = new Panel();
+            panel.setLayout(new GridLayout(1, 1)); // Custom layout example
+            panel.add(checkbox);
+            frame.add(panel);
+            frame.setSize(300, 200);
+            frame.setVisible(true);
+            frame.addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent we) {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+    `
+},
+"Program 8": { 
+    output: `0000`, 
+    code: `
+    import java.awt.*;
+    import java.awt.event.*;
+
+    public class LabelFlowLayout {
+        public static void main(String[] args) {
+            Frame frame = new Frame("Label with FlowLayout");
+            Label label = new Label("This is a Label");
+            frame.setLayout(new FlowLayout());
+            frame.add(label);
+            frame.setSize(300, 200);
+            frame.setVisible(true);
+            frame.addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent we) {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+    `
+},
+"Program 9": { 
+    output: `0000`, 
+    code: `
+    import java.awt.*;
+    import java.awt.event.*;
+
+    public class LabelCustomLayout {
+        public static void main(String[] args) {
+            Frame frame = new Frame("Label with Custom Layout");
+            Label label = new Label("This is a Label");
+            Panel panel = new Panel();
+            panel.setLayout(new FlowLayout());
+            panel.add(label);
+            frame.add(panel);
+            frame.setSize(300, 200);
+            frame.setVisible(true);
+            frame.addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent we) {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+    `
+},
+"Program 10": { 
+    output: `0000`, 
+    code: `
+    import java.awt.*;
+    import java.awt.event.*;
+
+    public class ChoiceFlowLayout {
+        public static void main(String[] args) {
+            Frame frame = new Frame("Choice with FlowLayout");
+            Choice choice = new Choice();
+            choice.add("Option 1");
+            choice.add("Option 2");
+            choice.add("Option 3");
+            frame.setLayout(new FlowLayout());
+            frame.add(choice);
+            frame.setSize(300, 200);
+            frame.setVisible(true);
+            frame.addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent we) {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+    `
+},
+"Program 11": { 
+    output: `0000`, 
+    code: `
+    import java.awt.*;
+    import java.awt.event.*;
+
+    public class ChoiceCustomLayout {
+        public static void main(String[] args) {
+            Frame frame = new Frame("Choice with Custom Layout");
+            Choice choice = new Choice();
+            choice.add("Option 1");
+            choice.add("Option 2");
+            choice.add("Option 3");
+            Panel panel = new Panel();
+            panel.setLayout(new GridLayout(1, 1)); // Custom layout example
+            panel.add(choice);
+            frame.add(panel);
+            frame.setSize(300, 200);
+            frame.setVisible(true);
+            frame.addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent we) {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+    `
+},
+"Program 12": { 
+    output: `0000`, 
+    code: `
+    import java.awt.*;
+    import java.awt.event.*;
+
+    public class CheckboxGroupFlowLayout {
+        public static void main(String[] args) {
+            Frame frame = new Frame("CheckboxGroup with FlowLayout");
+            CheckboxGroup group = new CheckboxGroup();
+            Checkbox checkbox1 = new Checkbox("Option 1", group, false);
+            Checkbox checkbox2 = new Checkbox("Option 2", group, false);
+            frame.setLayout(new FlowLayout());
+            frame.add(checkbox1);
+            frame.add(checkbox2);
+            frame.setSize(300, 200);
+            frame.setVisible(true);
+            frame.addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent we) {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+    `
+},
+"Program 13": { 
+    output: `0000`, 
+    code: `
+    import java.awt.*;
+    import java.awt.event.*;
+
+    public class CheckboxGroupCustomLayout {
+        public static void main(String[] args) {
+            Frame frame = new Frame("CheckboxGroup with Custom Layout");
+            CheckboxGroup group = new CheckboxGroup();
+            Checkbox checkbox1 = new Checkbox("Option 1", group, false);
+            Checkbox checkbox2 = new Checkbox("Option 2", group, false);
+            Panel panel = new Panel();
+            panel.setLayout(new GridLayout(1, 2)); // Custom layout example
+            panel.add(checkbox1);
+            panel.add(checkbox2);
+            frame.add(panel);
+            frame.setSize(300, 200);
+            frame.setVisible(true);
+            frame.addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent we) {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+    `
+},
+"Program 14": { 
+    output: `0000`, 
+    code: `
+    import java.awt.*;
+    import java.awt.event.*;
+
+    public class ListFlowLayout {
+        public static void main(String[] args) {
+            Frame frame = new Frame("List with FlowLayout");
+            List list = new List();
+            list.add("Item 1");
+            list.add("Item 2");
+            list.add("Item 3");
+            frame.setLayout(new FlowLayout());
+            frame.add(list);
+            frame.setSize(300, 200);
+            frame.setVisible(true);
+            frame.addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent we) {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+    `
+},
+"Program 15": { 
+    output: `0000`, 
+    code: `
+    import java.awt.*;
+    import java.awt.event.*;
+
+    public class ListCustomLayout {
+        public static void main(String[] args) {
+            Frame frame = new Frame("List with Custom Layout");
+            List list = new List();
+            list.add("Item 1");
+            list.add("Item 2");
+            list.add("Item 3");
+            Panel panel = new Panel();
+            panel.setLayout(new GridLayout(1, 1)); // Custom layout example
+            panel.add(list);
+            frame.add(panel);
+            frame.setSize(300, 200);
+            frame.setVisible(true);
+            frame.addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent we) {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+    `
+},
+"Program 16": { 
+    output: `0000`, 
+    code: `
+    import java.awt.*;
+    import java.awt.event.*;
+
+    public class TextAreaFlowLayout {
+        public static void main(String[] args) {
+            Frame frame = new Frame("TextArea with FlowLayout");
+            TextArea textArea = new TextArea(5, 20);
+            frame.setLayout(new FlowLayout());
+            frame.add(textArea);
+            frame.setSize(300, 200);
+            frame.setVisible(true);
+            frame.addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent we) {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+    `
+},
+"Program 17": { 
+    output: `0000`, 
+    code: `
+    import java.awt.*;
+    import java.awt.event.*;
+
+    public class TextAreaCustomLayout {
+        public static void main(String[] args) {
+            Frame frame = new Frame("TextArea with Custom Layout");
+            TextArea textArea = new TextArea(5, 20);
+            Panel panel = new Panel();
+            panel.setLayout(new GridLayout(1, 1)); // Custom layout example
+            panel.add(textArea);
+            frame.add(panel);
+            frame.setSize(300, 200);
+            frame.setVisible(true);
+            frame.addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent we) {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+    `
+},
+"Program 18": { 
+    output: `0000`, 
+    code: `
+    import java.awt.*;
+    import java.awt.event.*;
+
+    public class Calculator {
+        public static void main(String[] args) {
+            Frame frame = new Frame("Calculator");
+            frame.setLayout(new GridLayout(4, 4));
+            String[] buttons = {
+                "7", "8", "9", "/",
+                "4", "5", "6", "*",
+                "1", "2", "3", "-",
+                "C", "0", "=", "+"
+            };
+            for (String label : buttons) {
+                frame.add(new Button(label));
+            }
+            frame.setSize(400, 400);
+            frame.setVisible(true);
+            frame.addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent we) {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+    `
+}
+        };
+
+        function showProgram(programName) {
+            const program = programs[programName];
+            if (program) {
+                if(program.output == "0000"){
+                    document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                `;
+                }
+                else{
+                document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                    <h2>Output:</h2>
+                    <div class="code-block">${program.output}</div>
+                `;
+            }    
+                }
+                 else {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>Program not found</h2>
+                    <p>Details for this program are not available.</p>
+                `;
+            }
+        }
+    </script>
+
+</body></html>
