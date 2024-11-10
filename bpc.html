@@ -1,0 +1,3071 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Programming Constructs</title>
+     <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <nav class="navbar background">
+        <ul class="navlist">
+            <a href="index.html">Home</a></li> 
+  
+            <a href="Array.html">ARRAYS</a></li>
+            
+            <a href="2Darray.html" >2D-ARRAYS</a></li>
+            
+            <a href="Applet.html">APPLETS</a></li>
+            
+            <a href="bpc.html">BASIC PROGAMMING CONSTRUCTS</a></li>
+            
+            <a href="Data Conversion.html">DATA CONSVERSION</a></li>
+            
+            <a href="DEM.html">DELEGATION EVENT MODEL</a></li>
+            
+            <a href="Exception Handling.html">EXCEPTION HANDLING</a></li>
+            
+            <a href="Functions.html">FUNCTIONS</a></li>
+            
+            <a href="GUI AWT.html">GRAPHICAL USER INTERFACE (AWT)</a></li>
+            
+            <a href="Inheritance.html">INHERITANCE</a></li>
+            
+            <a href="IO.html">INPUT/OUTPUT</a></li>
+            
+            <a href="Interface.html">INTERFACES</a></li>
+            
+            <a href="JDBC.html">JAVA DATABASE CONECTIVITY</a></li>
+            
+            <a href="Threads.html">MULTITHREADING</a></li>
+            
+            <a href="OOP.html">OBJECT ORIENTED PROGRAMMING</a></li>
+            
+            <a href="Packages.html">PACKAGES</a></li>
+          
+            <a href="StringHandling.html">STRING HANDLING</a></li>
+        </ul>
+    </nav>
+    <div style="display: flex; margin: 0; max-height: 100vh;">
+    <div class="sidebar">
+        <h2>Programs</h2>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 1&#39;)">Program 1: Write a Java program to print "Hello, World!"</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 2&#39;)">Program 2: Write a Java program to print the sum of two numbers.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 3&#39;)">Program 3: Write a Java program that takes two numbers and displays the product of two numbers.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 4&#39;)">Program 4: Write a Java program to print the sum, multiply, subtract, divide, and remainder of two numbers.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 5&#39;)">Program 5: Write a Java program that takes five numbers as input to calculate and print the average of the numbers.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 6&#39;)">Program 6: Write a Java program to swap two variables.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 7&#39;)">Program 7: Write a Java program to convert a decimal number to binary numbers.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 8&#39;)">Program 8: Write a Java program to convert a binary number to a decimal number.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 9&#39;)">Program 9: Write a Java program to check whether Java is installed on your computer or not.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 10&#39;)">Program 10: Write a Java program to compute the sum of the digits of an integer.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 11&#39;)">Program 11: Write a Java program to compare two numbers.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 12&#39;)">Program 12: Write a Java program to count the letters, spaces, numbers, and other characters of an input string.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 13&#39;)">Program 13: Write a Java program to print the ASCII value of a given character.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 14&#39;)">Program 14: Write a Java program that accepts an integer (n) and computes the value of n + nn + nnn.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 15&#39;)">Program 15: Write a Java program to display the system time.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 16&#39;)">Program 16: Write a Java program to print the odd numbers from 1 to 20.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 17&#39;)">Program 17: Write a Java program to print the even numbers from 1 to 20.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 18&#39;)">Program 18: Write a Java program to convert a string to an integer.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 19&#39;)">Program 19: Write a Java program to convert seconds to hour, minute, and seconds.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 20&#39;)">Program 20: Write a Java program to compute the sum of the first 100 prime numbers.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 21&#39;)">Program 21: Write a Java program to swap the first and last elements of an array and create a new array.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 22&#39;)">Program 22: Write a Java program to count the number of even and odd elements in a given array.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 23&#39;)">Program 23: Write a Java program to compute the square root of a given integer.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 24&#39;)">Program 24: Write a Java program to check if a positive number is a palindrome or not.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 25&#39;)">Program 25: Write a Java program to add two numbers without using any arithmetic operators.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 26&#39;)">Program 26: Write a Java program to add all the digits of a given positive integer.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 27&#39;)">Program 27: Write a Java program to find the area of a circle.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 28&#39;)">Program 28: Write a Java program to find the area of a rectangle.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 29&#39;)">Program 29: Write a Java program to find the area of a triangle.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 30&#39;)">Program 30: Write a Java program to find the area of an equilateral triangle.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 31&#39;)">Program 31: Write a Java program to find the area of a rhombus.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 32&#39;)">Program 32: Write a Java program to find the area of a parallelogram.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 33&#39;)">Program 33: Write a Java program to find the area of a prism.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 34&#39;)">Program 34: Write a Java program to find the volume of a sphere.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 35&#39;)">Program 35: Write a Java program to find the volume of a cylinder.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 36&#39;)">Program 36: Write a Java program to find the volume of a cuboid.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 37&#39;)">Program 37: Write a Java program to find the volume of a cone.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 38&#39;)">Program 38: Write a Java program to find the surface area of a cuboid.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 39&#39;)">Program 39: Write a Java program to find the surface area of a cylinder.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 40&#39;)">Program 40: Write a Java program to find the surface area of a cube.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 41&#39;)">Program 41: Write a Java program to calculate average marks.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 42&#39;)">Program 42: Write a Java program to check vowel or consonant.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 43&#39;)">Program 43: Java program to sum of N numbers.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 44&#39;)">Program 44: Java program to find factorial of any number.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 45&#39;)">Program 45: Java Program to calculate electricity bill.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 46&#39;)">Program 46: Java Program To Calculate CGPA Percentage.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 47&#39;)">Program 47: Java Program to calculate compound interest.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 48&#39;)">Program 48: Java Program To Calculate Batting Average.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 49&#39;)">Program 49: Java Program To Calculate Commission Percentage.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 50&#39;)">Program 50: Java Program To Find Distance Between Two Points.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 51&#39;)">Program 51: Java Program To Calculate Power Of Number.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 52&#39;)">Program 52: Write a Java program to take three numbers from the user and print the greatest number.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 53&#39;)">Program 53: Write a Java program to find the number of days in a month.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 54&#39;)">Program 54: Write a Java program to test if a number is positive or negative.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 55&#39;)">Program 55: Write a Java Program to accept number of week's day (1-7) and print name of the day.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 56&#39;)">Program 56: Write a Java program that takes a year from the user and print whether that year is a leap year or not.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 57&#39;)">Program 57: Write a Java program to input 5 numbers from the keyboard and find their sum and average.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 58&#39;)">Program 58: Write a program in Java to display the first 5 natural numbers.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 59&#39;)">Program 59: Write a Java program to check vowel or consonant.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 60&#39;)">Program 60: Write a Java program to display the cube of the number up to a given integer.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 61&#39;)">Program 61: Write a Java program to display the n terms of odd natural numbers and their sum.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 62&#39;)">Program 62: Write a Java program to display the multiplication table of a given integer.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 63&#39;)">Program 63: Write a Java program that reads an integer and checks whether it is negative, zero, or positive.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 64&#39;)">Program 64: Write a Java program that reads a positive integer and counts the number of digits.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 65&#39;)">Program 65: Write a Java program that accepts three numbers and checks if all numbers are equal or not.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 66&#39;)">Program 66: Write a Java program that accepts three numbers from the user and checks if the numbers are in “increasing” or “decreasing” order.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 67&#39;)">Program 67: Write a Java program that determines a student's grade.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 68&#39;)">Program 68: Write a Java program to create a simple calculator.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 69&#39;)">Program 69: Write a Java program to concatenate two strings.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 70&#39;)">Program 70: Write a Java program to convert all characters in a string to lowercase.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 71&#39;)">Program 71: Write a Java program to convert all characters in a string to uppercase.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 72&#39;)">Program 72: Write a Java program to trim a string (remove whitespaces).</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 73&#39;)">Program 73: Write a Java program to get a substring of a given string between two specified positions.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 74&#39;)">Program 74: Write a Java program to replace all the ‘d’ characters with ‘f’ characters.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 75&#39;)">Program 75: Write a Java program to get the length of a given string.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 76&#39;)">Program 76: Write a Java program to print current date and time in the specified format.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 77&#39;)">Program 77: Write a Java program to get the character at the given index within the String.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 78&#39;)">Program 78: Write a Java program to remove a particular character from a string.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 79&#39;)">Program 79: Write a Java program to reverse a String.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 80&#39;)">Program 80: Write a Java program to remove HTML tags from a string.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 81&#39;)">Program 81: Write a Java program to count the total number of lines from a string.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 82&#39;)">Program 82: Write a Java program to sum values of an array.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 83&#39;)">Program 83: Write a Java program to find the index of an array element.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 84&#39;)">Program 84: Write a Java program to calculate the average value of array elements.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 85&#39;)">Program 85: Write a Java program to test if an array contains a specific value.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 86&#39;)">Program 86: Write a Java program to find the maximum and minimum value of an array.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 87&#39;)">Program 87: Write a Java program to insert an element (specific position) into an array.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 88&#39;)">Program 88: Write a Java program to reverse an array of integer values.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 89&#39;)">Program 89: Write a Java program to find the common elements between two arrays.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 90&#39;)">Program 90: Write a Java program to find the duplicate values of an array of integer values.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 91&#39;)">Program 91: Write a Java program to convert an array to ArrayList.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 92&#39;)">Program 92: Write a Java program to add two matrices of the same size.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 93&#39;)">Program 93: Write a Java program to find the second largest number from the array.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 94&#39;)">Program 94: Write a Java program to find the second lowest number from the array.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 95&#39;)">Program 95: Write a Java program to find the number of even and odd integers in a given array of integers.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 96&#39;)">Program 96: Write a Java program to get the difference between the largest and smallest values in an array of integers.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 97&#39;)">Program 97: Write a Java program to segregate all 0s on the left side and all 1s on the right side of a given array of 0s and 1s.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 98&#39;)">Program 98: Write a Java program to cyclically rotate a given array clockwise by one.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 99&#39;)">Program 99: Write a Java program to print all unique elements in an array.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 100&#39;)">Program 100: Write a Java Program to Sort the Array in Ascending Order.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 101&#39;)">Program 101: Write a Java Program to Sort the Array in Descending Order.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 102&#39;)">Program 102: Write a Java Program to Sort Names in Alphabetical Order.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 103&#39;)">Program 103: Write a Java Program to Display Transpose Matrix.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 104&#39;)">Program 104: Write a Java Program to Search Key Elements in an Array.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 105&#39;)">Program 105: Write a Java Program to Accept the Marks of a Student and find Total Marks and Percentage.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 106&#39;)">Program 106: Write a Java program to print numbers from 1 to 10 using a loop.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 107&#39;)">Program 107: Write a Java program to calculate the sum of the first 10 natural numbers using a loop.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 108&#39;)">Program 108: Write a Java program to print the multiplication table of a given number.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 109&#39;)">Program 109: Write a Java program to find the factorial value of any number entered through the keyboard.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 110&#39;)">Program 110: Write a Java program that prompts the user to input an integer and then outputs the number with the digits reversed.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 111&#39;)">Program 111: Write a Java program that reads a set of integers and then prints the sum of the even and odd integers using a loop.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 112&#39;)">Program 112: Write a Java program to check whether the number is a prime number or not.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 113&#39;)">Program 113: Write a Java program to calculate the HCF of two given numbers using a loop.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 114&#39;)">Program 114: Write a Java program to enter numbers until the user wants and at the end display the count of positive, negative, and zero numbers.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 115&#39;)">Program 115: Write a Java program to enter numbers until the user wants and at the end display the largest and smallest numbers entered.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 116&#39;)">Program 116: Write a Java program to print all Armstrong numbers between 1 to 600 using a loop.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 117&#39;)">Program 117: Write a Java program to count the total number of notes in the entered amount using a loop.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 118&#39;)">Program 118: Write a Java program to print the Fibonacci series of n terms where n is input by the user using a loop.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 119&#39;)">Program 119: Write a Java program to calculate the sum of the following series where n is input by the user.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 120&#39;)">Program 120: Write a Java method to compute the average of three numbers.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 121&#39;)">Program 121: Write a Java method to find the smallest number among three numbers.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 122&#39;)">Program 122: Write a Java method to count all words in a string.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 123&#39;)">Program 123: Write a Java method to count all vowels in a string.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 124&#39;)">Program 124: Write a Java method to compute the sum of the digits in an integer.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 125&#39;)">Program 125: Write a Java method to check whether a year entered by the user is a leap year or not.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 126&#39;)">Program 126: Write a Java method to calculate the area of a triangle.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 127&#39;)">Program 127: Write a Java method to find the area of a pentagon.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 128&#39;)">Program 128: Write a Java method to check if a number is even or not.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 129&#39;)">Program 129: Write a Java method to check if a number is a palindrome or not.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 130&#39;)">Program 130: Write a Java method to display prime numbers between 1 to 20.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 131&#39;)">Program 131: Write a Java method to find the GCD and LCM of two numbers.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 132&#39;)">Program 132: Write a Java method to find the factorial using recursion.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 133&#39;)">Program 133: Write a Java program to reverse an integer number.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 134&#39;)">Program 134: Write a Java program to round a float number to specified decimals.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 135&#39;)">Program 135: Write a Java program to test if a double number is an integer.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 136&#39;)">Program 136: Write a Java program to round up the result of integer division.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 137&#39;)">Program 137: Write a Java program to convert a Roman number to an integer number.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 138&#39;)">Program 138: Write a Java program to convert a float value to its absolute value.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 139&#39;)">Program 139: Write a Java program to accept a float value and return a rounded float value.</div>
+
+
+    </div>
+
+    <div class="content" id="programContent">
+                    <h2>Program 136</h2>
+                    
+                    <div class="code-block">public class RoundUpDivision {
+  public static void main(String[] args) {
+    int numerator = 7;
+    int denominator = 3;
+    int result = roundUpDivision(numerator, denominator);
+    System.out.println("Rounded up result: " + result);
+  }
+
+  public static int roundUpDivision(int numerator, int denominator) {
+    return (int) Math.ceil((double) numerator / denominator);
+  }
+}</div>
+                    <h2>Output:</h2>
+                    <div class="code-block">Rounded up result: 3</div>
+                </div>
+</div>
+    
+    <script>
+        const programs = {
+
+    "Program 1": { 
+        output: `Hello World!`, 
+        code: `
+            public class HelloWorld {
+                public static void main(String[] args) {
+                    System.out.println("Hello World!");
+                }
+            }
+        `
+    },
+    "Program 2": { 
+        output: `Enter first number: 5
+Enter second number: 10
+Sum: 15`, 
+        code: `
+            import java.util.Scanner;
+
+            public class SumOfTwoNumbers {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter first number: ");
+                    int num1 = scanner.nextInt();
+                    System.out.print("Enter second number: ");
+                    int num2 = scanner.nextInt();
+                    int sum = num1 + num2;
+                    System.out.println("Sum: " + sum);
+                }
+            }
+        `
+    },
+    "Program 3": { 
+        output: `Enter first number: 5
+Enter second number: 10
+Product: 50`, 
+        code: `
+            import java.util.Scanner;
+
+            public class ProductOfTwoNumbers {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter first number: ");
+                    int num1 = scanner.nextInt();
+                    System.out.print("Enter second number: ");
+                    int num2 = scanner.nextInt();
+                    int product = num1 * num2;
+                    System.out.println("Product: " + product);
+                }
+            }
+        `
+    },
+    "Program 4": { 
+        output: `Enter first number: 10
+Enter second number: 5
+Sum: 15
+Product: 50
+Difference: 5
+Quotient: 2.0
+Remainder: 0`, 
+        code: `
+            import java.util.Scanner;
+
+            public class BasicOperations {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter first number: ");
+                    int num1 = scanner.nextInt();
+                    System.out.print("Enter second number: ");
+                    int num2 = scanner.nextInt();
+                    
+                    int sum = num1 + num2;
+                    int product = num1 * num2;
+                    int difference = num1 - num2;
+                    double quotient = (double) num1 / num2;
+                    int remainder = num1 % num2;
+
+                    System.out.println("Sum: " + sum);
+                    System.out.println("Product: " + product);
+                    System.out.println("Difference: " + difference);
+                    System.out.println("Quotient: " + quotient);
+                    System.out.println("Remainder: " + remainder);
+                }
+            }
+        `
+    },
+    "Program 5": { 
+        output: `Enter number 1: 10
+Enter number 2: 20
+Enter number 3: 30
+Enter number 4: 40
+Enter number 5: 50
+Average: 30.0`, 
+        code: `
+            import java.util.Scanner;
+
+            public class AverageOfNumbers {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    double sum = 0;
+
+                    for (int i = 1; i <= 5; i++) {
+                        System.out.print("Enter number " + i + ": ");
+                        sum += scanner.nextDouble();
+                    }
+
+                    double average = sum / 5;
+                    System.out.println("Average: " + average);
+                }
+            }
+        `
+    },
+    "Program 6": { 
+        output: `Before swapping: a = 5, b = 10
+After swapping: a = 10, b = 5`, 
+        code: `
+            public class SwapVariables {
+                public static void main(String[] args) {
+                    int a = 5, b = 10;
+                    System.out.println("Before swapping: a = " + a + ", b = " + b);
+                    
+                    int temp = a;
+                    a = b;
+                    b = temp;
+                    
+                    System.out.println("After swapping: a = " + a + ", b = " + b);
+                }
+            }
+        `
+    },
+    "Program 7": { 
+        output: `Enter a decimal number: 10
+Binary representation: 1010`, 
+        code: `
+            import java.util.Scanner;
+
+            public class DecimalToBinary {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter a decimal number: ");
+                    int decimal = scanner.nextInt();
+                    String binary = Integer.toBinaryString(decimal);
+                    System.out.println("Binary representation: " + binary);
+                }
+            }
+        `
+    },
+    "Program 8": { 
+        output: `Enter a binary number: 1010
+Decimal representation: 10`, 
+        code: `
+            import java.util.Scanner;
+
+            public class BinaryToDecimal {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter a binary number: ");
+                    String binary = scanner.next();
+                    int decimal = Integer.parseInt(binary, 2);
+                    System.out.println("Decimal representation: " + decimal);
+                }
+            }
+        `
+    },
+    "Program 9": { 
+        output: `Java is installed on your computer.`, 
+        code: `
+            public class CheckJavaInstallation {
+                public static void main(String[] args) {
+                    try {
+                        Process process = Runtime.getRuntime().exec("java -version");
+                        if (process.waitFor() == 0) {
+                            System.out.println("Java is installed on your computer.");
+                        } else {
+                            System.out.println("Java is not installed.");
+                        }
+                    } catch (Exception e) {
+                        System.out.println("Java is not installed.");
+                    }
+                }
+            }
+        `
+    },
+    "Program 10": { 
+        output: `Enter an integer: 12345
+Sum of digits: 15`, 
+        code: `
+            import java.util.Scanner;
+
+            public class SumOfDigits {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter an integer: ");
+                    int number = scanner.nextInt();
+                    int sum = 0;
+
+                    while (number != 0) {
+                        sum += number % 10;
+                        number /= 10;
+                    }
+
+                    System.out.println("Sum of digits: " + sum);
+                }
+            }
+        `
+    },
+    "Program 11": { 
+        output: `Enter first number: 10
+Enter second number: 5
+10 is greater than 5`, 
+        code: `
+            import java.util.Scanner;
+
+            public class CompareTwoNumbers {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter first number: ");
+                    int num1 = scanner.nextInt();
+                    System.out.print("Enter second number: ");
+                    int num2 = scanner.nextInt();
+
+                    if (num1 > num2) {
+                        System.out.println(num1 + " is greater than " + num2);
+                    } else if (num1 < num2) {
+                        System.out.println(num1 + " is less than " + num2);
+                    } else {
+                        System.out.println("Both numbers are equal.");
+                    }
+                }
+            }
+        `
+    },
+    "Program 12": { 
+        output: `Enter a string: Hello World!
+Letters: 10
+Digits: 0
+Spaces: 1
+Other characters: 0`, 
+        code: `
+            import java.util.Scanner;
+
+            public class CountCharacters {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter a string: ");
+                    String input = scanner.nextLine();
+
+                    int letters = 0, digits = 0, spaces = 0, others = 0;
+
+                    for (char c : input.toCharArray()) {
+                        if (Character.isLetter(c)) {
+                            letters++;
+                        } else if (Character.isDigit(c)) {
+                            digits++;
+                        } else if (Character.isWhitespace(c)) {
+                            spaces++;
+                        } else {
+                            others++;
+                        }
+                    }
+
+                    System.out.println("Letters: " + letters);
+                    System.out.println("Digits: " + digits);
+                    System.out.println("Spaces: " + spaces);
+                    System.out.println("Other characters: " + others);
+                }
+            }
+        `
+    },
+    "Program 13": { 
+        output: `Enter a character: A
+ASCII value of 'A' is: 65`, 
+        code: `
+            import java.util.Scanner;
+
+            public class AsciiValue {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter a character: ");
+                    char c = scanner.next().charAt(0);
+                    int ascii = (int) c;
+                    System.out.println("ASCII value of '" + c + "' is: " + ascii);
+                }
+            }
+        `
+    },
+    "Program 14": { 
+        output: `Enter an integer: 5
+Result: 615`, 
+        code: `
+            import java.util.Scanner;
+
+            public class ComputeValue {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter an integer: ");
+                    int n = scanner.nextInt();
+                    int nn = Integer.parseInt(String.valueOf(n) + n);
+                    int nnn = Integer.parseInt(String.valueOf(n) + n + n);
+                    int result = n + nn + nnn;
+                    System.out.println("Result: " + result);
+                }
+            }
+        `
+    },
+    "Program 15": { 
+        output: `Current time: 14:35:23.456`, 
+        code: `
+            import java.time.LocalTime;
+
+            public class DisplaySystemTime {
+                public static void main(String[] args) {
+                    LocalTime time = LocalTime.now();
+                    System.out.println("Current time: " + time);
+                }
+            }
+        `
+    },
+
+    "Program 16": { 
+        output: `Odd numbers from 1 to 20:
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19`, 
+        code: `
+            public class OddNumbers {
+                public static void main(String[] args) {
+                    System.out.println("Odd numbers from 1 to 20:");
+                    for (int i = 1; i <= 20; i += 2) {
+                        System.out.println(i);
+                    }
+                }
+            }
+        `
+    },
+    "Program 17": { 
+        output: `Even numbers from 1 to 20:
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20`, 
+        code: `
+            public class EvenNumbers {
+                public static void main(String[] args) {
+                    System.out.println("Even numbers from 1 to 20:");
+                    for (int i = 2; i <= 20; i += 2) {
+                        System.out.println(i);
+                    }
+                }
+            }
+        `
+    },
+    "Program 18": { 
+        output: `Enter a string representing an integer: 123
+Converted integer: 123`, 
+        code: `
+            import java.util.Scanner;
+
+            public class StringToInteger {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter a string representing an integer: ");
+                    String str = scanner.next();
+                    int number = Integer.parseInt(str);
+                    System.out.println("Converted integer: " + number);
+                }
+            }
+        `
+    },
+    "Program 19": { 
+        output: `Enter seconds: 3661
+Converted time: 1 hours, 1 minutes, 1 seconds`, 
+        code: `
+            import java.util.Scanner;
+
+            public class ConvertSeconds {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter seconds: ");
+                    int seconds = scanner.nextInt();
+
+                    int hours = seconds / 3600;
+                    seconds %= 3600;
+                    int minutes = seconds / 60;
+                    seconds %= 60;
+
+                    System.out.println("Converted time: " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds");
+                }
+            }
+        `
+    },
+    "Program 20": { 
+        output: `Sum of the first 100 prime numbers: 24133`, 
+        code: `
+            public class SumOfPrimes {
+                public static void main(String[] args) {
+                    int count = 0, num = 2, sum = 0;
+
+                    while (count < 100) {
+                        boolean isPrime = true;
+
+                        for (int i = 2; i <= Math.sqrt(num); i++) {
+                            if (num % i == 0) {
+                                isPrime = false;
+                                break;
+                            }
+                        }
+
+                        if (isPrime) {
+                            sum += num;
+                            count++;
+                        }
+                        num++;
+                    }
+                    System.out.println("Sum of the first 100 prime numbers: " + sum);
+                }
+            }
+        `
+    },
+    "Program 21": { 
+        output: `Original array: 1 2 3 4 5 
+Swapped array: 5 2 3 4 1`, 
+        code: `
+            public class SwapFirstLast {
+                public static void main(String[] args) {
+                    int[] array = {1, 2, 3, 4, 5};
+                    int[] swappedArray = array.clone();
+                    int temp = swappedArray[0];
+                    swappedArray[0] = swappedArray[swappedArray.length - 1];
+                    swappedArray[swappedArray.length - 1] = temp;
+
+                    System.out.print("Original array: ");
+                    for (int num : array) {
+                        System.out.print(num + " ");
+                    }
+                    System.out.print("\\nSwapped array: ");
+                    for (int num : swappedArray) {
+                        System.out.print(num + " ");
+                    }
+                }
+            }
+        `
+    },
+    "Program 22": { 
+        output: `Even count: 5
+Odd count: 5`, 
+        code: `
+            public class CountEvenOdd {
+                public static void main(String[] args) {
+                    int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+                    int evenCount = 0, oddCount = 0;
+
+                    for (int num : array) {
+                        if (num % 2 == 0) {
+                            evenCount++;
+                        } else {
+                            oddCount++;
+                        }
+                    }
+                    System.out.println("Even count: " + evenCount);
+                    System.out.println("Odd count: " + oddCount);
+                }
+            }
+        `
+    },
+    "Program 23": { 
+        output: `Enter a positive integer: 16
+Square root: 4.0`, 
+        code: `
+            import java.util.Scanner;
+
+            public class SquareRoot {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter a positive integer: ");
+                    int number = scanner.nextInt();
+                    double sqrt = Math.sqrt(number);
+                    System.out.println("Square root: " + sqrt);
+                }
+            }
+        `
+    },
+    "Program 24": { 
+        output: `Enter a positive number: 121
+121 is a palindrome.`, 
+        code: `
+            import java.util.Scanner;
+
+            public class PalindromeCheck {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter a positive number: ");
+                    int number = scanner.nextInt();
+                    int original = number, reversed = 0;
+
+                    while (number != 0) {
+                        int digit = number % 10;
+                        reversed = reversed * 10 + digit;
+                        number /= 10;
+                    }
+
+                    if (original == reversed) {
+                        System.out.println(original + " is a palindrome.");
+                    } else {
+                        System.out.println(original + " is not a palindrome.");
+                    }
+                }
+            }
+        `
+    },
+    "Program 25": { 
+        output: `Sum: 15`, 
+        code: `
+            public class AddWithoutOperators {
+                public static void main(String[] args) {
+                    int a = 5, b = 10;
+
+                    while (b != 0) {
+                        int carry = a & b;
+                        a = a ^ b;
+                        b = carry << 1;
+                    }
+                    System.out.println("Sum: " + a);
+                }
+            }
+        `
+    },
+    "Program 26": { 
+        output: `Enter a positive integer: 123
+Sum of digits: 6`, 
+        code: `
+            import java.util.Scanner;
+
+            public class SumOfDigits {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter a positive integer: ");
+                    int number = scanner.nextInt();
+                    int sum = 0;
+
+                    while (number != 0) {
+                        sum += number % 10;
+                        number /= 10;
+                    }
+
+                    System.out.println("Sum of digits: " + sum);
+                }
+            }
+        `
+    },
+    "Program 27": { 
+        output: `Enter radius of the circle: 5
+Area of the circle: 78.53981633974483`, 
+        code: `
+            import java.util.Scanner;
+
+            public class AreaOfCircle {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter radius of the circle: ");
+                    double radius = scanner.nextDouble();
+                    double area = Math.PI * radius * radius;
+                    System.out.println("Area of the circle: " + area);
+                }
+            }
+        `
+    },
+    "Program 28": { 
+        output: `Enter length of the rectangle: 5
+Enter width of the rectangle: 10
+Area of the rectangle: 50.0`, 
+        code: `
+            import java.util.Scanner;
+
+            public class AreaOfRectangle {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter length of the rectangle: ");
+                    double length = scanner.nextDouble();
+                    System.out.print("Enter width of the rectangle: ");
+                    double width = scanner.nextDouble();
+                    double area = length * width;
+                    System.out.println("Area of the rectangle: " + area);
+                }
+            }
+        `
+    },
+    "Program 29": { 
+        output: `Enter base of the triangle: 5
+Enter height of the triangle: 10
+Area of the triangle: 25.0`, 
+        code: `
+            import java.util.Scanner;
+
+            public class AreaOfTriangle {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter base of the triangle: ");
+                    double base = scanner.nextDouble();
+                    System.out.print("Enter height of the triangle: ");
+                    double height = scanner.nextDouble();
+                    double area = 0.5 * base * height;
+                    System.out.println("Area of the triangle: " + area);
+                }
+            }
+        `
+    },
+    "Program 30": { 
+        output: `Enter side length of the equilateral triangle: 5
+Area of the equilateral triangle: 10.825317547305486`, 
+        code: `
+            import java.util.Scanner;
+
+            public class AreaOfEquilateralTriangle {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter side length of the equilateral triangle: ");
+                    double side = scanner.nextDouble();
+                    double area = (Math.sqrt(3) / 4) * side * side;
+                    System.out.println("Area of the equilateral triangle: " + area);
+                }
+            }
+        `
+    },
+
+    "Program 31": { 
+        output: `Enter the diagonals of the rhombus: 5 6
+Area of the rhombus: 15.0`, 
+        code: `
+            import java.util.Scanner;
+
+            public class AreaOfRhombus {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter the diagonals of the rhombus: ");
+                    double d1 = scanner.nextDouble();
+                    double d2 = scanner.nextDouble();
+                    double area = (d1 * d2) / 2;
+                    System.out.println("Area of the rhombus: " + area);
+                }
+            }
+        `
+    },
+    "Program 32": { 
+        output: `Enter base and height of the parallelogram: 5 10
+Area of the parallelogram: 50.0`, 
+        code: `
+            import java.util.Scanner;
+
+            public class AreaOfParallelogram {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter base and height of the parallelogram: ");
+                    double base = scanner.nextDouble();
+                    double height = scanner.nextDouble();
+                    double area = base * height;
+                    System.out.println("Area of the parallelogram: " + area);
+                }
+            }
+        `
+    },
+    "Program 33": { 
+        output: `Enter base area and height of the prism: 20 10
+Volume of the prism: 200.0`, 
+        code: `
+            import java.util.Scanner;
+
+            public class AreaOfPrism {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter base area and height of the prism: ");
+                    double baseArea = scanner.nextDouble();
+                    double height = scanner.nextDouble();
+                    double volume = baseArea * height;
+                    System.out.println("Volume of the prism: " + volume);
+                }
+            }
+        `
+    },
+    "Program 34": { 
+        output: `Enter radius of the sphere: 5
+Volume of the sphere: 523.5987755982989`, 
+        code: `
+            import java.util.Scanner;
+
+            public class VolumeOfSphere {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter radius of the sphere: ");
+                    double radius = scanner.nextDouble();
+                    double volume = (4 / 3.0) * Math.PI * Math.pow(radius, 3);
+                    System.out.println("Volume of the sphere: " + volume);
+                }
+            }
+        `
+    },
+    "Program 35": { 
+        output: `Enter radius and height of the cylinder: 5 10
+Volume of the cylinder: 785.3981633974483`, 
+        code: `
+            import java.util.Scanner;
+
+            public class VolumeOfCylinder {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter radius and height of the cylinder: ");
+                    double radius = scanner.nextDouble();
+                    double height = scanner.nextDouble();
+                    double volume = Math.PI * Math.pow(radius, 2) * height;
+                    System.out.println("Volume of the cylinder: " + volume);
+                }
+            }
+        `
+    },
+    "Program 36": { 
+        output: `Enter length, width and height of the cuboid: 5 10 15
+Volume of the cuboid: 750.0`, 
+        code: `
+            import java.util.Scanner;
+
+            public class VolumeOfCuboid {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter length, width and height of the cuboid: ");
+                    double length = scanner.nextDouble();
+                    double width = scanner.nextDouble();
+                    double height = scanner.nextDouble();
+                    double volume = length * width * height;
+                    System.out.println("Volume of the cuboid: " + volume);
+                }
+            }
+        `
+    },
+    "Program 37": { 
+        output: `Enter radius and height of the cone: 5 10
+Volume of the cone: 261.79938779914943`, 
+        code: `
+            import java.util.Scanner;
+
+            public class VolumeOfCone {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter radius and height of the cone: ");
+                    double radius = scanner.nextDouble();
+                    double height = scanner.nextDouble();
+                    double volume = (1 / 3.0) * Math.PI * Math.pow(radius, 2) * height;
+                    System.out.println("Volume of the cone: " + volume);
+                }
+            }
+        `
+    },
+    "Program 38": { 
+        output: `Enter length, width and height of the cuboid: 5 10 15
+Surface area of the cuboid: 550.0`, 
+        code: `
+            import java.util.Scanner;
+
+            public class SurfaceAreaOfCuboid {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter length, width and height of the cuboid: ");
+                    double length = scanner.nextDouble();
+                    double width = scanner.nextDouble();
+                    double height = scanner.nextDouble();
+                    double surfaceArea = 2 * (length * width + width * height + height * length);
+                    System.out.println("Surface area of the cuboid: " + surfaceArea);
+                }
+            }
+        `
+    },
+    "Program 39": { 
+        output: `Enter radius and height of the cylinder: 5 10
+Surface area of the cylinder: 471.23889803846896`, 
+        code: `
+            import java.util.Scanner;
+
+            public class SurfaceAreaOfCylinder {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter radius and height of the cylinder: ");
+                    double radius = scanner.nextDouble();
+                    double height = scanner.nextDouble();
+                    double surfaceArea = 2 * Math.PI * radius * (radius + height);
+                    System.out.println("Surface area of the cylinder: " + surfaceArea);
+                }
+            }
+        `
+    },
+    "Program 40": { 
+        output: `Enter side length of the cube: 5
+Surface area of the cube: 150.0`, 
+        code: `
+            import java.util.Scanner;
+
+            public class SurfaceAreaOfCube {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter side length of the cube: ");
+                    double side = scanner.nextDouble();
+                    double surfaceArea = 6 * Math.pow(side, 2);
+                    System.out.println("Surface area of the cube: " + surfaceArea);
+                }
+            }
+        `
+    },
+    "Program 41": { 
+        output: `Enter number of subjects: 3
+Enter marks for subject 1: 85
+Enter marks for subject 2: 90
+Enter marks for subject 3: 95
+Average marks: 90.0`, 
+        code: `
+            import java.util.Scanner;
+
+            public class AverageMarks {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter number of subjects: ");
+                    int subjects = scanner.nextInt();
+                    double sum = 0;
+
+                    for (int i = 0; i < subjects; i++) {
+                        System.out.print("Enter marks for subject " + (i + 1) + ": ");
+                        sum += scanner.nextDouble();
+                    }
+
+                    double average = sum / subjects;
+                    System.out.println("Average marks: " + average);
+                }
+            }
+        `
+    },
+    "Program 42": { 
+        output: `Enter a character: A
+A is a vowel.`, 
+        code: `
+            import java.util.Scanner;
+
+            public class VowelOrConsonant {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter a character: ");
+                    char ch = scanner.next().charAt(0);
+
+                    if ("AEIOUaeiou".indexOf(ch) != -1) {
+                        System.out.println(ch + " is a vowel.");
+                    } else {
+                        System.out.println(ch + " is a consonant.");
+                    }
+                }
+            }
+        `
+    },
+    "Program 43": { 
+        output: `Enter N: 5
+Sum of first 5 numbers: 15`, 
+        code: `
+            import java.util.Scanner;
+
+            public class SumOfNNumbers {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter N: ");
+                    int N = scanner.nextInt();
+                    int sum = 0;
+
+                    for (int i = 1; i <= N; i++) {
+                        sum += i;
+                    }
+
+                    System.out.println("Sum of first " + N + " numbers: " + sum);
+                }
+            }
+        `
+    },
+    "Program 44": { 
+        output: `Enter a number: 5
+Factorial of 5: 120`, 
+        code: `
+            import java.util.Scanner;
+
+            public class Factorial {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter a number: ");
+                    int num = scanner.nextInt();
+                    int factorial = 1;
+
+                    for (int i = 1; i <= num; i++) {
+                        factorial *= i;
+                    }
+
+                    System.out.println("Factorial of " + num + ": " + factorial);
+                }
+            }
+        `
+    },
+    "Program 45": { 
+        output: `Enter units consumed: 250
+Electricity bill: 375.0`, 
+        code: `
+            import java.util.Scanner;
+
+            public class ElectricityBill {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter units consumed: ");
+                    int units = scanner.nextInt();
+                    double bill;
+
+                    if (units <= 100) {
+                        bill = units * 1.20;
+                    } else if (units <= 300) {
+                        bill = units * 1.50;
+                    } else {
+                        bill = units * 2.00;
+                    }
+
+                    System.out.println("Electricity bill: " + bill);
+                }
+            }
+        `
+    },
+
+    "Program 46": { 
+        output: `Enter total credit hours: 5
+Enter grade point for subject 1: 4.0
+Enter grade point for subject 2: 3.5
+Enter grade point for subject 3: 3.7
+Enter grade point for subject 4: 3.9
+Enter grade point for subject 5: 3.8
+CGPA: 3.78`, 
+        code: `
+            import java.util.Scanner;
+
+            public class CGPACalculator {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter total credit hours: ");
+                    int totalCredits = scanner.nextInt();
+                    double totalGradePoints = 0;
+
+                    for (int i = 0; i < totalCredits; i++) {
+                        System.out.print("Enter grade point for subject " + (i + 1) + ": ");
+                        totalGradePoints += scanner.nextDouble();
+                    }
+
+                    double cgpa = totalGradePoints / totalCredits;
+                    System.out.println("CGPA: " + cgpa);
+                }
+            }
+        `
+    },
+    "Program 47": { 
+        output: `Enter principal, rate and time: 1000 5 2
+Compound Interest: 102.5`, 
+        code: `
+            import java.util.Scanner;
+
+            public class CompoundInterest {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter principal, rate and time: ");
+                    double principal = scanner.nextDouble();
+                    double rate = scanner.nextDouble();
+                    double time = scanner.nextDouble();
+                    double amount = principal * Math.pow((1 + rate / 100), time);
+                    double compoundInterest = amount - principal;
+                    System.out.println("Compound Interest: " + compoundInterest);
+                }
+            }
+        `
+    },
+    "Program 48": { 
+        output: `Enter runs scored and number of innings: 250 5
+Batting Average: 50.0`, 
+        code: `
+            import java.util.Scanner;
+
+            public class BattingAverage {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter runs scored and number of innings: ");
+                    double runs = scanner.nextDouble();
+                    double innings = scanner.nextDouble();
+                    double average = runs / innings;
+                    System.out.println("Batting Average: " + average);
+                }
+            }
+        `
+    },
+    "Program 49": { 
+        output: `Enter sales amount: 15000
+Commission: 1500.0`, 
+        code: `
+            import java.util.Scanner;
+
+            public class CommissionPercentage {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter sales amount: ");
+                    double sales = scanner.nextDouble();
+                    double commission;
+
+                    if (sales < 10000) {
+                        commission = sales * 0.05;
+                    } else {
+                        commission = sales * 0.10;
+                    }
+
+                    System.out.println("Commission: " + commission);
+                }
+            }
+        `
+    },
+    "Program 50": { 
+        output: `Enter coordinates of point 1 (x1, y1): 1 2
+Enter coordinates of point 2 (x2, y2): 4 6
+Distance between two points: 5.0`, 
+        code: `
+            import java.util.Scanner;
+
+            public class DistanceBetweenTwoPoints {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter coordinates of point 1 (x1, y1): ");
+                    double x1 = scanner.nextDouble();
+                    double y1 = scanner.nextDouble();
+                    System.out.print("Enter coordinates of point 2 (x2, y2): ");
+                    double x2 = scanner.nextDouble();
+                    double y2 = scanner.nextDouble();
+                    double distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+                    System.out.println("Distance between two points: " + distance);
+                }
+            }
+        `
+    },
+    "Program 51": { 
+        output: `Enter base and exponent: 2 3
+Power: 8.0`, 
+        code: `
+            import java.util.Scanner;
+
+            public class PowerOfNumber {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter base and exponent: ");
+                    double base = scanner.nextDouble();
+                    double exponent = scanner.nextDouble();
+                    double power = Math.pow(base, exponent);
+                    System.out.println("Power: " + power);
+                }
+            }
+        `
+    },
+    "Program 52": { 
+        output: `Enter three numbers: 4 9 2
+Greatest number: 9.0`, 
+        code: `
+            import java.util.Scanner;
+
+            public class GreatestNumber {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter three numbers: ");
+                    double num1 = scanner.nextDouble();
+                    double num2 = scanner.nextDouble();
+                    double num3 = scanner.nextDouble();
+                    double greatest = Math.max(num1, Math.max(num2, num3));
+                    System.out.println("Greatest number: " + greatest);
+                }
+            }
+        `
+    },
+    "Program 53": { 
+        output: `Enter month (1-12): 2
+Number of days: 28`, 
+        code: `
+            import java.util.Scanner;
+
+            public class DaysInMonth {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter month (1-12): ");
+                    int month = scanner.nextInt();
+                    int days;
+
+                    switch (month) {
+                        case 2:
+                            days = 28; // not accounting for leap year
+                            break;
+                        case 4: case 6: case 9: case 11:
+                            days = 30;
+                            break;
+                        default:
+                            days = 31;
+                    }
+
+                    System.out.println("Number of days: " + days);
+                }
+            }
+        `
+    },
+    "Program 54": { 
+        output: `Enter a number: -5
+-5.0 is negative.`, 
+        code: `
+            import java.util.Scanner;
+
+            public class PositiveOrNegative {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter a number: ");
+                    double number = scanner.nextDouble();
+
+                    if (number > 0) {
+                        System.out.println(number + " is positive.");
+                    } else if (number < 0) {
+                        System.out.println(number + " is negative.");
+                    } else {
+                        System.out.println("Number is zero.");
+                    }
+                }
+            }
+        `
+    },
+    "Program 55": { 
+        output: `Enter a number (1-7): 4
+Day: Wednesday`, 
+        code: `
+            import java.util.Scanner;
+
+            public class DayOfWeek {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter a number (1-7): ");
+                    int day = scanner.nextInt();
+                    String dayName;
+
+                    switch (day) {
+                        case 1: dayName = "Sunday"; break;
+                        case 2: dayName = "Monday"; break;
+                        case 3: dayName = "Tuesday"; break;
+                        case 4: dayName = "Wednesday"; break;
+                        case 5: dayName = "Thursday"; break;
+                        case 6: dayName = "Friday"; break;
+                        case 7: dayName = "Saturday"; break;
+                        default: dayName = "Invalid input";
+                    }
+
+                    System.out.println("Day: " + dayName);
+                }
+            }
+        `
+    },
+    "Program 56": { 
+        output: `Enter a year: 2024
+2024 is a leap year.`, 
+        code: `
+            import java.util.Scanner;
+
+            public class LeapYear {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter a year: ");
+                    int year = scanner.nextInt();
+
+                    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+                        System.out.println(year + " is a leap year.");
+                    } else {
+                        System.out.println(year + " is not a leap year.");
+                    }
+                }
+            }
+        `
+    },
+    "Program 57": { 
+        output: `Enter number 1: 5
+Enter number 2: 10
+Enter number 3: 15
+Enter number 4: 20
+Enter number 5: 25
+Sum: 75, Average: 15.0`, 
+        code: `
+            import java.util.Scanner;
+
+            public class SumAndAverage {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    int sum = 0;
+
+                    for (int i = 0; i < 5; i++) {
+                        System.out.print("Enter number " + (i + 1) + ": ");
+                        sum += scanner.nextInt();
+                    }
+
+                    double average = sum / 5.0;
+                    System.out.println("Sum: " + sum + ", Average: " + average);
+                }
+            }
+        `
+    },
+    "Program 58": { 
+        output: `First 5 natural numbers:
+1 2 3 4 5`, 
+        code: `
+            public class FirstFiveNaturalNumbers {
+                public static void main(String[] args) {
+                    System.out.println("First 5 natural numbers:");
+                    for (int i = 1; i <= 5; i++) {
+                        System.out.print(i + " ");
+                    }
+                }
+            }
+        `
+    },
+    "Program 59": { 
+        output: `Enter an alphabet: A
+A is a Vowel`, 
+        code: `
+            import java.util.Scanner;
+
+            public class VowelOrConsonant {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter an alphabet: ");
+                    char ch = scanner.next().charAt(0);
+                    String result = (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || 
+                                     ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') 
+                                    ? "Vowel" : "Consonant";
+                    System.out.println(ch + " is a " + result);
+                }
+            }
+        `
+    },
+    "Program 60": { 
+        output: `Enter a number: 4
+Cubes of numbers up to 4:
+1 8 27 64`, 
+        code: `
+            import java.util.Scanner;
+
+            public class CubeOfNumber {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter a number: ");
+                    int n = scanner.nextInt();
+
+                    System.out.println("Cubes of numbers up to " + n + ":");
+                    for (int i = 1; i <= n; i++) {
+                        System.out.print((i * i * i) + " ");
+                    }
+                }
+            }
+        `
+    },
+
+    "Program 61": { 
+        output: `Enter the number of terms: 5
+Odd natural numbers:
+1 3 5 7 9 
+Sum of odd natural numbers: 25`, 
+        code: `
+            import java.util.Scanner;
+
+            public class OddNaturalNumbers {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter the number of terms: ");
+                    int n = scanner.nextInt();
+                    int sum = 0;
+
+                    System.out.println("Odd natural numbers:");
+                    for (int i = 1; i <= n * 2; i += 2) {
+                        System.out.print(i + " ");
+                        sum += i;
+                    }
+                    System.out.println("\\nSum of odd natural numbers: " + sum);
+                }
+            }
+        `
+    },
+    "Program 62": { 
+        output: `Enter an integer: 3
+Multiplication table of 3:
+3 x 1 = 3
+3 x 2 = 6
+3 x 3 = 9
+3 x 4 = 12
+3 x 5 = 15
+3 x 6 = 18
+3 x 7 = 21
+3 x 8 = 24
+3 x 9 = 27
+3 x 10 = 30`, 
+        code: `
+            import java.util.Scanner;
+
+            public class MultiplicationTable {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter an integer: ");
+                    int n = scanner.nextInt();
+
+                    System.out.println("Multiplication table of " + n + ":");
+                    for (int i = 1; i <= 10; i++) {
+                        System.out.println(n + " x " + i + " = " + (n * i));
+                    }
+                }
+            }
+        `
+    },
+    "Program 63": { 
+        output: `Enter an integer: -5
+-5 is negative.`, 
+        code: `
+            import java.util.Scanner;
+
+            public class CheckInteger {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter an integer: ");
+                    int number = scanner.nextInt();
+
+                    if (number > 0) {
+                        System.out.println(number + " is positive.");
+                    } else if (number < 0) {
+                        System.out.println(number + " is negative.");
+                    } else {
+                        System.out.println("The number is zero.");
+                    }
+                }
+            }
+        `
+    },
+    "Program 64": { 
+        output: `Enter a positive integer: 12345
+Number of digits: 5`, 
+        code: `
+            import java.util.Scanner;
+
+            public class CountDigits {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter a positive integer: ");
+                    int number = scanner.nextInt();
+                    int count = 0;
+
+                    while (number != 0) {
+                        number /= 10;
+                        count++;
+                    }
+
+                    System.out.println("Number of digits: " + count);
+                }
+            }
+        `
+    },
+    "Program 65": { 
+        output: `Enter three numbers: 5 5 5
+All numbers are equal.`, 
+        code: `
+            import java.util.Scanner;
+
+            public class CheckEqualNumbers {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter three numbers: ");
+                    double num1 = scanner.nextDouble();
+                    double num2 = scanner.nextDouble();
+                    double num3 = scanner.nextDouble();
+
+                    if (num1 == num2 && num2 == num3) {
+                        System.out.println("All numbers are equal.");
+                    } else {
+                        System.out.println("Numbers are not equal.");
+                    }
+                }
+            }
+        `
+    },
+    "Program 66": { 
+        output: `Enter three numbers: 5 10 15
+Numbers are in increasing order.`, 
+        code: `
+            import java.util.Scanner;
+
+            public class OrderCheck {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter three numbers: ");
+                    double num1 = scanner.nextDouble();
+                    double num2 = scanner.nextDouble();
+                    double num3 = scanner.nextDouble();
+
+                    if (num1 < num2 && num2 < num3) {
+                        System.out.println("Numbers are in increasing order.");
+                    } else if (num1 > num2 && num2 > num3) {
+                        System.out.println("Numbers are in decreasing order.");
+                    } else {
+                        System.out.println("Numbers are neither in increasing nor decreasing order.");
+                    }
+                }
+            }
+        `
+    },
+    "Program 67": { 
+        output: `Enter marks: 85
+Grade: B`, 
+        code: `
+            import java.util.Scanner;
+
+            public class StudentGrade {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter marks: ");
+                    double marks = scanner.nextDouble();
+                    String grade;
+
+                    if (marks >= 90) {
+                        grade = "A";
+                    } else if (marks >= 80) {
+                        grade = "B";
+                    } else if (marks >= 70) {
+                        grade = "C";
+                    } else if (marks >= 60) {
+                        grade = "D";
+                    } else {
+                        grade = "F";
+                    }
+
+                    System.out.println("Grade: " + grade);
+                }
+            }
+        `
+    },
+    "Program 71": { 
+        output: `HELLO WORLD`, 
+        code: `
+            public class ToUpperCase {
+                public static void main(String[] args) {
+                    String str = "hello world";
+                    System.out.println(str.toUpperCase());
+                }
+            }
+        `
+    },
+    "Program 72": { 
+        output: `Hello World`, 
+        code: `
+            public class TrimString {
+                public static void main(String[] args) {
+                    String str = "   Hello World   ";
+                    System.out.println(str.trim());
+                }
+            }
+        `
+    },
+    "Program 73": { 
+        output: `Hello`, 
+        code: `
+            public class SubstringExample {
+                public static void main(String[] args) {
+                    String str = "Hello World";
+                    System.out.println(str.substring(0, 5)); // Hello
+                }
+            }
+        `
+    },
+    "Program 74": { 
+        output: `Hello WorlF`, 
+        code: `
+            public class ReplaceCharacter {
+                public static void main(String[] args) {
+                    String str = "Hello World";
+                    System.out.println(str.replace('d', 'f'));
+                }
+            }
+        `
+    },
+    "Program 75": { 
+        output: `Length: 11`, 
+        code: `
+            public class StringLength {
+                public static void main(String[] args) {
+                    String str = "Hello World";
+                    System.out.println("Length: " + str.length());
+                }
+            }
+        `
+    },
+
+    "Program 76": { 
+        output: `2023/10/05 14:30:15`, 
+        code: `
+            import java.time.LocalDateTime;
+            import java.time.format.DateTimeFormatter;
+
+            public class CurrentDateTime {
+                public static void main(String[] args) {
+                    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+                    LocalDateTime now = LocalDateTime.now();
+                    System.out.println(dtf.format(now));
+                }
+            }
+        `
+    },
+    "Program 77": { 
+        output: `o`, 
+        code: `
+            public class CharAtExample {
+                public static void main(String[] args) {
+                    String str = "Hello World";
+                    System.out.println(str.charAt(4)); // o
+                }
+            }
+        `
+    },
+    "Program 78": { 
+        output: `Heo Word`, 
+        code: `
+            public class RemoveCharacter {
+                public static void main(String[] args) {
+                    String str = "Hello World";
+                    char toRemove = 'l';
+                    String result = str.replace(Character.toString(toRemove), "");
+                    System.out.println(result);
+                }
+            }
+        `
+    },
+    "Program 79": { 
+        output: `dlroW olleH`, 
+        code: `
+            public class ReverseString {
+                public static void main(String[] args) {
+                    String str = "Hello World";
+                    String reversed = new StringBuilder(str).reverse().toString();
+                    System.out.println(reversed);
+                }
+            }
+        `
+    },
+    "Program 80": { 
+        output: `Hello World`, 
+        code: `
+            public class RemoveHtmlTags {
+                public static void main(String[] args) {
+                    String str = "<p>Hello World</p>";
+                    String result = str.replaceAll("<[^>]*>", "");
+                    System.out.println(result);
+                }
+            }
+        `
+    },
+    "Program 81": { 
+        output: `Total lines: 3`, 
+        code: `
+            public class CountLines {
+                public static void main(String[] args) {
+                    String str = "Hello\\nWorld\\nJava";
+                    String[] lines = str.split("\\n");
+                    System.out.println("Total lines: " + lines.length);
+                }
+            }
+        `
+    },
+    "Program 82": { 
+        output: `Sum: 15`, 
+        code: `
+            public class SumArray {
+                public static void main(String[] args) {
+                    int[] numbers = {1, 2, 3, 4, 5};
+                    int sum = 0;
+                    for (int num : numbers) {
+                        sum += num;
+                    }
+                    System.out.println("Sum: " + sum);
+                }
+            }
+        `
+    },
+    "Program 83": { 
+        output: `Index of 3: 2`, 
+        code: `
+            public class IndexOfElement {
+                public static void main(String[] args) {
+                    int[] numbers = {1, 2, 3, 4, 5};
+                    int target = 3;
+                    int index = -1;
+                    for (int i = 0; i < numbers.length; i++) {
+                        if (numbers[i] == target) {
+                            index = i;
+                            break;
+                        }
+                    }
+                    System.out.println("Index of " + target + ": " + index);
+                }
+            }
+        `
+    },
+    "Program 84": { 
+        output: `Average: 3.0`, 
+        code: `
+            public class AverageArray {
+                public static void main(String[] args) {
+                    int[] numbers = {1, 2, 3, 4, 5};
+                    int sum = 0;
+                    for (int num : numbers) {
+                        sum += num;
+                    }
+                    double average = (double) sum / numbers.length;
+                    System.out.println("Average: " + average);
+                }
+            }
+        `
+    },
+    "Program 85": { 
+        output: `Contains 3: true`, 
+        code: `
+            public class ContainsValue {
+                public static void main(String[] args) {
+                    int[] numbers = {1, 2, 3, 4, 5};
+                    int target = 3;
+                    boolean contains = false;
+                    for (int num : numbers) {
+                        if (num == target) {
+                            contains = true;
+                            break;
+                        }
+                    }
+                    System.out.println("Contains " + target + ": " + contains);
+                }
+            }
+        `
+    },
+    "Program 86": { 
+        output: `Max: 5, Min: 1`, 
+        code: `
+            public class MinMaxArray {
+                public static void main(String[] args) {
+                    int[] numbers = {1, 2, 3, 4, 5};
+                    int max = numbers[0];
+                    int min = numbers[0];
+                    for (int num : numbers) {
+                        if (num > max) {
+                            max = num;
+                        }
+                        if (num < min) {
+                            min = num;
+                        }
+                    }
+                    System.out.println("Max: " + max + ", Min: " + min);
+                }
+            }
+        `
+    },
+    "Program 87": { 
+        output: `1 2 99 3 4 5`, 
+        code: `
+            public class InsertElement {
+                public static void main(String[] args) {
+                    int[] numbers = {1, 2, 3, 4, 5};
+                    int elementToInsert = 99;
+                    int position = 2;
+                    int[] newNumbers = new int[numbers.length + 1];
+                    for (int i = 0, j = 0; i < newNumbers.length; i++) {
+                        if (i == position) {
+                            newNumbers[i] = elementToInsert;
+                        } else {
+                            newNumbers[i] = numbers[j++];
+                        }
+                    }
+                    for (int num : newNumbers) {
+                        System.out.print(num + " ");
+                    }
+                }
+            }
+        `
+    },
+    "Program 88": { 
+        output: `5 4 3 2 1`, 
+        code: `
+            public class ReverseArray {
+                public static void main(String[] args) {
+                    int[] numbers = {1, 2, 3, 4, 5};
+                    int[] reversed = new int[numbers.length];
+                    for (int i = 0; i < numbers.length; i++) {
+                        reversed[i] = numbers[numbers.length - 1 - i];
+                    }
+                    for (int num : reversed) {
+                        System.out.print(num + " ");
+                    }
+                }
+            }
+        `
+    },
+    "Program 89": { 
+        output: `Common elements: 4 5`, 
+        code: `
+            public class CommonElements {
+                public static void main(String[] args) {
+                    int[] array1 = {1, 2, 3, 4, 5};
+                    int[] array2 = {4, 5, 6, 7, 8};
+                    System.out.print("Common elements: ");
+                    for (int num1 : array1) {
+                        for (int num2 : array2) {
+                            if (num1 == num2) {
+                                System.out.print(num1 + " ");
+                            }
+                        }
+                    }
+                }
+            }
+        `
+    },
+    "Program 90": { 
+        output: `Duplicate values: 1 2`, 
+        code: `
+            public class DuplicateValues {
+                public static void main(String[] args) {
+                    int[] numbers = {1, 2, 3, 2, 4, 5, 1};
+                    System.out.print("Duplicate values: ");
+                    for (int i = 0; i < numbers.length; i++) {
+                        for (int j = i + 1; j < numbers.length; j++) {
+                            if (numbers[i] == numbers[j]) {
+                                System.out.print(numbers[i] + " ");
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        `
+    },
+    "Program 91": {
+    "output": "ArrayList: [Apple, Banana, Cherry]",
+    "code": `
+            import java.util.ArrayList;
+            import java.util.Arrays;
+
+            public class ArrayToArrayList {
+                public static void main(String[] args) {
+                    String[] array = {"Apple", "Banana", "Cherry"};
+                    ArrayList<String> list = new ArrayList<>(Arrays.asList(array));
+                    System.out.println("ArrayList: " + list);
+                }
+            }
+    `
+},
+"Program 92": {
+    "output": "6 8\n10 12",
+    "code": `
+            public class AddMatrices {
+                public static void main(String[] args) {
+                    int[][] matrixA = {{1, 2}, {3, 4}};
+                    int[][] matrixB = {{5, 6}, {7, 8}};
+                    int[][] result = new int[2][2];
+
+                    for (int i = 0; i < 2; i++) {
+                        for (int j = 0; j < 2; j++) {
+                            result[i][j] = matrixA[i][j] + matrixB[i][j];
+                        }
+                    }
+
+                    for (int[] row : result) {
+                        for (int value : row) {
+                            System.out.print(value + " ");
+                        }
+                        System.out.println();
+                    }
+                }
+            }
+    `
+},
+"Program 93": {
+    "output": "Second Largest: 4",
+    "code": `
+            public class SecondLargest {
+                public static void main(String[] args) {
+                    int[] numbers = {1, 2, 3, 4, 5};
+                    int largest = Integer.MIN_VALUE;
+                    int secondLargest = Integer.MIN_VALUE;
+
+                    for (int num : numbers) {
+                        if (num > largest) {
+                            secondLargest = largest;
+                            largest = num;
+                        } else if (num > secondLargest && num < largest) {
+                            secondLargest = num;
+                        }
+                    }
+                    System.out.println("Second Largest: " + secondLargest);
+                }
+            }
+    `
+},
+"Program 94": {
+    "output": "Second Lowest: 2",
+    "code": `
+            public class SecondLowest {
+                public static void main(String[] args) {
+                    int[] numbers = {5, 1, 3, 2, 4};
+                    int lowest = Integer.MAX_VALUE;
+                    int secondLowest = Integer.MAX_VALUE;
+
+                    for (int num : numbers) {
+                        if (num < lowest) {
+                            secondLowest = lowest;
+                            lowest = num;
+                        } else if (num < secondLowest && num > lowest) {
+                            secondLowest = num;
+                        }
+                    }
+                    System.out.println("Second Lowest: " + secondLowest);
+                }
+            }
+    `
+},
+"Program 95": {
+    "output": "Even Count: 3, Odd Count: 3",
+    "code": `
+            public class EvenOddCount {
+                public static void main(String[] args) {
+                    int[] numbers = {1, 2, 3, 4, 5, 6};
+                    int evenCount = 0, oddCount = 0;
+
+                    for (int num : numbers) {
+                        if (num % 2 == 0) {
+                            evenCount++;
+                        } else {
+                            oddCount++;
+                        }
+                    }
+                    System.out.println("Even Count: " + evenCount + ", Odd Count: " + oddCount);
+                }
+            }
+    `
+},
+"Program 96": {
+    "output": "Difference: 4",
+    "code": `
+            public class MaxMinDifference {
+                public static void main(String[] args) {
+                    int[] numbers = {1, 2, 3, 4, 5};
+                    int max = Integer.MIN_VALUE;
+                    int min = Integer.MAX_VALUE;
+
+                    for (int num : numbers) {
+                        if (num > max) {
+                            max = num;
+                        }
+                        if (num < min) {
+                            min = num;
+                        }
+                    }
+                    System.out.println("Difference: " + (max - min));
+                }
+            }
+    `
+},
+"Program 97": {
+    "output": "0 0 0 1 1 1",
+    "code": `
+            public class Segregate0sAnd1s {
+                public static void main(String[] args) {
+                    int[] arr = {0, 1, 0, 1, 0, 1};
+                    int leftIndex = 0;
+
+                    for (int i = 0; i < arr.length; i++) {
+                        if (arr[i] == 0) {
+                            int temp = arr[i];
+                            arr[i] = arr[leftIndex];
+                            arr[leftIndex] = temp;
+                            leftIndex++;
+                        }
+                    }
+
+                    for (int num : arr) {
+                        System.out.print(num + " ");
+                    }
+                }
+            }
+    `
+},
+"Program 98": {
+    "output": "5 1 2 3 4",
+    "code": `
+            public class RotateArray {
+                public static void main(String[] args) {
+                    int[] arr = {1, 2, 3, 4, 5};
+                    int lastElement = arr[arr.length - 1];
+
+                    for (int i = arr.length - 1; i > 0; i--) {
+                        arr[i] = arr[i - 1];
+                    }
+                    arr[0] = lastElement;
+
+                    for (int num : arr) {
+                        System.out.print(num + " ");
+                    }
+                }
+            }
+    `
+},
+"Program 99": {
+    "output": "Unique elements: 1 3 5",
+    "code": `
+            public class UniqueElements {
+                public static void main(String[] args) {
+                    int[] numbers = {1, 2, 2, 3, 4, 4, 5};
+                    System.out.print("Unique elements: ");
+                    for (int i = 0; i < numbers.length; i++) {
+                        boolean isUnique = true;
+                        for (int j = 0; j < numbers.length; j++) {
+                            if (i != j && numbers[i] == numbers[j]) {
+                                isUnique = false;
+                                break;
+                            }
+                        }
+                        if (isUnique) {
+                            System.out.print(numbers[i] + " ");
+                        }
+                    }
+                }
+            }
+    `
+},
+"Program 100": {
+    "output": "Sorted array: 1 2 3 4 5",
+    "code": `
+            import java.util.Arrays;
+
+            public class SortArray {
+                public static void main(String[] args) {
+                    int[] numbers = {5, 3, 2, 1, 4};
+                    Arrays.sort(numbers);
+                    System.out.print("Sorted array: ");
+                    for (int num : numbers) {
+                        System.out.print(num + " ");
+                    }
+                }
+            }
+    `
+},
+"Program 101": {
+    "output": "Sorted array in descending order: 5 4 3 2 1",
+    "code": `
+            import java.util.Arrays;
+            import java.util.Collections;
+
+            public class SortArrayDescending {
+                public static void main(String[] args) {
+                    Integer[] numbers = {5, 3, 2, 1, 4};
+                    Arrays.sort(numbers, Collections.reverseOrder());
+                    System.out.print("Sorted array in descending order: ");
+                    for (int num : numbers) {
+                        System.out.print(num + " ");
+                    }
+                }
+            }
+    `
+},
+"Program 102": {
+    "output": "Sorted names: Alice Bob Charlie John",
+    "code": `
+            import java.util.Arrays;
+
+            public class SortNames {
+                public static void main(String[] args) {
+                    String[] names = {"John", "Alice", "Bob", "Charlie"};
+                    Arrays.sort(names);
+                    System.out.print("Sorted names: ");
+                    for (String name : names) {
+                        System.out.print(name + " ");
+                    }
+                }
+            }
+    `
+},
+"Program 103": {
+    "output": "Transpose of the matrix:\n1 4 7\n2 5 8\n3 6 9",
+    "code": `
+            public class TransposeMatrix {
+                public static void main(String[] args) {
+                    int[][] matrix = {
+                        {1, 2, 3},
+                        {4, 5, 6},
+                        {7, 8, 9}
+                    };
+                    int[][] transpose = new int[3][3];
+
+                    for (int i = 0; i < 3; i++) {
+                        for (int j = 0; j < 3; j++) {
+                            transpose[j][i] = matrix[i][j];
+                        }
+                    }
+
+                    System.out.println("Transpose of the matrix:");
+                    for (int[] row : transpose) {
+                        for (int val : row) {
+                            System.out.print(val + " ");
+                        }
+                        System.out.println();
+                    }
+                }
+            }
+    `
+},
+"Program 104": {
+    "output": `Enter the number to search: 5
+5 is present in the array.`,
+    "code": `
+            import java.util.Scanner;
+
+            public class SearchInArray {
+                public static void main(String[] args) {
+                    int[] numbers = {5, 3, 2, 1, 4};
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter the number to search: ");
+                    int key = scanner.nextInt();
+                    boolean found = false;
+
+                    for (int num : numbers) {
+                        if (num == key) {
+                            found = true;
+                            break;
+                        }
+                    }
+
+                    if (found) {
+                        System.out.println(key + " is present in the array.");
+                    } else {
+                        System.out.println(key + " is not present in the array.");
+                    }
+                }
+            }
+    `
+},
+"Program 105": {
+    "output": "Total Marks: 400\nPercentage: 80.0%",
+    "code": `
+            import java.util.Scanner;
+
+            public class StudentMarks {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter marks in 5 subjects: ");
+                    int total = 0;
+
+                    for (int i = 0; i < 5; i++) {
+                        total += scanner.nextInt();
+                    }
+
+                    double percentage = total / 5.0;
+                    System.out.println("Total Marks: " + total);
+                    System.out.println("Percentage: " + percentage + "%");
+                }
+            }
+    `
+},
+
+    "Program 106": {
+        "output": "Numbers from 1 to 10: 1 2 3 4 5 6 7 8 9 10 ",
+        "code": `
+            public class PrintNumbers {
+                public static void main(String[] args) {
+                    System.out.print("Numbers from 1 to 10: ");
+                    for (int i = 1; i <= 10; i++) {
+                        System.out.print(i + " ");
+                    }
+                }
+            }
+        `
+    },
+    "Program 107": {
+        "output": "Sum of first 10 natural numbers: 55",
+        "code": `
+            public class SumOfNaturalNumbers {
+                public static void main(String[] args) {
+                    int sum = 0;
+                    for (int i = 1; i <= 10; i++) {
+                        sum += i;
+                    }
+                    System.out.println("Sum of first 10 natural numbers: " + sum);
+                }
+            }
+        `
+    },
+    "Program 108": {
+        "output": `Enter a number: 5
+Multiplication table of 5:
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50`,
+        "code": `
+            import java.util.Scanner;
+    
+            public class MultiplicationTable {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter a number: ");
+                    int num = scanner.nextInt();
+    
+                    System.out.println("Multiplication table of " + num + ":");
+                    for (int i = 1; i <= 10; i++) {
+                        System.out.println(num + " x " + i + " = " + (num * i));
+                    }
+                }
+            }
+        `
+    },
+    "Program 109": {
+        "output": `Enter a number: 5
+Factorial of 5 is: 120`,
+        "code": `
+            import java.util.Scanner;
+    
+            public class Factorial {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter a number: ");
+                    int num = scanner.nextInt();
+                    int factorial = 1;
+    
+                    for (int i = 1; i <= num; i++) {
+                        factorial *= i;
+                    }
+    
+                    System.out.println("Factorial of " + num + " is: " + factorial);
+                }
+            }
+        `
+    },
+    "Program 110": {
+        "output": `Enter an integer: 786
+Reversed number: 687`,
+        "code": `
+            import java.util.Scanner;
+    
+            public class ReverseDigits {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter an integer: ");
+                    int num = scanner.nextInt();
+                    int reversed = 0;
+    
+                    while (num != 0) {
+                        int digit = num % 10;
+                        reversed = reversed * 10 + digit;
+                        num /= 10;
+                    }
+    
+                    System.out.println("Reversed number: " + reversed);
+                }
+            }
+        `
+    },
+    "Program 111": {
+        "output": `Enter the number of integers: 5
+Enter 5 integers:
+1
+2
+3
+4
+5
+Sum of even integers: 6
+Sum of odd integers: 9`,
+        "code": `
+            import java.util.Scanner;
+    
+            public class EvenOddSum {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter the number of integers: ");
+                    int n = scanner.nextInt();
+                    int evenSum = 0, oddSum = 0;
+    
+                    System.out.println("Enter " + n + " integers:");
+                    for (int i = 0; i < n; i++) {
+                        int num = scanner.nextInt();
+                        if (num % 2 == 0) {
+                            evenSum += num;
+                        } else {
+                            oddSum += num;
+                        }
+                    }
+    
+                    System.out.println("Sum of even integers: " + evenSum);
+                    System.out.println("Sum of odd integers: " + oddSum);
+                }
+            }
+        `
+    },
+    "Program 112": {
+        "output": `Enter a number: 23
+23 is a prime number.`,
+        "code": `
+            import java.util.Scanner;
+    
+            public class PrimeNumberCheck {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter a number: ");
+                    int num = scanner.nextInt();
+                    boolean isPrime = true;
+    
+                    if (num <= 1) {
+                        isPrime = false;
+                    } else {
+                        for (int i = 2; i <= Math.sqrt(num); i++) {
+                            if (num % i == 0) {
+                                isPrime = false;
+                                break;
+                            }
+                        }
+                    }
+    
+                    if (isPrime) {
+                        System.out.println(num + " is a prime number.");
+                    } else {
+                        System.out.println(num + " is not a prime number.");
+                    }
+                }
+            }
+        `
+    },
+    "Program 113": {
+        "output": `Enter first number: 15
+Enter second number: 20
+HCF of 15 and 20 is: 5`,
+        "code": `
+            import java.util.Scanner;
+    
+            public class HCF {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter first number: ");
+                    int num1 = scanner.nextInt();
+                    System.out.print("Enter second number: ");
+                    int num2 = scanner.nextInt();
+                    int hcf = 1;
+    
+                    for (int i = 1; i <= Math.min(num1, num2); i++) {
+                        if (num1 % i == 0 && num2 % i == 0) {
+                            hcf = i;
+                        }
+                    }
+    
+                    System.out.println("HCF of " + num1 + " and " + num2 + " is: " + hcf);
+                }
+            }
+        `
+    },
+    "Program 114": {
+        "output": `Enter a number (0 to end): 23
+Enter a number (0 to end): 15
+Enter a number (0 to end): -89
+Enter a number (0 to end): 0
+Positive count: 2
+Negative count: 1
+Zero count: 1`,
+        "code": `
+            import java.util.Scanner;
+    
+            public class CountNumbers {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    int positiveCount = 0, negativeCount = 0, zeroCount = 0;
+    
+                    while (true) {
+                        System.out.print("Enter a number (0 to end): ");
+                        int num = scanner.nextInt();
+                        if (num == 0) {
+                            zeroCount++;
+                            break;
+                        } else if (num > 0) {
+                            positiveCount++;
+                        } else {
+                            negativeCount++;
+                        }
+                    }
+    
+                    System.out.println("Positive count: " + positiveCount);
+                    System.out.println("Negative count: " + negativeCount);
+                    System.out.println("Zero count: " + zeroCount);
+                }
+            }
+        `
+    },
+    "Program 115": {
+        "output": `Enter a number (0 to end): 98
+Enter a number (0 to end): 132
+Enter a number (0 to end): 15
+Enter a number (0 to end): 0
+Largest number: 132
+Smallest number: 15`,
+        "code": `
+            import java.util.Scanner;
+    
+            public class LargestSmallest {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    int largest = Integer.MIN_VALUE;
+                    int smallest = Integer.MAX_VALUE;
+    
+                    while (true) {
+                        System.out.print("Enter a number (0 to end): ");
+                        int num = scanner.nextInt();
+                        if (num == 0) {
+                            break;
+                        }
+                        if (num > largest) {
+                            largest = num;
+                        }
+                        if (num < smallest) {
+                            smallest = num;
+                        }
+                    }
+    
+                    System.out.println("Largest number: " + largest);
+                    System.out.println("Smallest number: " + smallest);
+                }
+            }
+        `
+    },
+    "Program 116": {
+        "output": `Armstrong numbers between 1 and 600:
+1 153 370 371 407`,
+        "code": `
+            public class ArmstrongNumbers {
+                public static void main(String[] args) {
+                    System.out.println("Armstrong numbers between 1 and 600:");
+                    for (int i = 1; i <= 600; i++) {
+                        int sum = 0;
+                        int temp = i;
+                        while (temp != 0) {
+                            int digit = temp % 10;
+                            sum += digit * digit * digit;
+                            temp /= 10;
+                        }
+                        if (sum == i) {
+                            System.out.print(i + " ");
+                        }
+                    }
+                }
+            }
+        `
+    },
+    "Program 117": {
+        "output": `Enter amount: 8500
+Total number of notes:
+1000 : 8
+500 : 1`,
+        "code": `
+            import java.util.Scanner;
+    
+            public class CountNotes {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter amount: ");
+                    int amount = scanner.nextInt();
+    
+                    int[] notes = {1000, 500, 100, 50, 20, 10, 5, 1};
+                    int[] noteCount = new int[notes.length];
+    
+                    for (int i = 0; i < notes.length; i++) {
+                        if (amount >= notes[i]) {
+                            noteCount[i] = amount / notes[i];
+                            amount %= notes[i];
+                        }
+                    }
+    
+                    System.out.println("Total number of notes:");
+                    for (int i = 0; i < notes.length; i++) {
+                        if (noteCount[i] != 0) {
+                            System.out.println(notes[i] + " : " + noteCount[i]);
+                        }
+                    }
+                }
+            }
+        `
+    },
+    "Program 118": {
+        "output": `Enter the number of terms: 5
+Fibonacci series: 0 1 1 2 3`,
+        "code": `
+            import java.util.Scanner;
+    
+            public class FibonacciSeries {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter the number of terms: ");
+                    int n = scanner.nextInt();
+                    int a = 0, b = 1;
+    
+                    System.out.print("Fibonacci series: ");
+                    for (int i = 0; i < n; i++) {
+                        System.out.print(a + " ");
+                        int next = a + b;
+                        a = b;
+                        b = next;
+                    }
+                }
+            }
+        `
+    },
+    "Program 119": {
+        "output": `Enter n: 5
+Sum of series: 2.283333333333333`,
+        "code": `
+            import java.util.Scanner;
+    
+            public class SumOfSeries {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Enter n: ");
+                    int n = scanner.nextInt();
+                    double sum = 0;
+    
+                    for (int i = 1; i <= n; i++) {
+                        sum += 1.0 / i;
+                    }
+    
+                    System.out.println("Sum of series: " + sum);
+                }
+            }
+        `
+    },
+    "Program 120": {
+        "output": "Average: 20.0",
+        "code": `
+            public class AverageCalculator {
+                public static void main(String[] args) {
+                    double avg = average(10, 20, 30);
+                    System.out.println("Average: " + avg);
+                }
+    
+                public static double average(int a, int b, int c) {
+                    return (a + b + c) / 3.0;
+                }
+            }
+        `
+    },
+  "Program 121": { 
+    "output": "Smallest number: 5", 
+    "code": `
+    public class SmallestNumber {
+        public static void main(String[] args) {
+            int smallest = findSmallest(10, 20, 5);
+            System.out.println("Smallest number: " + smallest);
+        }
+
+        public static int findSmallest(int a, int b, int c) {
+            return Math.min(a, Math.min(b, c));
+        }
+    }
+    `
+  },
+  "Program 122": { 
+    "output": "Word count: 7", 
+    "code": `
+    public class WordCounter {
+        public static void main(String[] args) {
+            String str = "Hello world, this is a test.";
+            int wordCount = countWords(str);
+            System.out.println("Word count: " + wordCount);
+        }
+
+        public static int countWords(String str) {
+            String[] words = str.split("\\s+");
+            return words.length;
+        }
+    }
+    `
+  },
+  "Program 123": { 
+    "output": "Vowel count: 4", 
+    "code": `
+    public class VowelCounter {
+        public static void main(String[] args) {
+            String str = "Hello world";
+            int vowelCount = countVowels(str);
+            System.out.println("Vowel count: " + vowelCount);
+        }
+
+        public static int countVowels(String str) {
+            int count = 0;
+            for (char ch : str.toCharArray()) {
+                if ("AEIOUaeiou".indexOf(ch) != -1) {
+                    count++;
+                }
+            }
+            return count;
+        }
+    }
+    `
+  },
+  "Program 124": { 
+    "output": "Sum of digits: 6", 
+    "code": `
+    import java.util.Scanner;
+
+    public class SumOfDigits {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Enter an integer: ");
+            int num = scanner.nextInt();
+            int sum = sumDigits(num);
+            System.out.println("Sum of digits: " + sum);
+        }
+
+        public static int sumDigits(int num) {
+            int sum = 0;
+            while (num != 0) {
+                sum += num % 10;
+                num /= 10;
+            }
+            return sum;
+        }
+    }
+    `
+  },
+  "Program 125": { 
+    "output": "2024 is a leap year.", 
+    "code": `
+    import java.util.Scanner;
+
+    public class LeapYearChecker {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Enter a year: ");
+            int year = scanner.nextInt();
+            boolean isLeap = isLeapYear(year);
+            System.out.println(year + (isLeap ? " is a leap year." : " is not a leap year."));
+        }
+
+        public static boolean isLeapYear(int year) {
+            return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+        }
+    }
+    `
+  },
+  "Program 126": { 
+    "output": "Area of the triangle: 25.0", 
+    "code": `
+    public class TriangleArea {
+  public static void main(String[] args) {
+    double area = calculateArea(5, 10);
+    System.out.println("Area of the triangle: " + area);
+  }
+
+  public static double calculateArea(double base, double height) {
+    return 0.5 * base * height;
+  }
+}
+    `
+  },
+  "Program 127": { 
+    "output": "Area of the pentagon: 87.5", 
+    "code": `
+    public class PentagonArea {
+  public static void main(String[] args) {
+    double area = calculateArea(5, 7);
+    System.out.println("Area of the pentagon: " + area);
+  }
+
+  public static double calculateArea(double sideLength, double apothem) {
+    return (5 * sideLength * apothem) / 2;
+  }
+}
+    `
+  },
+  "Program 128": { 
+    "output": "Is the number even? true", 
+    "code": `
+    public class EvenNumber {
+  public static void main(String[] args) {
+    boolean isEven = isEven(10);
+    System.out.println("Is the number even? " + isEven);
+  }
+
+  public static boolean isEven(int number) {
+    return number % 2 == 0;
+  }
+}
+    `
+  },
+  "Program 129": { 
+    "output": "Is the number a palindrome? true", 
+    "code": `
+    public class PalindromeNumber {
+  public static void main(String[] args) {
+    boolean isPalindrome = isPalindrome(12321);
+    System.out.println("Is the number a palindrome? " + isPalindrome);
+  }
+
+  public static boolean isPalindrome(int number) {
+    int originalNumber = number;
+    int reversedNumber = 0;
+    while (number != 0) {
+      int digit = number % 10;
+      reversedNumber = reversedNumber * 10 + digit;
+      number /= 10;
+    }
+    return originalNumber == reversedNumber;
+  }
+}
+    `
+  },
+  "Program 130": { 
+    "output": `Prime numbers between 1 and 20:
+2 3 5 7 11 13 17 19`, 
+    "code": `
+    public class PrimeNumbers {
+  public static void main(String[] args) {
+    displayPrimes(20);
+  }
+
+  public static void displayPrimes(int limit) {
+    System.out.println("Prime numbers between 1 and " + limit + ":");
+    for (int num = 2; num <= limit; num++) {
+      if (isPrime(num)) {
+        System.out.print(num + " ");
+      }
+    }
+    System.out.println();
+  }
+
+  private static boolean isPrime(int num) {
+    if (num <= 1) return false;
+    for (int i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i == 0) return false;
+    }
+    return true;
+  }
+}
+    `
+  },
+  "Program 131": { 
+    output: `GCD: 5
+LCM: 60`, 
+    code:`public class GCDLCM {
+  public static void main(String[] args) {
+    int a = 15, b = 20;
+    int gcd = findGCD(a, b);
+    int lcm = findLCM(a, b);
+    System.out.println("GCD: " + gcd);
+    System.out.println("LCM: " + lcm);
+  }
+
+  public static int findGCD(int a, int b) {
+    if (b == 0) return a;
+    return findGCD(b, a % b);
+  }
+
+  public static int findLCM(int a, int b) {
+    return (a * b) / findGCD(a, b);
+  }
+}`
+},
+"Program 132": { 
+    output: `Factorial of 5 is: 120`, 
+    code:`public class Factorial {
+  public static void main(String[] args) {
+    int number = 5;
+    int result = factorial(number);
+    System.out.println("Factorial of " + number + " is: " + result);
+  }
+
+  public static int factorial(int n) {
+    if (n == 0) return 1;
+    return n * factorial(n - 1);
+  }
+}`
+},
+"Program 133": { 
+    output: `Reversed number: 54321`, 
+    code:`public class ReverseInteger {
+  public static void main(String[] args) {
+    int number = 12345;
+    int reversed = reverseNumber(number);
+    System.out.println("Reversed number: " + reversed);
+  }
+
+  public static int reverseNumber(int num) {
+    int reversed = 0;
+    while (num != 0) {
+      int digit = num % 10;
+      reversed = reversed * 10 + digit;
+      num /= 10;
+    }
+    return reversed;
+  }
+}`
+},
+"Program 134": { 
+    output: `Rounded number: 12.35`, 
+    code:`public class RoundFloat {
+  public static void main(String[] args) {
+    float number = 12.34567f;
+    int decimals = 2;
+    float rounded = roundToDecimals(number, decimals);
+    System.out.println("Rounded number: " + rounded);
+  }
+
+  public static float roundToDecimals(float value, int decimals) {
+    float scale = (float) Math.pow(10, decimals);
+    return Math.round(value * scale) / scale;
+  }
+}`
+},
+"Program 135": { 
+    output: `5.0 is an integer? true`, 
+    code:`public class CheckInteger {
+  public static void main(String[] args) {
+    double number = 5.0;
+    boolean isInteger = isInteger(number);
+    System.out.println(number + " is an integer? " + isInteger);
+  }
+
+  public static boolean isInteger(double number) {
+    return number == (int) number;
+  }
+}`
+},
+"Program 136": { 
+    output: `Rounded up result: 3`, 
+    code:`public class RoundUpDivision {
+  public static void main(String[] args) {
+    int numerator = 7;
+    int denominator = 3;
+    int result = roundUpDivision(numerator, denominator);
+    System.out.println("Rounded up result: " + result);
+  }
+
+  public static int roundUpDivision(int numerator, int denominator) {
+    return (int) Math.ceil((double) numerator / denominator);
+  }
+}`
+},
+"Program 137": { 
+    output: `Integer value: 1994`, 
+    code:`import java.util.HashMap;
+import java.util.Map;
+
+public class RomanToInteger {
+  private static final Map<Character, Integer> romanMap = new HashMap<>();
+
+  static {
+    romanMap.put('I', 1);
+    romanMap.put('V', 5);
+    romanMap.put('X', 10);
+    romanMap.put('L', 50);
+    romanMap.put('C', 100);
+    romanMap.put('D', 500);
+    romanMap.put('M', 1000);
+  }
+
+  public static void main(String[] args) {
+    String roman = "MCMXCIV";
+    int result = romanToInt(roman);
+    System.out.println("Integer value: " + result);
+  }
+
+  public static int romanToInt(String roman) {
+    int total = 0;
+    int prevValue = 0;
+    for (int i = roman.length() - 1; i >= 0; i--) {
+      int value = romanMap.get(roman.charAt(i));
+      if (value < prevValue) {
+        total -= value;
+      } else {
+        total += value;
+      }
+      prevValue = value;
+    }
+    return total;
+  }
+}`
+},
+"Program 138": { 
+    output: `Absolute value: 5.67`, 
+    code:`public class AbsoluteFloat {
+  public static void main(String[] args) {
+    float number = -5.67f;
+    float absolute = Math.abs(number);
+    System.out.println("Absolute value: " + absolute);
+  }
+}`
+},
+"Program 139": { 
+    output: `Rounded float value: 3.0`, 
+    code:`public class RoundFloatValue {
+  public static void main(String[] args) {
+    float number = 3.14159f;
+    float rounded = Math.round(number);
+    System.out.println("Rounded float value: " + rounded);
+  }
+}`
+}
+
+        };
+
+        function showProgram(programName) {
+            const program = programs[programName];
+            if (program) {
+                if(program.output == "0000"){
+                    document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                `;
+                }
+                else{
+                document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                    <h2>Output:</h2>
+                    <div class="code-block">${program.output}</div>
+                `;
+            }    
+                }
+                 else {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>Program not found</h2>
+                    <p>Details for this program are not available.</p>
+                `;
+            }
+        }
+    </script>
+
+</body></html>
