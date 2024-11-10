@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+     <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <nav class="navbar background">
+        <ul class="navlist">
+            <a href="index.html">Home</a></li> 
+  
+            <a href="Array.html">ARRAYS</a></li>
+            
+            <a href="2Darray.html" >2D-ARRAYS</a></li>
+            
+            <a href="Applet.html">APPLETS</a></li>
+            
+            <a href="bpc.html">BASIC PROGAMMING CONSTRUCTS</a></li>
+            
+            <a href="Data Conversion.html">DATA CONSVERSION</a></li>
+            
+            <a href="DEM.html">DELEGATION EVENT MODEL</a></li>
+            
+            <a href="Exception Handling.html">EXCEPTION HANDLING</a></li>
+            
+            <a href="Functions.html">FUNCTIONS</a></li>
+            
+            <a href="GUI AWT.html">GRAPHICAL USER INTERFACE (AWT)</a></li>
+            
+            <a href="Inheritance.html">INHERITANCE</a></li>
+            
+            <a href="IO.html">INPUT/OUTPUT</a></li>
+            
+            <a href="Interface.html">INTERFACES</a></li>
+            
+            <a href="JDBC.html">JAVA DATABASE CONECTIVITY</a></li>
+            
+            <a href="Threads.html">MULTITHREADING</a></li>
+            
+            <a href="OOP.html">OBJECT ORIENTED PROGRAMMING</a></li>
+            
+            <a href="Packages.html">PACKAGES</a></li>
+          
+            <a href="StringHandling.html">STRING HANDLING</a></li>
+        </ul>
+    </nav>
+    <div style="display: flex; margin: 0; max-height: 100vh;">
+    <div class="sidebar">
+        <h2>Programs</h2>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 1&#39;)">1. Program to copy all elements of one array into another array</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 2&#39;)">2. Program to find the frequency of each element in the array</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 3&#39;)">3. Program to left rotate the elements of an array</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 4&#39;)">4. Program to print the duplicate elements of an array</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 5&#39;)">5. Program to print the elements of an array</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 6&#39;)">6. Program to print the elements of an array in reverse order</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 7&#39;)">7. Program to print the elements of an array present on even position</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 8&#39;)">8. Program to print the elements of an array present on odd position</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 9&#39;)">9. Program to print the largest element in an array</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 10&#39;)">10. Program to print the smallest element in an array</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 11&#39;)">11. Program to print the number of elements present in an array</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 12&#39;)">12. Program to print the sum of all the items of the array</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 13&#39;)">13. Program to right rotate the elements of an array</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 14&#39;)">14. Program to sort the elements of an array in ascending order</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 15&#39;)">15. Program to sort the elements of an array in descending order</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 16&#39;)">16. Program to Find 3rd Largest Number in an array</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 17&#39;)">17. Program to Find 2nd Largest Number in an array</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 18&#39;)">18. Program to Find Largest Number in an array</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 19&#39;)">19. Program to Find 2nd Smallest Number in an array</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 20&#39;)">20. Program to Find Smallest Number in an array</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 21&#39;)">21. Program to Remove Duplicate Element in an array</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 22&#39;)">22. Program to Print Odd and Even Numbers from an array</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 23&#39;)">23. How to Sort an Array in Java
+</div>
+
+    </div>
+
+    <div class="content" id="programContent">
+<h2>Please select program from the list!</h2>
+    </div></div>
+    
+    <script>
+        const programs = {
+"Program 1": {
+    output: `Copied Array: 1 2 3 4 5`,
+    code: `
+public class ArrayCopy {
+            public static void main(String[] args) {
+                int[] originalArray = {1, 2, 3, 4, 5};
+                int[] copiedArray = new int[originalArray.length];
+        
+                // Copying elements from originalArray to copiedArray
+                for (int i = 0; i < originalArray.length; i++) {
+                    copiedArray[i] = originalArray[i];
+                }
+        
+                System.out.println("Copied Array:");
+                for (int element : copiedArray) {
+                    System.out.print(element + " ");
+                }
+            }
+        }
+`
+},
+"Program 2": {
+    output: `Element Frequency
+1 -> 1
+2 -> 2
+3 -> 1
+4 -> 3
+5 -> 1`,
+    code: `
+public class FrequencyCounter {
+            public static void main(String[] args) {
+                int[] array = {1, 2, 2, 3, 4, 4, 4, 5};
+                int[] frequency = new int[array.length];
+                boolean[] visited = new boolean[array.length];
+                
+                for (int i = 0; i < array.length; i++) {
+                    if (!visited[i]) {
+                        frequency[i] = 1;
+                        for (int j = i + 1; j < array.length; j++) {
+                            if (array[i] == array[j]) {
+                                frequency[i]++;
+                                visited[j] = true;
+                            }
+                        }
+                    }
+                }
+                
+                System.out.println("Element Frequency");
+                for (int i = 0; i < array.length; i++) {
+                    if (!visited[i]) {
+                        System.out.println(array[i] + " -> " + frequency[i]);
+                    }
+                }
+            }
+        }
+`
+},
+"Program 3": {
+    output: `Array after left rotation: 2 3 4 5 1`,
+    code: `
+public class LeftRotate {
+            public static void main(String[] args) {
+                int[] array = {1, 2, 3, 4, 5};
+                int n = 1; // Number of rotations
+
+                for (int i = 0; i < n; i++) {
+                    int first = array[0];
+                    for (int j = 0; j < array.length - 1; j++) {
+                        array[j] = array[j + 1];
+                    }
+                    array[array.length - 1] = first;
+                }
+
+                System.out.println("Array after left rotation:");
+                for (int element : array) {
+                    System.out.print(element + " ");
+                }
+            }
+        }
+`
+},
+"Program 4": {
+    output: `Duplicate elements in the array:
+2
+4`,
+    code: `
+public class DuplicateElements {
+            public static void main(String[] args) {
+                int[] array = {1, 2, 3, 2, 4, 5, 4};
+
+                System.out.println("Duplicate elements in the array:");
+                for (int i = 0; i < array.length; i++) {
+                    for (int j = i + 1; j < array.length; j++) {
+                        if (array[i] == array[j]) {
+                            System.out.println(array[i]);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+`
+},
+"Program 5": {
+    output: `Elements of the array: 1 2 3 4 5`,
+    code: `
+public class PrintArray {
+            public static void main(String[] args) {
+                int[] array = {1, 2, 3, 4, 5};
+
+                System.out.println("Elements of the array:");
+                for (int element : array) {
+                    System.out.print(element + " ");
+                }
+            }
+        }
+`
+},
+"Program 6": {
+    output: ` Array in reverse order: 5 4 3 2 1`,
+    code: `
+public class ReverseArray {
+            public static void main(String[] args) {
+                int[] array = {1, 2, 3, 4, 5};
+
+                System.out.println("Array in reverse order:");
+                for (int i = array.length - 1; i >= 0; i--) {
+                    System.out.print(array[i] + " ");
+                }
+            }
+        }
+`
+},
+"Program 7": {
+    output: `Elements on even positions: 2 4`,
+    code: `
+public class EvenPositionArray {
+            public static void main(String[] args) {
+                int[] array = {1, 2, 3, 4, 5};
+
+                System.out.println("Elements on even positions:");
+                for (int i = 1; i < array.length; i += 2) {
+                    System.out.print(array[i] + " ");
+                }
+            }
+        }
+`
+},
+"Program 8": {
+    output: `Elements on odd positions: 1 3 5`,
+    code: `
+public class OddPositionArray {
+            public static void main(String[] args) {
+                int[] array = {1, 2, 3, 4, 5};
+
+                System.out.println("Elements on odd positions:");
+                for (int i = 0; i < array.length; i += 2) {
+                    System.out.print(array[i] + " ");
+                }
+            }
+        }
+`
+},
+"Program 9": {
+    output: `Largest element: 5`,
+    code: `
+public class LargestElement {
+            public static void main(String[] args) {
+                int[] array = {1, 2, 3, 4, 5};
+                int max = array[0];
+
+                for (int i = 1; i < array.length; i++) {
+                    if (array[i] > max) {
+                        max = array[i];
+                    }
+                }
+
+                System.out.println("Largest element: " + max);
+            }
+        }
+`
+},
+"Program 10": {
+    output: `Smallest element: 1`,
+    code: `
+public class SmallestElement {
+            public static void main(String[] args) {
+                int[] array = {1, 2, 3, 4, 5};
+                int min = array[0];
+
+                for (int i = 1; i < array.length; i++) {
+                    if (array[i] < min) {
+                        min = array[i];
+                    }
+                }
+
+                System.out.println("Smallest element: " + min);
+            }
+        }
+`
+},
+"Program 11": {
+    output: `Number of elements: 5`,
+    code: `
+public class ArrayLength {
+            public static void main(String[] args) {
+                int[] array = {1, 2, 3, 4, 5};
+                System.out.println("Number of elements: " + array.length);
+            }
+        }
+`
+},
+"Program 12": {
+    output: `Sum of all elements: 15`,
+    code: `
+public class ArraySum {
+            public static void main(String[] args) {
+                int[] array = {1, 2, 3, 4, 5};
+                int sum = 0;
+
+                for (int i = 0; i < array.length; i++) {
+                    sum += array[i];
+                }
+
+                System.out.println("Sum of all elements: " + sum);
+            }
+        }
+`
+},
+"Program 13": {
+    output: `Array after right rotation: 5 1 2 3 4`,
+    code: `
+public class RightRotate {
+            public static void main(String[] args) {
+                int[] array = {1, 2, 3, 4, 5};
+                int n = 1; // Number of rotations
+
+                for (int i = 0; i < n; i++) {
+                    int last = array[array.length - 1];
+                    for (int j = array.length - 1; j > 0; j--) {
+                        array[j] = array[j - 1];
+                    }
+                    array[0] = last;
+                }
+
+                System.out.println("Array after right rotation:");
+                for (int element : array) {
+                    System.out.print(element + " ");
+                }
+            }
+        }
+`
+},
+"Program 14": {
+    output: `Array in ascending order: 1 2 3 5 8`,
+    code: `
+import java.util.Arrays;
+        
+        public class AscendingSort {
+            public static void main(String[] args) {
+                int[] array = {5, 2, 8, 1, 3};
+                
+                Arrays.sort(array);
+                
+                System.out.println("Array in ascending order:");
+                for (int element : array) {
+                    System.out.print(element + " ");
+                }
+            }
+        }
+`
+},
+"Program 15": {
+    output: `Array in descending order: 8 5 3 2 1`,
+    code: `
+import java.util.Arrays;
+        import java.util.Collections;
+
+        public class DescendingSort {
+            public static void main(String[] args) {
+                Integer[] array = {5, 2, 8, 1, 3};
+
+                Arrays.sort(array, Collections.reverseOrder());
+
+                System.out.println("Array in descending order:");
+                for (int element : array) {
+                    System.out.print(element + " ");
+                }
+            }
+        }
+`
+},
+"Program 16": {
+    output: `3rd Largest Number: 3`,
+    code: `
+import java.util.Arrays;
+
+        public class ThirdLargest {
+            public static void main(String[] args) {
+                int[] array = {5, 2, 8, 1, 3};
+                Arrays.sort(array);
+                int thirdLargest = array[array.length - 3];
+
+                System.out.println("3rd Largest Number: " + thirdLargest);
+            }
+        }
+`
+},
+"Program 17": {
+    output: `2nd Largest Number: 5`,
+    code: `
+import java.util.Arrays;
+
+        public class SecondLargest {
+            public static void main(String[] args) {
+                int[] array = {5, 2, 8, 1, 3};
+                Arrays.sort(array);
+                int secondLargest = array[array.length - 2];
+
+                System.out.println("2nd Largest Number: " + secondLargest);
+            }
+        }
+`
+},
+"Program 18": {
+    output: `Largest Number: 8`,
+    code: `
+public class LargestNumber {
+            public static void main(String[] args) {
+                int[] array = {5, 2, 8, 1, 3};
+                int max = array[0];
+
+                for (int i = 1; i < array.length; i++) {
+                    if (array[i] > max) {
+                        max = array[i];
+                    }
+                }
+
+                System.out.println("Largest Number: " + max);
+            }
+        }
+`
+},
+"Program 19": {
+    output: `2nd Smallest Number: 2`,
+    code: `
+import java.util.Arrays;
+
+        public class SecondSmallest {
+            public static void main(String[] args) {
+                int[] array = {5, 2, 8, 1, 3};
+                Arrays.sort(array);
+                int secondSmallest = array[1];
+
+                System.out.println("2nd Smallest Number: " + secondSmallest);
+            }
+        }
+`
+},
+"Program 20": {
+    output: `Smallest Number: 1`,
+    code: `
+public class SmallestNumber {
+            public static void main(String[] args) {
+                int[] array = {5, 2, 8, 1, 3};
+                int min = array[0];
+
+                for (int i = 1; i < array.length; i++) {
+                    if (array[i] < min) {
+                        min = array[i];
+                    }
+                }
+
+                System.out.println("Smallest Number: " + min);
+            }
+        }
+`
+},
+"Program 21": {
+    output: `Array after removing duplicates: [1, 2, 3, 4, 5]`,
+    code: `
+import java.util.HashSet;
+
+        public class RemoveDuplicates {
+            public static void main(String[] args) {
+                int[] array = {1, 2, 2, 3, 4, 4, 5};
+                HashSet uniqueElements = new HashSet<>();
+
+                for (int element : array) {
+                    uniqueElements.add(element);
+                }
+
+                System.out.println("Array after removing duplicates: " + uniqueElements);
+            }
+        }
+`
+},
+"Program 22": {
+    output: `Odd Numbers: 1 3 5 Even Numbers: 2 4`,
+    code: `
+public class OddEven {
+            public static void main(String[] args) {
+                int[] array = {1, 2, 3, 4, 5};
+
+                System.out.print("Odd Numbers: ");
+                for (int element : array) {
+                    if (element % 2 != 0) {
+                        System.out.print(element + " ");
+                    }
+                }
+
+                System.out.print("\nEven Numbers: ");
+                for (int element : array) {
+                    if (element % 2 == 0) {
+                        System.out.print(element + " ");
+                    }
+                }
+            }
+        }
+`
+},
+"Program 23": {
+    output: `Original array:
+            5 2 9 70 1
+            Array after sorting in ascending order:
+            1 2 5 9 70`,
+    code: `
+class Sort {
+                public static void main(String[] args) {
+                    int[] arr = {5, 2, 9, 70, 1};
+            
+                    System.out.println("Original array:");
+                    for (int i = 0; i < arr.length; i++) {
+                        System.out.print(arr[i] + " ");
+                    }
+            
+                     bubbleSort(arr);
+            
+                            System.out.println("\nArray after sorting in ascending order:");
+                    for (int i = 0; i < arr.length; i++) {
+                        System.out.print(arr[i] + " ");
+                    }
+                }
+            
+               
+                public static void bubbleSort(int[] arr) {
+                    int n = arr.length;
+                           for (int i = 0; i < n - 1; i++) {
+                                   for (int j = 0; j < n - i - 1; j++) {
+                                           if (arr[j] > arr[j + 1]) {
+                                int temp = arr[j];
+                                arr[j] = arr[j + 1];
+                                arr[j + 1] = temp;
+                            }
+                        }
+                    }
+                }
+            }
+`
+}
+        };
+
+        function showProgram(programName) {
+            const program = programs[programName];
+            if (program) {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                    <h2>Output:</h2>
+                    <div class="code-block">${program.output}</div>
+                `;
+            } else {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>Program not found</h2>
+                    <p>Details for this program are not available.</p>
+                `;
+            }
+        }
+    </script>
+
+</body></html>
