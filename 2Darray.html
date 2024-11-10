@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>2d arrray</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <nav class="navbar background">
+        <ul class="navlist">
+            <a href="index.html">Home</a></li> 
+  
+            <a href="Array.html">ARRAYS</a></li>
+            
+            <a href="2Darray.html" >2D-ARRAYS</a></li>
+            
+            <a href="Applet.html">APPLETS</a></li>
+            
+            <a href="bpc.html">BASIC PROGAMMING CONSTRUCTS</a></li>
+            
+            <a href="Data Conversion.html">DATA CONSVERSION</a></li>
+            
+            <a href="DEM.html">DELEGATION EVENT MODEL</a></li>
+            
+            <a href="Exception Handling.html">EXCEPTION HANDLING</a></li>
+            
+            <a href="Functions.html">FUNCTIONS</a></li>
+            
+            <a href="GUI AWT.html">GRAPHICAL USER INTERFACE (AWT)</a></li>
+            
+            <a href="Inheritance.html">INHERITANCE</a></li>
+            
+            <a href="IO.html">INPUT/OUTPUT</a></li>
+            
+            <a href="Interface.html">INTERFACES</a></li>
+            
+            <a href="JDBC.html">JAVA DATABASE CONECTIVITY</a></li>
+            
+            <a href="Threads.html">MULTITHREADING</a></li>
+            
+            <a href="OOP.html">OBJECT ORIENTED PROGRAMMING</a></li>
+            
+            <a href="Packages.html">PACKAGES</a></li>
+          
+            <a href="StringHandling.html">STRING HANDLING</a></li>
+           
+        </ul>
+    </nav>
+    <div style="display: flex; margin: 0; max-height: 100vh;">
+    <div class="sidebar">
+        <h2>Programs</h2>
+<div class="program-list-item" onclick="showProgram(&#39;Program 1&#39;)">1.Enter the Matrix of rows and columns entered by the user and print in matrix format</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 2&#39;)">2. Program to Add Two Matrices</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 3&#39;)">3. Program to left rotate the elements of an array.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 4&#39;)">4.Program to subtract the two matrices</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 5&#39;)">5. Program to determine whether two matrices are equal</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 6&#39;)">6.Program to display the lower triangular matrix</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 7&#39;)">7.Program to display the upper triangular matrix</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 8&#39;)">8.Program to find the frequency of odd &amp; even numbers in the given matrix</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 9&#39;)">9.Program to find the sum of each row and each column of a matrix</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 10&#39;)">10. Program to find the transpose of a given matrix</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 11&#39;)">11.Program to determine whether a given matrix is an identity matrix</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 12&#39;)">12.Program to Transpose matrix</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 13&#39;)">13.Program to determine whether a given matrix is a sparse matrix</div>
+    </div>
+    <div class="content" id="programContent">
+        <h2>Please select program from the list!</h2>
+        
+    </div>
+</div>
+
+    <script>
+        const programs = {
+    "Program 1": {
+        output: `
+Enter number of rows: 2
+        Enter number of columns: 3
+        Enter the elements of the matrix:
+        1
+        2
+        3
+        4
+        5
+        6
+        Matrix:
+        1 2 3 
+        4 5 6
+`,
+        code: `
+import java.io.BufferedReader;
+        import java.io.IOException;
+        import java.io.InputStreamReader;
+
+        public class MatrixInput {
+            public static void main(String[] args) throws IOException {
+                BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+                
+                System.out.print("Enter number of rows: ");
+                int rows = Integer.parseInt(reader.readLine());
+                
+                System.out.print("Enter number of columns: ");
+                int cols = Integer.parseInt(reader.readLine());
+                
+                int[][] matrix = new int[rows][cols];
+
+                System.out.println("Enter the elements of the matrix:");
+                for (int i = 0; i < rows; i++) {
+                    for (int j = 0; j < cols; j++) {
+                        matrix[i][j] = Integer.parseInt(reader.readLine());
+                    }
+                }
+                
+                System.out.println("Matrix:");
+                for (int i = 0; i < rows; i++) {
+                    for (int j = 0; j < cols; j++) {
+                        System.out.print(matrix[i][j] + " ");
+                    }
+                    System.out.println();
+                }
+            }
+        }
+`
+    },
+    "Program 2": {
+    output: `10 10 10 
+        10 10 10 
+        10 10 10`,
+    code: `
+public class MatrixAddition {
+            public static void main(String[] args) {
+                int[][] matrix1 = {
+                    {1, 2, 3},
+                    {4, 5, 6},
+                    {7, 8, 9}
+                };
+        
+                int[][] matrix2 = {
+                    {9, 8, 7},
+                    {6, 5, 4},
+                    {3, 2, 1}
+                };
+        
+                int[][] result = addMatrices(matrix1, matrix2);
+                for (int i = 0; i < result.length; i++) {
+                    for (int j = 0; j < result[i].length; j++) {
+                        System.out.print(result[i][j] + " ");
+                    }
+                    System.out.println();
+                }
+            }
+        
+            public static int[][] addMatrices(int[][] matrix1, int[][] matrix2) {
+                int[][] result = new int[matrix1.length][matrix1[0].length];
+                for (int i = 0; i < matrix1.length; i++) {
+                    for (int j = 0; j < matrix1[0].length; j++) {
+                        result[i][j] = matrix1[i][j] + matrix2[i][j];
+                    }
+                }
+                return result;
+            }
+        }
+`
+},
+"Program 3": {
+    output: `
+58 64 
+139 154 `,
+    code: `
+public class MatrixMultiplication {
+            public static void main(String[] args) {
+                int[][] matrix1 = {
+                    {1, 2, 3},
+                    {4, 5, 6}
+                };
+                
+                int[][] matrix2 = {
+                    {7, 8},
+                    {9, 10},
+                    {11, 12}
+                };
+
+                int[][] result = multiplyMatrices(matrix1, matrix2);
+                
+                for (int i = 0; i < result.length; i++) {
+                    for (int j = 0; j < result[i].length; j++) {
+                        System.out.print(result[i][j] + " ");
+                    }
+                    System.out.println();
+                }
+            }
+            
+            public static int[][] multiplyMatrices(int[][] matrix1, int[][] matrix2) {
+                int rows1 = matrix1.length;
+                int cols1 = matrix1[0].length;
+                int cols2 = matrix2[0].length;
+                int[][] result = new int[rows1][cols2];
+
+                for (int i = 0; i < rows1; i++) {
+                    for (int j = 0; j < cols2; j++) {
+                        for (int k = 0; k < cols1; k++) {
+                            result[i][j] += matrix1[i][k] * matrix2[k][j];
+                        }
+                    }
+                }
+                return result;
+            }
+        }
+`
+},
+"Program 4": {
+    output: `
+4 4 4 
+4 4 4`,
+    code: `
+public class MatrixSubtraction {
+            public static void main(String[] args) {
+                int[][] matrix1 = {
+                    {5, 6, 7},
+                    {8, 9, 10}
+                };
+        
+                int[][] matrix2 = {
+                    {1, 2, 3},
+                    {4, 5, 6}
+                };
+        
+                int[][] result = subtractMatrices(matrix1, matrix2);
+                
+                for (int i = 0; i < result.length; i++) {
+                    for (int j = 0; j < result[i].length; j++) {
+                        System.out.print(result[i][j] + " ");
+                    }
+                    System.out.println();
+                }
+            }
+        
+            public static int[][] subtractMatrices(int[][] matrix1, int[][] matrix2) {
+                int[][] result = new int[matrix1.length][matrix1[0].length];
+                for (int i = 0; i < matrix1.length; i++) {
+                    for (int j = 0; j < matrix1[0].length; j++) {
+                        result[i][j] = matrix1[i][j] - matrix2[i][j];
+                    }
+                }
+                return result;
+            }
+        }
+`
+},
+"Program 5": {
+    output: `
+The matrices are equal.`,
+    code: `
+public class MatrixEquality {
+            public static void main(String[] args) {
+                int[][] matrix1 = {
+                    {1, 2, 3},
+                    {4, 5, 6}
+                };
+        
+                int[][] matrix2 = {
+                    {1, 2, 3},
+                    {4, 5, 6}
+                };
+        
+                if (areMatricesEqual(matrix1, matrix2)) {
+                    System.out.println("The matrices are equal.");
+                } else {
+                    System.out.println("The matrices are not equal.");
+                }
+            }
+        
+            public static boolean areMatricesEqual(int[][] matrix1, int[][] matrix2) {
+                if (matrix1.length != matrix2.length || matrix1[0].length != matrix2[0].length) {
+                    return false;
+                }
+                for (int i = 0; i < matrix1.length; i++) {
+                    for (int j = 0; j < matrix1[0].length; j++) {
+                        if (matrix1[i][j] != matrix2[i][j]) {
+                            return false;
+                        }
+                    }
+                }
+                return true;
+            }
+        }
+`
+},
+"Program 6": {
+    output: `
+Lower Triangular Matrix:
+        1 0 0 
+        4 5 0 
+        7 8 9`,
+    code: `
+public class LowerTriangularMatrix {
+            public static void main(String[] args) {
+                int[][] matrix = {
+                    {1, 2, 3},
+                    {4, 5, 6},
+                    {7, 8, 9}
+                };
+
+                System.out.println("Lower Triangular Matrix:");
+                for (int i = 0; i < matrix.length; i++) {
+                    for (int j = 0; j < matrix[i].length; j++) {
+                        if (i >= j) {
+                            System.out.print(matrix[i][j] + " ");
+                        } else {
+                            System.out.print("0 ");
+                        }
+                    }
+                    System.out.println();
+                }
+            }
+        }
+`
+},
+"Program 7": {
+    output: `
+Upper Triangular Matrix:
+        1 2 3 
+        0 5 6 
+        0 0 9`,
+    code: `
+public class UpperTriangularMatrix {
+            public static void main(String[] args) {
+                int[][] matrix = {
+                    {1, 2, 3},
+                    {4, 5, 6},
+                    {7, 8, 9}
+                };
+
+                System.out.println("Upper Triangular Matrix:");
+                for (int i = 0; i < matrix.length; i++) {
+                    for (int j = 0; j < matrix[i].length; j++) {
+                        if (i <= j) {
+                            System.out.print(matrix[i][j] + " ");
+                        } else {
+                            System.out.print("0 ");
+                        }
+                    }
+                    System.out.println();
+                }
+            }
+        }
+`
+},
+"Program 8": {
+    output: `
+Odd count: 5
+Even count: 4`,
+    code: `
+public class MatrixOddEvenFrequency {
+            public static void main(String[] args) {
+                int[][] matrix = {
+                    {1, 2, 3},
+                    {4, 5, 6},
+                    {7, 8, 9}
+                };
+
+                int oddCount = 0;
+                int evenCount = 0;
+
+                for (int i = 0; i < matrix.length; i++) {
+                    for (int j = 0; j < matrix[i].length; j++) {
+                        if (matrix[i][j] % 2 == 0) {
+                            evenCount++;
+                        } else {
+                            oddCount++;
+                        }
+                    }
+                }
+
+                System.out.println("Odd count: " + oddCount);
+                System.out.println("Even count: " + evenCount);
+            }
+        }
+`
+},
+"Program 9": {
+    output: `
+Sum of each row:
+        Row 1: 6
+        Row 2: 15
+        Row 3: 24
+        Sum of each column:
+        Column 1: 12
+        Column 2: 15
+        Column 3: 18`,
+    code: `
+public class MatrixRowColumnSum {
+            public static void main(String[] args) {
+                int[][] matrix = {
+                    {1, 2, 3},
+                    {4, 5, 6},
+                    {7, 8, 9}
+                };
+
+                System.out.println("Sum of each row:");
+                for (int i = 0; i < matrix.length; i++) {
+                    int rowSum = 0;
+                    for (int j = 0; j < matrix[i].length; j++) {
+                        rowSum += matrix[i][j];
+                    }
+                    System.out.println("Row " + (i + 1) + ": " + rowSum);
+                }
+
+                System.out.println("Sum of each column:");
+                for (int j = 0; j < matrix[0].length; j++) {
+                    int colSum = 0;
+                    for (int i = 0; i < matrix.length; i++) {
+                        colSum += matrix[i][j];
+                    }
+                    System.out.println("Column " + (j + 1) + ": " + colSum);
+                }
+            }
+        }
+`
+},
+"Program 10": {
+    output: `
+Transpose of the matrix:
+        1 4 
+        2 5 
+        3 6`,
+    code: `
+public class MatrixTranspose {
+            public static void main(String[] args) {
+                int[][] matrix = {
+                    {1, 2, 3},
+                    {4, 5, 6}
+                };
+
+                int[][] transpose = new int[matrix[0].length][matrix.length];
+
+                for (int i = 0; i < matrix.length; i++) {
+                    for (int j = 0; j < matrix[i].length; j++) {
+                        transpose[j][i] = matrix[i][j];
+                    }
+                }
+
+                System.out.println("Transpose of the matrix:");
+                for (int i = 0; i < transpose.length; i++) {
+                    for (int j = 0; j < transpose[i].length; j++) {
+                        System.out.print(transpose[i][j] + " ");
+                    }
+                    System.out.println();
+                }
+            }
+        }
+`
+},
+"Program 11": {
+    output: `The matrix is an identity matrix.`,
+    code: `
+public class IdentityMatrixCheck {
+            public static void main(String[] args) {
+                int[][] matrix = {
+                    {1, 0, 0},
+                    {0, 1, 0},
+                    {0, 0, 1}
+                };
+
+                if (isIdentityMatrix(matrix)) {
+                    System.out.println("The matrix is an identity matrix.");
+                } else {
+                    System.out.println("The matrix is not an identity matrix.");
+                }
+            }
+
+            public static boolean isIdentityMatrix(int[][] matrix) {
+                for (int i = 0; i < matrix.length; i++) {
+                    for (int j = 0; j < matrix[i].length; j++) {
+                        if (i == j && matrix[i][j] != 1) {
+                            return false;
+                        } else if (i != j && matrix[i][j] != 0) {
+                            return false;
+                        }
+                    }
+                }
+                return true;
+            }
+        }
+`
+},
+"Program 12": {
+    output: `
+Transpose of the matrix:
+        1 4 
+        2 5 
+        3 6`,
+    code: `
+public class MatrixTranspose {
+            public static void main(String[] args) {
+                int[][] matrix = {
+                    {1, 2, 3},
+                    {4, 5, 6}
+                };
+
+                int[][] transpose = new int[matrix[0].length][matrix.length];
+
+                for (int i = 0; i < matrix.length; i++) {
+                    for (int j = 0; j < matrix[i].length; j++) {
+                        transpose[j][i] = matrix[i][j];
+                    }
+                }
+
+                System.out.println("Transpose of the matrix:");
+                for (int i = 0; i < transpose.length; i++) {
+                    for (int j = 0; j < transpose[i].length; j++) {
+                        System.out.print(transpose[i][j] + " ");
+                    }
+                    System.out.println();
+                }
+            }
+        }
+`
+},
+"Program 13": {
+    output: `The matrix is a sparse matrix.`,
+    code: `
+public class SparseMatrixCheck {
+            public static void main(String[] args) {
+                int[][] matrix = {
+                    {0, 0, 3},
+                    {0, 0, 0},
+                    {1, 0, 0}
+                };
+
+                if (isSparseMatrix(matrix)) {
+                    System.out.println("The matrix is a sparse matrix.");
+                } else {
+                    System.out.println("The matrix is not a sparse matrix.");
+                }
+            }
+
+            public static boolean isSparseMatrix(int[][] matrix) {
+                int zeroCount = 0;
+                int totalElements = matrix.length * matrix[0].length;
+
+                for (int i = 0; i < matrix.length; i++) {
+                    for (int j = 0; j < matrix[i].length; j++) {
+                        if (matrix[i][j] == 0) {
+                            zeroCount++;
+                        }
+                    }
+                }
+                return zeroCount > totalElements / 2;
+            }
+        }
+
+`
+}
+        };
+
+        function showProgram(programName) {
+            const program = programs[programName];
+            if (program) {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                    <h2>Output:</h2>
+                    <div class="code-block">${program.output}</div>
+                `;
+            } else {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>Program not found</h2>
+                    <p>Details for this program are not available.</p>
+                `;
+            }
+        }
+    </script>
+
+</body></html>
