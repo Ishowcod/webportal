@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applet</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <nav class="navbar background">
+        <ul class="navlist">
+            <a href="index.html">Home</a></li> 
+  
+            <a href="Array.html">ARRAYS</a></li>
+            
+            <a href="2Darray.html" >2D-ARRAYS</a></li>
+            
+            <a href="Applet.html">APPLETS</a></li>
+            
+            <a href="bpc.html">BASIC PROGAMMING CONSTRUCTS</a></li>
+            
+            <a href="Data Conversion.html">DATA CONSVERSION</a></li>
+            
+            <a href="DEM.html">DELEGATION EVENT MODEL</a></li>
+            
+            <a href="Exception Handling.html">EXCEPTION HANDLING</a></li>
+            
+            <a href="Functions.html">FUNCTIONS</a></li>
+            
+            <a href="GUI AWT.html">GRAPHICAL USER INTERFACE (AWT)</a></li>
+            
+            <a href="Inheritance.html">INHERITANCE</a></li>
+            
+            <a href="IO.html">INPUT/OUTPUT</a></li>
+            
+            <a href="Interface.html">INTERFACES</a></li>
+            
+            <a href="JDBC.html">JAVA DATABASE CONECTIVITY</a></li>
+            
+            <a href="Threads.html">MULTITHREADING</a></li>
+            
+            <a href="OOP.html">OBJECT ORIENTED PROGRAMMING</a></li>
+            
+            <a href="Packages.html">PACKAGES</a></li>
+          
+            <a href="StringHandling.html">STRING HANDLING</a></li>
+        </ul>
+    </nav>
+    <div style="display: flex; margin: 0; max-height: 100vh;">
+    <div class="sidebar">
+        <h2>Programs</h2>
+
+        <div class="program-list-item" onclick="showProgram(&#39;Program 1&#39;)">Program 1: Create an applet showing the string "Hello World" which is embedded in the HTML page.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 2&#39;)">Program 2: Create an applet showing the string "Hello World" which is executed by an appletviewer.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 3&#39;)">Program 3: Create an applet in Java to draw a circle.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 4&#39;)">Program 4: Create an applet in Java to draw a polygon.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 5&#39;)">Program 5: Create an applet in Java to draw a rectangle.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 6&#39;)">Program 6: Create an applet in Java to draw a square.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 7&#39;)">Program 7: Create an applet in Java to draw 4 concentric circles.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 8&#39;)">Program 8: Create an applet in Java to draw a line.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 9&#39;)">Program 9: Create an applet in Java to draw an oval.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 10&#39;)">Program 10: Create an applet in Java to draw an arc.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 11&#39;)">Program 11: Create an applet in Java to change the background color.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 12&#39;)">Program 12: Create an applet in Java to draw a rounded rectangle.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 13&#39;)">Program 13: Create an applet in Java to set font.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 14&#39;)">Program 14: Create an applet to display a digital clock.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 15&#39;)">Program 15: Java Program to Draw a Smiling Face using Graphics Class Methods.</div>
+        
+    </div>
+
+    <div class="content" id="programContent">
+  <h2>Please select program from the list!</h2>
+    </div>
+    </div>
+    <script>
+        const programs = {
+    "Program 1": { 
+    output: `0000`, 
+    code: `import java.applet.Applet;\nimport java.awt.Graphics;\n\npublic class HelloWorldApplet extends Applet {\n    public void paint(Graphics g) {\n        g.drawString("Hello World", 20, 20);\n    }\n}\n`  
+}, 
+"Program 2": { 
+    output: `0000`, 
+    code: `import java.applet.Applet;\nimport java.awt.Graphics;\n\npublic class HelloWorldApplet extends Applet {\n    public void paint(Graphics g) {\n        g.drawString("Hello World", 20, 20);\n    }\n}\n`  
+}, 
+"Program 3": { 
+    output: `0000`, 
+    code: `import java.applet.Applet;\nimport java.awt.Graphics;\n\npublic class CircleApplet extends Applet {\n    public void paint(Graphics g) {\n        g.drawOval(50, 50, 100, 100); // Draw a circle\n    }\n}\n`  
+}, 
+"Program 4": { 
+    output: `0000`, 
+    code: `import java.applet.Applet;\nimport java.awt.Graphics;\n\npublic class PolygonApplet extends Applet {\n    public void paint(Graphics g) {\n        int[] xPoints = {50, 100, 150};\n        int[] yPoints = {150, 50, 150};\n        g.drawPolygon(xPoints, yPoints, 3); // Draw a triangle\n    }\n}\n`  
+}, 
+"Program 5": { 
+    output: `0000`, 
+    code: `import java.applet.Applet;\nimport java.awt.Graphics;\n\npublic class RectangleApplet extends Applet {\n    public void paint(Graphics g) {\n        g.drawRect(50, 50, 200, 100); // Draw a rectangle\n    }\n}\n`  
+}, 
+"Program 6": { 
+    output: `0000`, 
+    code: `import java.applet.Applet;\nimport java.awt.Graphics;\n\npublic class SquareApplet extends Applet {\n    public void paint(Graphics g) {\n        g.drawRect(50, 50, 100, 100); // Draw a square\n    }\n}\n`  
+}, 
+"Program 7": { 
+    output: `0000`, 
+    code: `import java.applet.Applet;\nimport java.awt.Graphics;\n\npublic class ConcentricCirclesApplet extends Applet {\n    public void paint(Graphics g) {\n        for (int i = 0; i < 4; i++) {\n            g.drawOval(50 - (i * 20), 50 - (i * 20), 100 + (i * 40), 100 + (i * 40)); // Draw concentric circles\n        }\n    }\n}\n`  
+}, 
+"Program 8": { 
+    output: `0000`, 
+    code: `import java.applet.Applet;\nimport java.awt.Graphics;\n\npublic class LineApplet extends Applet {\n    public void paint(Graphics g) {\n        g.drawLine(20, 20, 200, 200); // Draw a line\n    }\n}\n`  
+}, 
+"Program 9": { 
+    output: `0000`, 
+    code: `import java.applet.Applet;\nimport java.awt.Graphics;\n\npublic class OvalApplet extends Applet {\n    public void paint(Graphics g) {\n        g.drawOval(50, 50, 200, 100); // Draw an oval\n    }\n}\n`  
+}, 
+"Program 10": { 
+    output: `0000`, 
+    code: `import java.applet.Applet;\nimport java.awt.Graphics;\n\npublic class ArcApplet extends Applet {\n    public void paint(Graphics g) {\n        g.drawArc(50, 50, 200, 100, 0, 180); // Draw an arc\n    }\n}\n`  
+}, 
+"Program 11": { 
+    output: `0000`, 
+    code: `import java.applet.Applet;\nimport java.awt.Color;\nimport java.awt.Graphics;\n\npublic class BackgroundColorApplet extends Applet {\n    public void init() {\n        setBackground(Color.CYAN); // Set background color\n    }\n    public void paint(Graphics g) {\n        g.drawString("Background Color Changed", 20, 20);\n    }\n}\n`  
+}, 
+"Program 12": { 
+    output: `0000`, 
+    code: `import java.applet.Applet;\nimport java.awt.Graphics;\n\npublic class RoundedRectangleApplet extends Applet {\n    public void paint(Graphics g) {\n        g.drawRoundRect(50, 50, 200, 100, 30, 30); // Draw a rounded rectangle\n    }\n}\n`  
+}, 
+"Program 13": { 
+    output: `0000`, 
+    code: `import java.applet.Applet;\nimport java.awt.Font;\nimport java.awt.Graphics;\n\npublic class FontApplet extends Applet {\n    public void paint(Graphics g) {\n        Font font = new Font("Arial", Font.BOLD, 20);\n        g.setFont(font);\n        g.drawString("Custom Font", 20, 20);\n    }\n}\n`  
+}, 
+"Program 14": { 
+    output: `0000`, 
+    code: `import java.applet.Applet;\nimport java.awt.Graphics;\nimport java.text.SimpleDateFormat;\nimport java.util.Date;\n\npublic class DigitalClockApplet extends Applet {\n    public void paint(Graphics g) {\n        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");\n        String time = sdf.format(new Date());\n        g.drawString("Current Time: " + time, 20, 20);\n    }\n}\n`  
+}, 
+"Program 15": { 
+    output: `0000`, 
+    code: `import java.applet.Applet;\nimport java.awt.Color;\nimport java.awt.Graphics;\n\npublic class SmilingFaceApplet extends Applet {\n    public void paint(Graphics g) {\n        g.setColor(Color.YELLOW);\n        g.fillOval(50, 50, 200, 200); // Face\n        g.setColor(Color.BLACK);\n        g.fillOval(100, 100, 20, 20); // Left eye\n        g.fillOval(180, 100, 20, 20); // Right eye\n        g.drawArc(100, 120, 100, 100, 0, -180); // Smile\n    }\n}\n`  
+}
+
+        };
+
+        function showProgram(programName) {
+            const program = programs[programName];
+            if (program) {
+                if(program.output == "0000"){
+                    document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                `;
+                }
+                else{
+                document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                    <h2>Output:</h2>
+                    <div class="code-block">${program.output}</div>
+                `;
+            }    
+                }
+                 else {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>Program not found</h2>
+                    <p>Details for this program are not available.</p>
+                `;
+            }
+        }
+    </script>
+
+</body></html>
