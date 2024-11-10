@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Conversion</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <nav class="navbar background">
+        <ul class="navlist">
+            <a href="index.html">Home</a></li> 
+  
+            <a href="Array.html">ARRAYS</a></li>
+            
+            <a href="2Darray.html" >2D-ARRAYS</a></li>
+            
+            <a href="Applet.html">APPLETS</a></li>
+            
+            <a href="bpc.html">BASIC PROGAMMING CONSTRUCTS</a></li>
+            
+            <a href="Data Conversion.html">DATA CONSVERSION</a></li>
+            
+            <a href="DEM.html">DELEGATION EVENT MODEL</a></li>
+            
+            <a href="Exception Handling.html">EXCEPTION HANDLING</a></li>
+            
+            <a href="Functions.html">FUNCTIONS</a></li>
+            
+            <a href="GUI AWT.html">GRAPHICAL USER INTERFACE (AWT)</a></li>
+            
+            <a href="Inheritance.html">INHERITANCE</a></li>
+            
+            <a href="IO.html">INPUT/OUTPUT</a></li>
+            
+            <a href="Interface.html">INTERFACES</a></li>
+            
+            <a href="JDBC.html">JAVA DATABASE CONECTIVITY</a></li>
+            
+            <a href="Threads.html">MULTITHREADING</a></li>
+            
+            <a href="OOP.html">OBJECT ORIENTED PROGRAMMING</a></li>
+            
+            <a href="Packages.html">PACKAGES</a></li>
+          
+            <a href="StringHandling.html">STRING HANDLING</a></li>
+        </ul>
+    </nav>
+    <div style="display: flex; margin: 0; max-height: 100vh;">
+    <div class="sidebar">
+        <h2>Programs</h2>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 1&#39;)">1. How to convert String to int</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 2&#39;)">2. How to convert int to String</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 3&#39;)">3. How to convert String to long</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 4&#39;)">4. How to convert long to String</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 5&#39;)">5. How to convert String to float</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 6&#39;)">6. How to convert float to String</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 7&#39;)">7. How to convert String to double</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 8&#39;)">8. How to convert double to String</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 9&#39;)">9. How to convert String to Date</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 10&#39;)">10. How to convert Date to String</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 11&#39;)">11. How to convert String to char</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 12&#39;)">12. How to convert char to String</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 13&#39;)">13. How to convert String to Object</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 14&#39;)">14. How to convert Object to String</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 15&#39;)">15. How to convert int to long</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 16&#39;)">16. How to convert long to int</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 17&#39;)">17. How to convert int to double</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 18&#39;)">18. How to convert double to int</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 19&#39;)">19. How to convert char to int</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 20&#39;)">20. How to convert int to char</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 21&#39;)">21. How to convert String to boolean</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 22&#39;)">22. How to convert boolean to String</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 23&#39;)">23. How to convert Date to Timestamp</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 24&#39;)">24. How to convert Timestamp to Date</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 25&#39;)">25. How to convert Binary to Decimal</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 26&#39;)">26. How to convert Decimal to Binary</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 27&#39;)">27. How to convert Hex to Decimal</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 28&#39;)">28. How to convert Decimal to Hex</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 29&#39;)">29. How to convert Octal to Decimal</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 30&#39;)">30. How to convert Decimal to Octal</div>
+
+    </div>
+
+    <div class="content" id="programContent">
+        <h2>Please select program from the list!</h2>
+    </div>
+</div>
+    
+    <script>
+        const programs = {
+    "Program 1": {
+        output: `Converted int: 123`,
+        code: `public class StringToIntExample {
+                    public static void main(String[] args) {
+                        String str = "123"; // The string to be converted
+                        
+                        try {
+                            // Converting String to int
+                            int num = Integer.parseInt(str);
+                            System.out.println("Converted int: " + num);
+                        } catch (NumberFormatException e) {
+                            System.out.println("Invalid input: " + str);
+                        }
+                    }
+                }`
+    },
+    "Program 2": {
+        output: `Converted String: 123`,
+        code: `public class IntToStringExample {
+                    public static void main(String[] args) {
+                        int num = 123; // The int to be converted
+                        
+                        // Converting int to String
+                        String str = Integer.toString(num);
+                        System.out.println("Converted String: " + str);
+                    }
+                }`
+    },
+    "Program 3": {
+        output: `Converted long: 123456789`,
+        code: `public class StringToLongExample {
+                    public static void main(String[] args) {
+                        String str = "123456789"; // The string to be converted
+                        
+                        try {
+                            // Converting String to long
+                            long num = Long.parseLong(str);
+                            System.out.println("Converted long: " + num);
+                        } catch (NumberFormatException e) {
+                            System.out.println("Invalid input: " + str);
+                        }
+                    }
+                }`
+    },
+    "Program 4": {
+        output: `Converted String: 123456789`,
+        code: `public class LongToStringExample {
+                    public static void main(String[] args) {
+                        long num = 123456789L; // The long to be converted
+                        
+                        // Converting long to String
+                        String str = Long.toString(num);
+                        System.out.println("Converted String: " + str);
+                    }
+                }`
+    },
+    "Program 5": {
+        output: `Converted float: 123.45`,
+        code: `public class StringToFloatExample {
+                    public static void main(String[] args) {
+                        String str = "123.45"; // The string to be converted
+                        
+                        try {
+                            // Converting String to float
+                            float num = Float.parseFloat(str);
+                            System.out.println("Converted float: " + num);
+                        } catch (NumberFormatException e) {
+                            System.out.println("Invalid input: " + str);
+                        }
+                    }
+                }`
+    },
+    "Program 6": {
+        output: `Converted String: 123.45`,
+        code: `public class FloatToStringExample {
+                    public static void main(String[] args) {
+                        float num = 123.45f; // The float to be converted
+                        
+                        // Converting float to String
+                        String str = Float.toString(num);
+                        System.out.println("Converted String: " + str);
+                    }
+                }`
+    },
+    "Program 7": {
+        output: `Converted double: 123.45`,
+        code: `public class StringToDoubleExample {
+                    public static void main(String[] args) {
+                        String str = "123.45"; // The string to be converted
+                        
+                        try {
+                            // Converting String to double
+                            double num = Double.parseDouble(str);
+                            System.out.println("Converted double: " + num);
+                        } catch (NumberFormatException e) {
+                            System.out.println("Invalid input: " + str);
+                        }
+                    }
+                }`
+    },
+    "Program 8": {
+        output: `Converted String: 123.45`,
+        code: `public class DoubleToStringExample {
+                    public static void main(String[] args) {
+                        double num = 123.45; // The double to be converted
+                        
+                        // Converting double to String
+                        String str = Double.toString(num);
+                        System.out.println("Converted String: " + str);
+                    }
+                }`
+    },
+    "Program 9": {
+        output: `Converted Date: Sat Nov 02 00:00:00 IST 2024`,
+        code: `import java.text.SimpleDateFormat;
+                import java.util.Date;
+                import java.text.ParseException;
+    
+                public class StringToDateExample {
+                    public static void main(String[] args) {
+                        String str = "2024-11-02"; // The string to be converted
+                        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+                        
+                        try {
+                            // Converting String to Date
+                            Date date = formatter.parse(str);
+                            System.out.println("Converted Date: " + date);
+                        } catch (ParseException e) {
+                            System.out.println("Invalid input: " + str);
+                        }
+                    }
+                }`
+    },
+    "Program 10": {
+        output: `Converted String: [current_date]`,
+        code: `import java.text.SimpleDateFormat;
+                import java.util.Date;
+    
+                public class DateToStringExample {
+                    public static void main(String[] args) {
+                        Date date = new Date(); // The current date
+                        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+                        
+                        // Converting Date to String
+                        String str = formatter.format(date);
+                        System.out.println("Converted String: " + str);
+                    }
+                }`
+    },
+    "Program 11": {
+        output: `Converted char: H`,
+        code: `public class StringToCharExample {
+                    public static void main(String[] args) {
+                        String str = "Hello"; // The string to be converted
+                        
+                        // Converting String to char
+                        char ch = str.charAt(0); // Get first character
+                        System.out.println("Converted char: " + ch);
+                    }
+                }`
+    },
+    "Program 12": {
+        output: `Converted String: H`,
+        code: `public class CharToStringExample {
+                    public static void main(String[] args) {
+                        char ch = 'H'; // The char to be converted
+                        
+                        // Converting char to String
+                        String str = Character.toString(ch);
+                        System.out.println("Converted String: " + str);
+                    }
+                }`
+    },
+    "Program 13": {
+        output: `Converted Object: Hello`,
+        code: `public class StringToObjectExample {
+                    public static void main(String[] args) {
+                        String str = "Hello"; // The string to be converted
+                        
+                        // Converting String to Object
+                        Object obj = str;
+                        System.out.println("Converted Object: " + obj);
+                    }
+                }`
+    },
+    "Program 14": {
+        output: `Converted String: Hello`,
+        code: `public class ObjectToStringExample {
+                    public static void main(String[] args) {
+                        Object obj = "Hello"; // The object to be converted
+                        
+                        // Converting Object to String
+                        String str = obj.toString();
+                        System.out.println("Converted String: " + str);
+                    }
+                }`
+    },
+    "Program 15": {
+        output: `Converted long: 123`,
+        code: `public class IntToLongExample {
+                    public static void main(String[] args) {
+                        int num = 123; // The int to be converted
+                        
+                        // Converting int to long
+                        long longNum = (long) num;
+                        System.out.println("Converted long: " + longNum);
+                    }
+                }`
+    },
+    "Program 16": {
+        output: `Converted int: 123`,
+        code: `public class LongToIntExample {
+                    public static void main(String[] args) {
+                        long longNum = 123; // The long to be converted
+                        
+                        // Converting long to int
+                        int num = (int) longNum;
+                        System.out.println("Converted int: " + num);
+                    }
+                }`
+    },
+    "Program 17": {
+        output: `Converted double: 123.0`,
+        code: `public class IntToDoubleExample {
+                    public static void main(String[] args) {
+                        int num = 123; // The int to be converted
+                        
+                        // Converting int to double
+                        double doubleNum = (double) num;
+                        System.out.println("Converted double: " + doubleNum);
+                    }
+                }`
+    },
+    "Program 18": {
+        output: `Converted int: 123`,
+        code: `public class DoubleToIntExample {
+                    public static void main(String[] args) {
+                        double doubleNum = 123.45; // The double to be converted
+                        
+                        // Converting double to int
+                        int num = (int) doubleNum;
+                        System.out.println("Converted int: " + num);
+                    }
+                }`
+    },
+    "Program 19": {
+        output: `Converted int: 65`,
+        code: `public class CharToIntExample {
+                    public static void main(String[] args) {
+                        char ch = 'A'; // The char to be converted
+                        
+                        // Converting char to int
+                        int num = (int) ch;
+                        System.out.println("Converted int: " + num);
+                    }
+                }`
+    },
+    "Program 20": {
+        output: `Converted char: A`,
+        code: `public class IntToCharExample {
+                    public static void main(String[] args) {
+                        int num = 65; // The int to be converted
+                        
+                        // Converting int to char
+                        char ch = (char) num;
+                        System.out.println("Converted char: " + ch);
+                    }
+                }`
+    },
+    "Program 21": {
+        output: `Converted boolean: true`,
+        code: `public class StringToBooleanExample {
+                    public static void main(String[] args) {
+                        String str = "true"; // The string to be converted
+                        
+                        // Converting String to boolean
+                        boolean bool = Boolean.parseBoolean(str);
+                        System.out.println("Converted boolean: " + bool);
+                    }
+                }`
+    },
+    "Program 22": {
+        output: `Converted String: true`,
+        code: `public class BooleanToStringExample {
+                    public static void main(String[] args) {
+                        boolean bool = true; // The boolean to be converted
+                        
+                        // Converting boolean to String
+                        String str = Boolean.toString(bool);
+                        System.out.println("Converted String: " + str);
+                    }
+                }`
+    },
+    "Program 23": {
+        output: `Converted Timestamp: [current_timestamp]`,
+        code: `import java.sql.Timestamp;
+                import java.util.Date;
+    
+                public class DateToTimestampExample {
+                    public static void main(String[] args) {
+                        Date date = new Date(); // The current date
+                        
+                        // Converting Date to Timestamp
+                        Timestamp timestamp = new Timestamp(date.getTime());
+                        System.out.println("Converted Timestamp: " + timestamp);
+                    }
+                }`
+    },
+    "Program 24": {
+        output: `Converted Date: [current_date]`,
+        code: `import java.sql.Timestamp;
+                import java.util.Date;
+    
+                public class TimestampToDateExample {
+                    public static void main(String[] args) {
+                        Timestamp timestamp = new Timestamp(System.currentTimeMillis()); // Current Timestamp
+                        
+                        // Converting Timestamp to Date
+                        Date date = new Date(timestamp.getTime());
+                        System.out.println("Converted Date: " + date);
+                    }
+                }`
+    },
+    "Program 25": {
+        output: `Converted Decimal: 10  `,
+        code: `public class BinaryToDecimalExample {
+                    public static void main(String[] args) {
+                        String binary = "1010"; // The binary string to be converted
+                        
+                        // Converting Binary to Decimal
+                        int decimal = Integer.parseInt(binary, 2);
+                        System.out.println("Converted Decimal: " + decimal);
+                    }
+                }`
+    },
+    "Program 26": {
+        output: `Converted Binary: 1010`,
+        code: `public class DecimalToBinaryExample {
+                    public static void main(String[] args) {
+                        int decimal = 10; // The decimal number to be converted
+                        
+                        // Converting Decimal to Binary
+                        String binary = Integer.toBinaryString(decimal);
+                        System.out.println("Converted Binary: " + binary);
+                    }
+                }`
+    },
+    "Program 27": {
+        output: `Converted Decimal: 10`,
+        code: `public class HexToDecimalExample {
+                    public static void main(String[] args) {
+                        String hex = "A"; // The hex string to be converted
+                        
+                        // Converting Hex to Decimal
+                        int decimal = Integer.parseInt(hex, 16);
+                        System.out.println("Converted Decimal: " + decimal);
+                    }
+                }`
+    },
+    "Program 28": {
+        output: `Converted Hex: a`,
+        code: `public class DecimalToHexExample {
+                    public static void main(String[] args) {
+                        int decimal = 10; // The decimal number to be converted
+                        
+                        // Converting Decimal to Hex
+                        String hex = Integer.toHexString(decimal);
+                        System.out.println("Converted Hex: " + hex);
+                    }
+                }`
+    },
+    "Program 29": {
+        output: `Converted Decimal: 10`,
+        code: `public class OctalToDecimalExample {
+                    public static void main(String[] args) {
+                        String octal = "12"; // The octal string to be converted
+                        
+                        // Converting Octal to Decimal
+                        int decimal = Integer.parseInt(octal, 8);
+                        System.out.println("Converted Decimal: " + decimal);
+                    }
+                }`
+    },
+    "Program 30": {
+        output: `Converted Octal: 12`,
+        code: `public class DecimalToOctalExample {
+                    public static void main(String[] args) {
+                        int decimal = 10; // The decimal number to be converted
+                        
+                        // Converting Decimal to Octal
+                        String octal = Integer.toOctalString(decimal);
+                        System.out.println("Converted Octal: " + octal);
+                    }
+                }`
+    }
+        };
+
+        function showProgram(programName) {
+            const program = programs[programName];
+            if (program) {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                    <h2>Output:</h2>
+                    <div class="code-block">${program.output}</div>
+                `;
+            } else {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>Program not found</h2>
+                    <p>Details for this program are not available.</p>
+                `;
+            }
+        }
+    </script>
+
+</body></html>
