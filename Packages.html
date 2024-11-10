@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages</title> <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <nav class="navbar background">
+        <ul class="navlist">
+            <a href="index.html">Home</a></li> 
+  
+            <a href="Array.html">ARRAYS</a></li>
+            
+            <a href="2Darray.html" >2D-ARRAYS</a></li>
+            
+            <a href="Applet.html">APPLETS</a></li>
+            
+            <a href="bpc.html">BASIC PROGAMMING CONSTRUCTS</a></li>
+            
+            <a href="Data Conversion.html">DATA CONSVERSION</a></li>
+            
+            <a href="DEM.html">DELEGATION EVENT MODEL</a></li>
+            
+            <a href="Exception Handling.html">EXCEPTION HANDLING</a></li>
+            
+            <a href="Functions.html">FUNCTIONS</a></li>
+            
+            <a href="GUI AWT.html">GRAPHICAL USER INTERFACE (AWT)</a></li>
+            
+            <a href="Inheritance.html">INHERITANCE</a></li>
+            
+            <a href="IO.html">INPUT/OUTPUT</a></li>
+            
+            <a href="Interface.html">INTERFACES</a></li>
+            
+            <a href="JDBC.html">JAVA DATABASE CONECTIVITY</a></li>
+            
+            <a href="Threads.html">MULTITHREADING</a></li>
+            
+            <a href="OOP.html">OBJECT ORIENTED PROGRAMMING</a></li>
+            
+            <a href="Packages.html">PACKAGES</a></li>
+          
+            <a href="StringHandling.html">STRING HANDLING</a></li>
+        </ul>
+    </nav>
+    <div style="display: flex; margin: 0; max-height: 100vh;">
+    <div class="sidebar">
+        <h2>Programs</h2>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 1&#39;)">1. Create a Java program to access the java.util.Date class through import keyword and print the current date of the system.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 2&#39;)">2. Create a Java program to access the java.util.Date class through qualified way and print the current date of the system.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 3&#39;)">3. Create a Java program to access the java.util.Date class through import keyword and print the current date of the system but inherit the Date class.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 4&#39;)">4. Create a Java program to access the java.util.Date class through qualified way and print the current date of the system but inherit the Date class.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 5&#39;)">5. Create a Java program to create a package with multiple default classes.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 6&#39;)">6. Create a Java program to create a package with 4 public classes, create the object in another file and call the function created in those classes.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 7&#39;)">7. Write a Java program to perform employee payroll processing using packages. In the java file, Emp.java creates a package employee and creates a class Emp. Declare the variables name, empid, category, bpay, hra, da, npay, pf, grosspay, incometax, and allowance. Calculate the values in methods. Create another java file Emppay.java. Create an object e to call the methods to perform and print values.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 8&#39;)">8. Create a Java program to create a package with public class and protected members to be accessed in another class.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 9&#39;)">9. Create a Java program to create a nested package i.e. c4.sample with public class and protected members to be accessed in another class.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 10&#39;)">10. Create a Java program to create a package with public class and public members to be accessed in another class.</div>
+    </div>
+
+    <div class="content" id="programContent">
+ <h2>Please select program from the list!</h2>
+    </div>
+</div>
+    
+    <script>
+        const programs = {
+    "Program 1": {
+        output: `The current date is 19`,
+        code: `import java.util.Date;
+class Abc{
+public static void main(String str[]){
+Date obj=new Date();
+System.out.println("The current date is " +obj.getDate());
+}
+}`
+    },
+    "Program 2": {
+        output: `Current date = 19`,
+        code: `class A {
+                public static void main(String x[]){
+                java.util.Date obj= new java.util.Date();
+                System.out.println("Current date = "+ obj.getDate());
+                }
+                }`
+    },
+    "Program 3": {
+        output: `Current date = 19`,
+        code: `import java.util.Date;
+class A extends Date {
+public static void main(String x[]){
+A obj= new A();
+System.out.println("Current date = "+ obj.getDate());
+}
+}`
+    },
+    "Program 4": {
+        output: `Current date = 19`,
+        code: `class A extends java.util.Date{
+                public static void main(String x[]){
+                A obj= new A();
+                System.out.println("Current date = "+ obj.getDate());
+                }
+                }`
+    },
+    "Program 5": {
+        output: `Hello from class A.
+Hello from class B.
+Hello from class C.`,
+        code: `            package p1;
+class A {
+void display() {
+System.out.println("Hello from class A.");
+}
+}
+class B {
+void display() {
+System.out.println("Hello from class B.");
+}
+}
+class C {
+void display() {
+System.out.println("Hello from class C.");
+}
+public static void main(String s[]){
+A obj=new A();
+obj.display();
+B obj2=new B();
+obj2.display();
+C obj3=new C();
+obj3.display();
+}
+}`
+    },
+    "Program 6": {
+        output: `claA called..
+claB called..
+claC called..
+claD called..`,
+        code: `    package mypac;
+    public class claA
+    {
+    public void display()
+    {
+    System.out.println("claA called..");
+    }
+    }
+
+    
+    package mypac;
+public class claB
+{
+public void display()
+{
+System.out.println("claB called..");
+}
+}
+
+
+package mypac;
+public class claC
+{
+public void display()
+{
+System.out.println("claC called..");
+}
+}
+
+
+package mypac;
+public class claD
+{
+public void display()
+{
+System.out.println("claD called..");
+}
+}
+
+
+import mypac.claA;
+import mypac.claB;
+import mypac.claC;
+import mypac.claD;
+
+public class main12
+{
+public static void main(String st[])
+{
+ claA obj=new claA();
+obj.diplay();
+claB obj1=new claB();
+obj1.diplay();
+claC obj2=new claC();
+obj2.diplay();
+claD obj3=new claD();
+obj3.diplay();
+}
+}`
+    },
+    "Program 7": {
+        output: `0000`,
+        code: `package employee;
+
+public class Emp {
+    String name;
+    int empid;
+    String category;
+    double bpay, hra, da, npay, pf, grosspay, incometax, allowance;
+
+    public void calculatePay() {
+        // Sample calculations
+        grosspay = bpay + hra + da;
+        incometax = grosspay * 0.1;
+        npay = grosspay - incometax - pf;
+    }
+}
+
+import employee.Emp;
+
+public class Emppay {
+    public static void main(String[] args) {
+        Emp e = new Emp();
+        e.name = "John Doe";
+        e.empid = 101;
+        e.category = "Manager";
+        e.bpay = 50000;
+        e.hra = 10000;
+        e.da = 5000;
+        e.pf = 3000;
+
+        e.calculatePay();
+        System.out.println("Net Pay: " + e.npay);
+    }
+}`
+    },
+    "Program 8": {
+        output: `x=10
+  hello first class..`,
+        code: `    package mypac1;
+    public class First
+    {
+    protected int x=10;
+    protected void printMessage()
+    {
+    System.out.println("hello first class..");
+    }
+    }
+  
+
+    //in another file
+    package mypac1;
+    public class Second extends First
+    {
+
+        protected void accessProtected()
+    {
+      System.out.println("x= " + x);
+       printMessage();
+      }
+    
+    }
+      import mypackage.Second;
+
+      class main
+      {
+      public static void main(String st[])
+      {
+      Second obj=new Second();
+      obj.accessProtected();
+      }
+      }`
+    },
+    "Program 9": {
+        output: `protected var1=10
+protected method called`,
+        code: `    package c4.sample;
+
+    public class Myclas
+    {
+    protected int var1=10;
+    protected void method()
+    {
+    System.out.println("protected method called");
+    }
+    }
+
+    package c4.sample;
+public class Aclass extends Myclas
+{
+public static void main(String st[])
+{
+ Aclass obj= new Aclass();
+System.out.println("protected var1:" + obj.var1);
+obj.method();
+}
+}
+
+import c4.sample.Myclas;
+
+public class outside extends Myclas
+{
+public static void main(String st[])
+{
+outside obj= new outside();
+System.out.println("protected var1:" + obj.var1);
+obj.method();
+}
+}`
+    },
+    "Program 10": {
+        output: `    var=10
+    public method called`,
+        code: `    package mypac2;
+
+    public class Myclass
+    {
+    public int var=10;
+    public void Method()
+    {
+    System.out.println("public method called");
+    }
+    }
+
+    //another file
+    import mypac2.Myclass;
+
+    public class Another
+    {
+    public static void main(String st[])
+    {
+    Myclass obj= new Myclass();
+    System.out.println("var:" + obj.var);
+    obj.Method();
+    }
+    }`
+    }
+        };
+
+        function showProgram(programName) {
+            const program = programs[programName];
+            if (program) {
+                if(program.output == "0000"){
+                    document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                `;
+                }
+                else{
+                document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                    <h2>Output:</h2>
+                    <div class="code-block">${program.output}</div>
+                `;
+            }    
+                }
+                 else {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>Program not found</h2>
+                    <p>Details for this program are not available.</p>
+                `;
+            }
+        }
+    </script>
+
+</body></html>
