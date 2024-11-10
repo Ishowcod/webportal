@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threads</title>
+     <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <nav class="navbar background">
+        <ul class="navlist">
+            <a href="index.html">Home</a></li> 
+  
+            <a href="Array.html">ARRAYS</a></li>
+            
+            <a href="2Darray.html" >2D-ARRAYS</a></li>
+            
+            <a href="Applet.html">APPLETS</a></li>
+            
+            <a href="bpc.html">BASIC PROGAMMING CONSTRUCTS</a></li>
+            
+            <a href="Data Conversion.html">DATA CONSVERSION</a></li>
+            
+            <a href="DEM.html">DELEGATION EVENT MODEL</a></li>
+            
+            <a href="Exception Handling.html">EXCEPTION HANDLING</a></li>
+            
+            <a href="Functions.html">FUNCTIONS</a></li>
+            
+            <a href="GUI AWT.html">GRAPHICAL USER INTERFACE (AWT)</a></li>
+            
+            <a href="Inheritance.html">INHERITANCE</a></li>
+            
+            <a href="IO.html">INPUT/OUTPUT</a></li>
+            
+            <a href="Interface.html">INTERFACES</a></li>
+            
+            <a href="JDBC.html">JAVA DATABASE CONECTIVITY</a></li>
+            
+            <a href="Threads.html">MULTITHREADING</a></li>
+            
+            <a href="OOP.html">OBJECT ORIENTED PROGRAMMING</a></li>
+            
+            <a href="Packages.html">PACKAGES</a></li>
+          
+            <a href="StringHandling.html">STRING HANDLING</a></li>
+        </ul>
+    </nav>
+    <div style="display: flex; margin: 0; max-height: 100vh;">
+    <div class="sidebar">
+        <h2>Programs</h2>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 1&#39;)">Program 1: Write a Java program to create a basic Java thread that prints "Hello, World!" when executed.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 2&#39;)">Program 2: Write a Java program that creates two threads to find and print even and odd numbers from 1 to 20.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 3&#39;)">Program 3: Write a Java program that sorts an array of integers using multiple threads.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 4&#39;)">Program 4: Write a Java program that performs matrix multiplication using multiple threads.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 5&#39;)">Program 5: Write a Java program that calculates the sum of all prime numbers up to a given limit using multiple threads.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 6&#39;)">Program 6: Write a Java program to implement a concurrent web crawler that crawls multiple websites simultaneously using threads.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 7&#39;)">Program 7: Write a Java program that creates a bank account with concurrent deposits and withdrawals using threads.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 8&#39;)">Program 8: Create the program to create multiple threads by using Runnable interface.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 9&#39;)">Program 9: Create the program to create multiple threads by using Thread class.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 10&#39;)">Program 10: Create the program to create multiple threads, set its name and its priority.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 11&#39;)">Program 11: Create the program to create multiple threads, show an example of synchronization keyword.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 12&#39;)">Program 12: Create the program to create multiple threads, show an example of notify, notifyAll, wait, resume, sleep methods.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 13&#39;)">Program 13: Create the program to create multiple threads, show an example of join and yield methods.</div>
+        
+
+    </div>
+
+    <div class="content" id="programContent">
+        <h2>Please select program from the list!</h2>
+    </div>
+</div>
+    
+    <script>
+        const programs = {
+    "Program 1": { 
+        output: `Hello, World!`, 
+        code: `
+            public class HelloWorldThread extends Thread {
+                public void run() {
+                    System.out.println("Hello, World!");
+                }
+
+                public static void main(String[] args) {
+                    HelloWorldThread thread = new HelloWorldThread();
+                    thread.start();
+                }
+            }
+        `
+    },
+    "Program 2": { 
+        output: `Even: 2
+Even: 4
+Even: 6
+Even: 8
+Even: 10
+Even: 12
+Even: 14
+Even: 16
+Even: 18
+Even: 20
+Odd: 1
+Odd: 3
+Odd: 5
+Odd: 7
+Odd: 9
+Odd: 11
+Odd: 13
+Odd: 15
+Odd: 17
+Odd: 19`, 
+        code: `
+            class EvenThread extends Thread {
+                public void run() {
+                    for (int i = 2; i <= 20; i += 2) {
+                        System.out.println("Even: " + i);
+                    }
+                }
+            }
+
+            class OddThread extends Thread {
+                public void run() {
+                    for (int i = 1; i < 20; i += 2) {
+                        System.out.println("Odd: " + i);
+                    }
+                }
+            }
+
+            public class EvenOdd {
+                public static void main(String[] args) {
+                    EvenThread evenThread = new EvenThread();
+                    OddThread oddThread = new OddThread();
+                    evenThread.start();
+                    oddThread.start();
+                }
+            }
+        `
+    },
+    "Program 3": { 
+        output: `Sorted array: [1, 2, 3, 4, 5, 6, 7, 8]`, 
+        code: `
+            class SortThread extends Thread {
+                private int[] array;
+                private int start, end;
+
+                public SortThread(int[] array, int start, int end) {
+                    this.array = array;
+                    this.start = start;
+                    this.end = end;
+                }
+
+                public void run() {
+                    java.util.Arrays.sort(array, start, end);
+                }
+            }
+
+            public class MultiThreadSort {
+                public static void main(String[] args) {
+                    int[] array = {5, 2, 8, 1, 3, 7, 4, 6};
+                    SortThread thread1 = new SortThread(array, 0, 4);
+                    SortThread thread2 = new SortThread(array, 4, 8);
+                    thread1.start();
+                    thread2.start();
+                    try {
+                        thread1.join();
+                        thread2.join();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println("Sorted array: " + java.util.Arrays.toString(array));
+                }
+            }
+        `
+    },
+    "Program 4": { 
+        output: `Matrix Multiplication Result:
+[58, 64]
+[139, 154]`, 
+        code: `
+            class MatrixMultiplication extends Thread {
+                private int[][] a, b, result;
+                private int row;
+
+                public MatrixMultiplication(int[][] a, int[][] b, int[][] result, int row) {
+                    this.a = a;
+                    this.b = b;
+                    this.result = result;
+                    this.row = row;
+                }
+
+                public void run() {
+                    for (int j = 0; j < b[0].length; j++) {
+                        result[row][j] = 0;
+                        for (int k = 0; k < a[0].length; k++) {
+                            result[row][j] += a[row][k] * b[k][j];
+                        }
+                    }
+                }
+            }
+
+            public class MatrixMultiplicationDemo {
+                public static void main(String[] args) {
+                    int[][] a = {{1, 2, 3}, {4, 5, 6}};
+                    int[][] b = {{7, 8}, {9, 10}, {11, 12}};
+                    int[][] result = new int[a.length][b[0].length];
+                    MatrixMultiplication[] threads = new MatrixMultiplication[a.length];
+
+                    for (int i = 0; i < a.length; i++) {
+                        threads[i] = new MatrixMultiplication(a, b, result, i);
+                        threads[i].start();
+                    }
+                    for (MatrixMultiplication thread : threads) {
+                        try {
+                            thread.join();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    System.out.println("Matrix Multiplication Result:");
+                    for (int[] row : result) {
+                        System.out.println(java.util.Arrays.toString(row));
+                    }
+                }
+            }
+        `
+    },
+    "Program 5": { 
+        output: `Sum of prime numbers up to 100 is: 1060`, 
+        code: `
+            class PrimeSumThread extends Thread {
+                private int start, end;
+                private int sum;
+
+                public PrimeSumThread(int start, int end) {
+                    this.start = start;
+                    this.end = end;
+                }
+
+                public void run() {
+                    sum = 0;
+                    for (int i = start; i <= end; i++) {
+                        if (isPrime(i)) {
+                            sum += i;
+                        }
+                    }
+                }
+
+                public int getSum() {
+                    return sum;
+                }
+
+                private boolean isPrime(int n) {
+                    if (n < 2) return false;
+                    for (int i = 2; i <= Math.sqrt(n); i++) {
+                        if (n % i == 0) return false;
+                    }
+                    return true;
+                }
+            }
+
+            public class PrimeSum {
+                public static void main(String[] args) {
+                    int limit = 100;
+                    PrimeSumThread thread1 = new PrimeSumThread(1, limit / 2);
+                    PrimeSumThread thread2 = new PrimeSumThread(limit / 2 + 1, limit);
+                    thread1.start();
+                    thread2.start();
+                    try {
+                        thread1.join();
+                        thread2.join();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    int totalSum = thread1.getSum() + thread2.getSum();
+                    System.out.println("Sum of prime numbers up to " + limit + " is: " + totalSum);
+                }
+            }
+        `
+    },
+    "Program 6": { 
+        output: `Content from http://example.com
+Content from http://example.org`, 
+        code: `
+            import java.io.BufferedReader;
+            import java.io.InputStreamReader;
+            import java.net.URL;
+
+            class CrawlerThread extends Thread {
+                private String url;
+
+                public CrawlerThread(String url) {
+                    this.url = url;
+                }
+
+                public void run() {
+                    try {
+                        URL urlObj = new URL(url);
+                        BufferedReader in = new BufferedReader(new InputStreamReader(urlObj.openStream()));
+                        String inputLine;
+                        while ((inputLine = in.readLine()) != null) {
+                            System.out.println(inputLine);
+                        }
+                        in.close();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            public class WebCrawler {
+                public static void main(String[] args) {
+                    String[] urls = {"http://example.com", "http://example.org"};
+                    for (String url : urls) {
+                        CrawlerThread crawler = new CrawlerThread(url);
+                        crawler.start();
+                    }
+                }
+            }
+        `
+    },
+    "Program 7": { 
+        output: `Final balance: 50`, 
+        code: `
+            class BankAccount {
+                private int balance = 0;
+
+                public synchronized void deposit(int amount) {
+                    balance += amount;
+                }
+
+                public synchronized void withdraw(int amount) {
+                    if (balance >= amount) {
+                        balance -= amount;
+                    }
+                }
+
+                public int getBalance() {
+                    return balance;
+                }
+            }
+
+            class DepositThread extends Thread {
+                private BankAccount account;
+                private int amount;
+
+                public DepositThread(BankAccount account, int amount) {
+                    this.account = account;
+                    this.amount = amount;
+                }
+
+                public void run() {
+                    account.deposit(amount);
+                }
+            }
+
+            class WithdrawThread extends Thread {
+                private BankAccount account;
+                private int amount;
+
+                public WithdrawThread(BankAccount account, int amount) {
+                    this.account = account;
+                    this.amount = amount;
+                }
+
+                public void run() {
+                    account.withdraw(amount);
+                }
+            }
+
+            public class BankDemo {
+                public static void main(String[] args) {
+                    BankAccount account = new BankAccount();
+                    DepositThread d1 = new DepositThread(account, 100);
+                    WithdrawThread w1 = new WithdrawThread(account, 50);
+                    d1.start();
+                    w1.start();
+                    try {
+                        d1.join();
+                        w1.join();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println("Final balance: " + account.getBalance());
+                }
+            }
+        `
+    },
+    "Program 8": { 
+        output: `Thread is running: Thread-2
+Thread is running: Thread-1
+Thread is running: Thread-4
+Thread is running: Thread-3
+Thread is running: Thread-0`, 
+        code: `
+            class RunnableTask implements Runnable {
+                public void run() {
+                    System.out.println("Thread is running: " + Thread.currentThread().getName());
+                }
+            }
+
+            public class RunnableExample {
+                public static void main(String[] args) {
+                    for (int i = 0; i < 5; i++) {
+                        Thread thread = new Thread(new RunnableTask());
+                        thread.start();
+                    }
+                }
+            }
+        `
+    },
+    "Program 9": { 
+        output: `Thread is running: Thread-4
+Thread is running: Thread-3
+Thread is running: Thread-1
+Thread is running: Thread-2
+Thread is running: Thread-0`, 
+        code: `
+            class MyThread extends Thread {
+                public void run() {
+                    System.out.println("Thread is running: " + Thread.currentThread().getName());
+                }
+            }
+
+            public class ThreadExample {
+                public static void main(String[] args) {
+                    for (int i = 0; i < 5; i++) {
+                        MyThread thread = new MyThread();
+                        thread.start();
+                    }
+                }
+            }
+        `
+    },
+    "Program 10": { 
+        output: `Thread Name: Thread-1, Priority: 2
+Thread Name: Thread-0, Priority: 1
+Thread Name: Thread-2, Priority: 3
+Thread Name: Thread-3, Priority: 4
+Thread Name: Thread-4, Priority: 5`, 
+        code: `
+            class CustomThread extends Thread {
+                public void run() {
+                    System.out.println("Thread Name: " + getName() + ", Priority: " + getPriority());
+                }
+            }
+
+            public class ThreadPriorityExample {
+                public static void main(String[] args) {
+                    for (int i = 0; i < 5; i++) {
+                        CustomThread thread = new CustomThread();
+                        thread.setName("Thread-" + i);
+                        thread.setPriority(i + 1);
+                        thread.start();
+                    }
+                }
+            }
+        `
+    },
+    "Program 11": { 
+        output: `Final Count: 2000`, 
+        code: `
+            class SynchronizedCounter {
+                private int count = 0;
+
+                public synchronized void increment() {
+                    count++;
+                }
+
+                public int getCount() {
+                    return count;
+                }
+            }
+
+            class CounterThread extends Thread {
+                private SynchronizedCounter counter;
+
+                public CounterThread(SynchronizedCounter counter) {
+                    this.counter = counter;
+                }
+
+                public void run() {
+                    for (int i = 0; i < 1000; i++) {
+                        counter.increment();
+                    }
+                }
+            }
+
+            public class SyncExample {
+                public static void main(String[] args) {
+                    SynchronizedCounter counter = new SynchronizedCounter();
+                    CounterThread t1 = new CounterThread(counter);
+                    CounterThread t2 = new CounterThread(counter);
+                    t1.start();
+                    t2.start();
+                    try {
+                        t1.join();
+                        t2.join();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println("Final Count: " + counter.getCount());
+                }
+            }
+        `
+    },
+    "Program 12": { 
+        output: `Producing...
+Consuming...`, 
+        code: `
+            class WaitNotifyExample {
+                private final Object lock = new Object();
+                private boolean isAvailable = false;
+
+                public void produce() throws InterruptedException {
+                    synchronized (lock) {
+                        while (isAvailable) {
+                            lock.wait();
+                        }
+                        System.out.println("Producing...");
+                        isAvailable = true;
+                        lock.notify();
+                    }
+                }
+
+                public void consume() throws InterruptedException {
+                    synchronized (lock) {
+                        while (!isAvailable) {
+                            lock.wait();
+                        }
+                        System.out.println("Consuming...");
+                        isAvailable = false;
+                        lock.notify();
+                    }
+                }
+            }
+
+            public class ThreadNotifyExample {
+                public static void main(String[] args) {
+                    WaitNotifyExample example = new WaitNotifyExample();
+                    Thread producer = new Thread(() -> {
+                        try {
+                            example.produce();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    });
+                    Thread consumer = new Thread(() -> {
+                        try {
+                            example.consume();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    });
+                    producer.start();
+                    consumer.start();
+                }
+            }
+        `
+    },
+    "Program 13": { 
+        output: `Thread-0 is running.
+Thread-1 is running.
+Thread-0 is resumed.
+Thread-1 is resumed.
+All threads have completed.`, 
+        code: `
+            class YieldExample extends Thread {
+                public void run() {
+                    System.out.println(Thread.currentThread().getName() + " is running.");
+                    Thread.yield();
+                    System.out.println(Thread.currentThread().getName() + " is resumed.");
+                }
+            }
+
+            public class ThreadJoinYieldExample {
+                public static void main(String[] args) {
+                    YieldExample thread1 = new YieldExample();
+                    YieldExample thread2 = new YieldExample();
+                    thread1.start();
+                    thread2.start();
+                    try {
+                        thread1.join();
+                        thread2.join();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println("All threads have completed.");
+                }
+            }
+        `
+    }
+
+
+        };
+
+        function showProgram(programName) {
+            const program = programs[programName];
+            if (program) {
+                if(program.output == "0000"){
+                    document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                `;
+                }
+                else{
+                document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                    <h2>Output:</h2>
+                    <div class="code-block">${program.output}</div>
+                `;
+            }    
+                }
+                 else {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>Program not found</h2>
+                    <p>Details for this program are not available.</p>
+                `;
+            }
+        }
+    </script>
+
+</body></html>
