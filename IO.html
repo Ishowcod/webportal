@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input/Output</title>
+    <link rel="stylesheet" href="style2.css">
+    
+</head>
+
+<body>
+    <nav class="navbar background">
+        <ul class="navlist">
+            <a href="ind.html">Home</a></li> 
+  
+            <a href="Array.html">ARRAYS</a></li>
+            
+            <a href="2Darray.html" >2D-ARRAYS</a></li>
+            
+            <a href="Applet.html">APPLETS</a></li>
+            
+            <a href="bpc.html">BASIC PROGAMMING CONSTRUCTS</a></li>
+            
+            <a href="Data Conversion.html">DATA CONSVERSION</a></li>
+            
+            <a href="DEM.html">DELEGATION EVENT MODEL</a></li>
+            
+            <a href="Exception Handling.html">EXCEPTION HANDLING</a></li>
+            
+            <a href="Functions.html">FUNCTIONS</a></li>
+            
+            <a href="GUI AWT.html">GRAPHICAL USER INTERFACE (AWT)</a></li>
+            
+            <a href="Inheritance.html">INHERITANCE</a></li>
+            
+            <a href="IO.html">INPUT/OUTPUT</a></li>
+            
+            <a href="Interface.html">INTERFACES</a></li>
+            
+            <a href="JDBC.html">JAVA DATABASE CONECTIVITY</a></li>
+            
+            <a href="Threads.html">MULTITHREADING</a></li>
+            
+            <a href="OOP.html">OBJECT ORIENTED PROGRAMMING</a></li>
+            
+            <a href="Packages.html">PACKAGES</a></li>
+          
+            <a href="StringHandling.html">STRING HANDLING</a></li>
+        </ul>
+    </nav>
+    <div style="display: flex; margin: 0; max-height: 100vh;">
+    <div class="sidebar">
+        <h2>Programs</h2>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 1&#39;)">1. Enter the character from user using InputStreamReader</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 2&#39;)">2. Enter the string from user using BufferedReader</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 3&#39;)">3. Enter the integer from user using Scanner class</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 4&#39;)">4. Enter the float from user using Scanner class</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 5&#39;)">5. Enter the double from user using Scanner class</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 6&#39;)">6. Enter the boolean from user using Scanner class</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 7&#39;)">7. Enter the short integer from user using Scanner class</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 8&#39;)">8. Enter the long integer from user using Scanner class</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 9&#39;)">9. Get all characters from the file and display on the screen</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 10&#39;)">10. Get all characters from the file, count number of lines, words, characters and display on the screen</div>
+    </div>
+
+    <div class="content" id="programContent">
+        <h2>Please select program from the list!</h2>
+    </div>
+</div>
+    
+    <script>
+        const programs = {
+    "Program 1": {
+        output: `a
+            97`,
+        code: `import java.io.InputStreamReader;
+            import java.io.IOException;
+            class A{
+            public static void main(String x[]) throws java.io.IOException{
+            InputStreamReader a=new InputStreamReader(System.in);
+            int x1=a.read();
+            System.out.println(x1);
+            }
+            }`
+    },
+    "Program 2": {
+        output: `HELLO WELCOME TO THE WORLD OF JAVA
+            HELLO WELCOME TO THE WORLD OF JAVA`,
+        code: `import java.io.InputStreamReader;
+            import java.io.BufferedReader;
+            import java.io.IOException;
+            class A{
+            public static void main(String x[]) throws java.io.IOException{
+            InputStreamReader a=new InputStreamReader(System.in);
+            BufferedReader obj=new BufferedReader(a);
+            String x1=obj.readLine();
+            System.out.println(x1);
+            }
+            }`
+    },
+    "Program 3": {
+        output: `Enter an integer: 10
+            You entered: 10`,
+        code: `import java.util.Scanner;
+
+            class A {
+            
+                public static void main(String[] args) {
+                     Scanner obj = new Scanner(System.in);
+            
+                     System.out.print("Enter an integer: ");
+                    
+                    int num = obj.nextInt();
+            
+                    System.out.println("You entered: " + num);
+            
+                    obj.close();
+                }
+            }`
+    },
+    "Program 4": {
+        output: `Enter a float number: 89.89
+            You entered: 89.89`,
+        code: `import java.util.Scanner;
+
+            class A {
+            
+                public static void main(String[] args) {
+                     Scanner obj = new Scanner(System.in);
+            
+                     System.out.print("Enter a float number: ");
+                    
+                    float num = obj.nextFloat();
+            
+                    System.out.println("You entered: " + num);
+            
+                    obj.close();
+                }
+            }`
+    },
+    "Program 5": {
+        output: `Enter a double number: 67.8976
+            You entered: 67.8976`,
+        code: `import java.util.Scanner;
+
+            class A {
+            
+                public static void main(String[] args) {
+                     Scanner obj = new Scanner(System.in);
+            
+                     System.out.print("Enter a double number: ");
+                    
+                    double num = obj.nextDouble();
+            
+                    System.out.println("You entered: " + num);
+            
+                    obj.close();
+                }
+            }`
+    },
+    "Program 6": {
+        output: `Enter a Boolean value: true
+            You entered: true`,
+        code: `import java.util.Scanner;
+
+            class A {
+            
+                public static void main(String[] args) {
+                     Scanner obj = new Scanner(System.in);
+            
+                     System.out.print("Enter a Boolean value: ");
+                    
+                    boolean num = obj.nextBoolean();
+            
+                    System.out.println("You entered: " + num);
+            
+                    obj.close();
+                }
+            }`
+    },
+    "Program 7": {
+        output: `Enter a short int number: 7
+            You entered: 7`,
+        code: `import java.util.Scanner;
+
+            class A {
+            
+                public static void main(String[] args) {
+                     Scanner obj = new Scanner(System.in);
+            
+                     System.out.print("Enter a short int number: ");
+                    
+                    short num = obj.nextShort();
+            
+                    System.out.println("You entered: " + num);
+            
+                    obj.close();
+                }
+            }`
+    },
+    "Program 8": {
+        output: `Enter a long int number: 7890
+            You entered: 7890`,
+        code: `import java.util.Scanner;
+
+            class A {
+            
+                public static void main(String[] args) {
+                     Scanner obj = new Scanner(System.in);
+            
+                     System.out.print("Enter a long int number: ");
+                    
+                    long num = obj.nextLong();
+            
+                    System.out.println("You entered: " + num);
+            
+                    obj.close();
+                }
+            }`
+    },
+    "Program 9": {
+        output: `akshsjgdshbcjzxnckxmcnzghsgwqerwtyqtreuwiuroskdflmcxnajmXBH`,
+        code: `import java.util.Scanner;
+    import java.io.File;
+    import java.io.FileNotFoundException;
+    
+    class main9
+    {
+    public static void main(String st[]) throws java.io.IOException
+    {
+    try
+    {
+    File file1= new File("input.txt");
+    Scanner obj=new Scanner(file1);
+    String str=obj.nextLine();
+    System.out.println(str);
+    }
+    catch(FileNotFoundException e)
+    {
+    System.out.println("file not found");
+    }
+    }
+    }`
+    },
+    "Program 10": {
+        output: `akshsjgdshbcjzxnckxmcnzghsgwqerwtyqtreuwiuroskdflmcxnajmXBH
+asysagxjznckxuocasgakjhiwetroeuti
+axmzmnxbasytdisygdusyg
+127e3846
+Lines:4
+words:4
+characters:126`,
+        code: `import java.io.File;
+    import java.io.FileNotFoundException;
+    import java.util.Scanner;
+    class main10
+    {
+    public static void main(String st[])
+    {
+    try
+    {
+    File file2=new File("input.txt");
+    Scanner obj= new Scanner(file2);
+    int lines=0;
+    int words=0;
+    int characters=0;
+    while(obj.hasNextLine())
+    {
+    String line=obj.nextLine();
+    lines++;
+    words+=line.split("\\s+").length;
+    characters+=line.length()+1;
+    System.out.println(line);
+    }
+    System.out.println("Lines:" + lines);
+    System.out.println("words:" + words); 
+    System.out.println("characters:" + characters) ;
+    }
+    catch(FileNotFoundException e)
+    {
+    System.out.println("file not found!");
+    }
+    }
+    }`
+    }
+        };
+
+        function showProgram(programName) {
+            const program = programs[programName];
+            if (program) {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                    <h2>Output:</h2>
+                    <div class="code-block">${program.output}</div>
+                `;
+            } else {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>Program not found</h2>
+                    <p>Details for this program are not available.</p>
+                `;
+            }
+        }
+    </script>
+
+</body></html>
