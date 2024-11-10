@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegation Event Model</title>
+     <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <nav class="navbar background">
+        <ul class="navlist">
+            <a href="index.html">Home</a></li> 
+  
+            <a href="Array.html">ARRAYS</a></li>
+            
+            <a href="2Darray.html" >2D-ARRAYS</a></li>
+            
+            <a href="Applet.html">APPLETS</a></li>
+            
+            <a href="bpc.html">BASIC PROGAMMING CONSTRUCTS</a></li>
+            
+            <a href="Data Conversion.html">DATA CONSVERSION</a></li>
+            
+            <a href="DEM.html">DELEGATION EVENT MODEL</a></li>
+            
+            <a href="Exception Handling.html">EXCEPTION HANDLING</a></li>
+            
+            <a href="Functions.html">FUNCTIONS</a></li>
+            
+            <a href="GUI AWT.html">GRAPHICAL USER INTERFACE (AWT)</a></li>
+            
+            <a href="Inheritance.html">INHERITANCE</a></li>
+            
+            <a href="IO.html">INPUT/OUTPUT</a></li>
+            
+            <a href="Interface.html">INTERFACES</a></li>
+            
+            <a href="JDBC.html">JAVA DATABASE CONECTIVITY</a></li>
+            
+            <a href="Threads.html">MULTITHREADING</a></li>
+            
+            <a href="OOP.html">OBJECT ORIENTED PROGRAMMING</a></li>
+            
+            <a href="Packages.html">PACKAGES</a></li>
+          
+            <a href="StringHandling.html">STRING HANDLING</a></li>
+        </ul>
+    </nav>
+    <div style="display: flex; margin: 0; max-height: 100vh;">
+    <div class="sidebar">
+        <h2>Programs</h2>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 1&#39;)">Program 1: Java Program to Display Some Text in the Frame using Labels</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 2&#39;)">Program 2: Java Program to Create Text Area and Password Field</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 3&#39;)">Program 3: Java Program to Create a Button and Display Image in the Frame when Clicked</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 4&#39;)">Program 4: Java Program to Create 2 Radio Buttons and Display Selected Button Label</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 5&#39;)">Program 5: Java Program to Handle KeyBoardEvent</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 6&#39;)">Program 6: Java Program to Handle MouseEvent</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 7&#39;)">Program 7: Java Program to Get and Set State and Get Label of a Check Box</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 8&#39;)">Program 8: Java Program to Create Check Boxes and Radio Buttons</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 9&#39;)">Program 9: Java Program to Create and Switch between Frames using Buttons</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 10&#39;)">Program 10: Java Program to Create and Set Border to Push Buttons</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 11&#39;)">Program 11: Java Program to Create a List Box to Select Multiple Items and Display it in the Frame</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 12&#39;)">Program 12: Java Program to Display a Message in a New Frame</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 13&#39;)">Program 13: Java Program to Close the Frame using WindowAdapter Class</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 14&#39;)">Program 14: Java Program to Check Which Fonts are Available in a Local System</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 15&#39;)">Program 15: Java Program to Display Text in Different Fonts</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 16&#39;)">Program 16: Java Program to Change Frame Background Color as Cyan</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 17&#39;)">Program 17: Java Program to Change the Applet Background Colour when Button Clicked</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 18&#39;)">Program 18: Java Program to Display Several Dots on the Screen Continuously</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 19&#39;)">Program 19: Java Program to Validate the TextField for only entering numbers using KeyListener</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 20&#39;)">Program 20: Java Program to Validate the TextField for only entering email id using KeyAdapter</div>
+        
+
+    </div>
+
+    <div class="content" id="programContent">
+        <h2>Please select program from the list!</h2>
+    </div>
+</div>
+    
+    <script>
+        const programs = {
+    "Program 1": { 
+    output: `0000`, 
+    code: `
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class LabelExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Label Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 200);
+        
+        JPanel panel = new JPanel();
+        
+        JLabel label = new JLabel("Hello, this is a label!");
+        
+        panel.add(label);
+        
+        frame.add(panel);
+        
+        frame.setVisible(true);
+    }
+}
+`
+},
+"Program 2": { 
+    output: `0000`, 
+    code: `
+import javax.swing.*;
+
+public class TextAreaPasswordFieldExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Text Area and Password Field Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 200);
+
+        JTextArea textArea = new JTextArea(5, 20);
+        JPasswordField passwordField = new JPasswordField(20);
+
+        JPanel panel = new JPanel();
+        panel.add(new JScrollPane(textArea));
+        panel.add(passwordField);
+
+        frame.add(panel);
+        frame.setVisible(true);
+    }
+}
+`
+},
+"Program 3": { 
+    output: `0000`, 
+    code: `
+import javax.swing.*;
+import java.awt.event.*;
+
+public class ButtonImageExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Button Image Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 200);
+        
+        JButton button = new JButton("Show Image");
+        JLabel label = new JLabel();
+
+        button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                label.setIcon(new ImageIcon("path/to/image.jpg"));
+            }
+        });
+        
+        JPanel panel = new JPanel();
+        panel.add(button);
+        panel.add(label);
+        
+        frame.add(panel);
+        frame.setVisible(true);
+    }
+}
+`
+},
+"Program 4": { 
+    output: `0000`, 
+    code: `
+import javax.swing.*;
+import java.awt.event.*;
+
+public class RadioButtonExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Radio Button Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 200);
+        
+        JRadioButton radioButton1 = new JRadioButton("Option 1");
+        JRadioButton radioButton2 = new JRadioButton("Option 2");
+        ButtonGroup group = new ButtonGroup();
+        group.add(radioButton1);
+        group.add(radioButton2);
+        
+        JLabel label = new JLabel();
+
+        ActionListener listener = new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                label.setText("Selected: " + e.getActionCommand());
+            }
+        };
+        
+        radioButton1.addActionListener(listener);
+        radioButton2.addActionListener(listener);
+        
+        JPanel panel = new JPanel();
+        panel.add(radioButton1);
+        panel.add(radioButton2);
+        panel.add(label);
+        
+        frame.add(panel);
+        frame.setVisible(true);
+    }
+}
+`
+},
+"Program 5": { 
+    output: `0000`, 
+    code: `
+import javax.swing.*;
+import java.awt.event.*;
+
+public class KeyboardEventExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Keyboard Event Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 200);
+        
+        JTextField textField = new JTextField(20);
+        textField.addKeyListener(new KeyAdapter() {
+            public void keyPressed(KeyEvent e) {
+                System.out.println("Key pressed: " + e.getKeyChar());
+            }
+        });
+        
+        frame.add(textField);
+        frame.setVisible(true);
+    }
+}
+`
+},
+"Program 6": { 
+    output: `0000`, 
+    code: `
+import javax.swing.*;
+import java.awt.event.*;
+
+public class MouseEventExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Mouse Event Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 200);
+        
+        JLabel label = new JLabel("Click me!");
+        label.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                System.out.println("Mouse clicked at: " + e.getPoint());
+            }
+        });
+        
+        frame.add(label);
+        frame.setVisible(true);
+    }
+}
+`
+},
+"Program 7": { 
+    output: `0000`, 
+    code: `
+import javax.swing.*;
+import java.awt.event.*;
+
+public class CheckBoxExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Check Box Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 200);
+        
+        JCheckBox checkBox = new JCheckBox("Check me!");
+        JButton button = new JButton("Check State");
+        JLabel label = new JLabel();
+
+        button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                label.setText("CheckBox selected: " + checkBox.isSelected());
+            }
+        });
+        
+        JPanel panel = new JPanel();
+        panel.add(checkBox);
+        panel.add(button);
+        panel.add(label);
+        
+        frame.add(panel);
+        frame.setVisible(true);
+    }
+}
+`
+},
+"Program 8": { 
+    output: `0000`, 
+    code: `
+import javax.swing.*;
+import java.awt.event.*;
+
+public class CheckBoxRadioButtonExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Check Box and Radio Button Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 200);
+
+        JCheckBox checkBox1 = new JCheckBox("Check Box 1");
+        JCheckBox checkBox2 = new JCheckBox("Check Box 2");
+        JRadioButton radioButton1 = new JRadioButton("Radio Button 1");
+        JRadioButton radioButton2 = new JRadioButton("Radio Button 2");
+
+        ButtonGroup group = new ButtonGroup();
+        group.add(radioButton1);
+        group.add(radioButton2);
+        
+        JPanel panel = new JPanel();
+        panel.add(checkBox1);
+        panel.add(checkBox2);
+        panel.add(radioButton1);
+        panel.add(radioButton2);
+        
+        frame.add(panel);
+        frame.setVisible(true);
+    }
+}
+`
+},
+"Program 9": { 
+    output: `0000`, 
+    code: `
+import javax.swing.*;
+import java.awt.event.*;
+
+public class SwitchFramesExample {
+    public static void main(String[] args) {
+        JFrame frame1 = new JFrame("Frame 1");
+        JFrame frame2 = new JFrame("Frame 2");
+        frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame1.setSize(300, 200);
+        frame2.setSize(300, 200);
+
+        JButton switchButton = new JButton("Switch to Frame 2");
+        switchButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                frame1.setVisible(false);
+                frame2.setVisible(true);
+            }
+        });
+        
+        frame1.add(switchButton);
+        frame1.setVisible(true);
+    }
+}
+`
+},
+"Program 10": { 
+    output: `0000`, 
+    code: `
+import javax.swing.*;
+import javax.swing.border.*;
+
+public class ButtonBorderExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Button Border Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 200);
+        
+        JButton button = new JButton("Button with Border");
+        button.setBorder(BorderFactory.createLineBorder(java.awt.Color.BLACK, 2));
+        
+        JPanel panel = new JPanel();
+        panel.add(button);
+        
+        frame.add(panel);
+        frame.setVisible(true);
+    }
+}
+`
+},
+    "Program 11": { 
+        "output": "0000", 
+        "code": `
+            import javax.swing.*;
+            import java.awt.event.*;
+
+            public class ListBoxExample {
+                public static void main(String[] args) {
+                    JFrame frame = new JFrame("List Box Example");
+                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    frame.setSize(300, 200);
+                    
+                    String[] items = { "Item 1", "Item 2", "Item 3" };
+                    JList<String> list = new JList<>(items);
+                    list.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+                    
+                    JButton button = new JButton("Show Selected");
+                    JLabel label = new JLabel();
+
+                    button.addActionListener(new ActionListener() {
+                        public void actionPerformed(ActionEvent e) {
+                            label.setText("Selected: " + list.getSelectedValuesList());
+                        }
+                    });
+
+                    JPanel panel = new JPanel();
+                    panel.add(new JScrollPane(list));
+                    panel.add(button);
+                    panel.add(label);
+                    
+                    frame.add(panel);
+                    frame.setVisible(true);
+                }
+            }
+        `
+    },
+    "Program 12": { 
+        "output": "0000", 
+        "code": `
+            import javax.swing.*;
+
+            public class NewFrameMessage {
+                public static void main(String[] args) {
+                    JFrame frame = new JFrame("Message Frame");
+                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    frame.setSize(300, 200);
+                    
+                    JOptionPane.showMessageDialog(frame, "This is a message in a new frame!");
+                    frame.setVisible(true);
+                }
+            }
+        `
+    },
+    "Program 13": { 
+        "output": "0000", 
+        "code": `
+            import javax.swing.*;
+            import java.awt.event.*;
+
+            public class CloseFrameExample {
+                public static void main(String[] args) {
+                    JFrame frame = new JFrame("Close Frame Example");
+                    frame.setSize(300, 200);
+                    frame.addWindowListener(new WindowAdapter() {
+                        public void windowClosing(WindowEvent e) {
+                            System.exit(0);
+                        }
+                    });
+                    
+                    frame.setVisible(true);
+                }
+            }
+        `
+    },
+    "Program 14": { 
+        "output": "0000", 
+        "code": `
+            import javax.swing.*;
+
+            public class FontCheck {
+                public static void main(String[] args) {
+                    String[] fonts = GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
+                    for (String font : fonts) {
+                        System.out.println(font);
+                    }
+                }
+            }
+        `
+    },
+    "Program 15": { 
+        "output": "0000", 
+        "code": `
+            import javax.swing.*;
+            import java.awt.*;
+
+            public class DifferentFontsExample {
+                public static void main(String[] args) {
+                    JFrame frame = new JFrame("Different Fonts Example");
+                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    frame.setSize(300, 200);
+                    
+                    JLabel label = new JLabel("Hello, World!");
+                    label.setFont(new Font("Serif", Font.BOLD, 20));
+                    
+                    JPanel panel = new JPanel();
+                    panel.add(label);
+                    
+                    frame.add(panel);
+                    frame.setVisible(true);
+                }
+            }
+        `
+    },
+    "Program 16": { 
+        "output": "0000", 
+        "code": `
+            import javax.swing.*;
+            import java.awt.*;
+
+            public class BackgroundColorExample {
+                public static void main(String[] args) {
+                    JFrame frame = new JFrame("Background Color Example");
+                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    frame.setSize(300, 200);
+                    frame.getContentPane().setBackground(Color.CYAN);
+                    
+                    frame.setVisible(true);
+                }
+            }
+        `
+    },
+    "Program 17": { 
+        "output": "0000", 
+        "code": `
+            import javax.swing.*;
+            import java.awt.*;
+            import java.awt.event.*;
+
+            public class AppletBackgroundColorExample extends JApplet {
+                public void init() {
+                    JButton button = new JButton("Change Background");
+                    button.addActionListener(new ActionListener() {
+                        public void actionPerformed(ActionEvent e) {
+                            getContentPane().setBackground(Color.YELLOW);
+                        }
+                    });
+                    add(button);
+                }
+            }
+        `
+    },
+    "Program 18": { 
+        "output": "0000", 
+        "code": `
+            import javax.swing.*;
+            import java.awt.*;
+
+            public class DotsDisplay {
+                public static void main(String[] args) {
+                    JFrame frame = new JFrame("Dots Display");
+                    frame.setSize(400, 300);
+                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    
+                    JPanel panel = new JPanel() {
+                        protected void paintComponent(Graphics g) {
+                            super.paintComponent(g);
+                            for (int i = 0; i < 100; i++) {
+                                int x = (int) (Math.random() * getWidth());
+                                int y = (int) (Math.random() * getHeight());
+                                g.fillOval(x, y, 5, 5);
+                            }
+                            repaint();
+                        }
+                    };
+                    
+                    frame.add(panel);
+                    frame.setVisible(true);
+                }
+            }
+        `
+    },
+    "Program 19": { 
+        "output": "0000", 
+        "code": `
+            import javax.swing.*;
+            import java.awt.event.*;
+
+            public class NumberValidation {
+                public static void main(String[] args) {
+                    JFrame frame = new JFrame("Number Validation");
+                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    frame.setSize(300, 200);
+                    
+                    JTextField textField = new JTextField(10);
+                    textField.addKeyListener(new KeyAdapter() {
+                        public void keyTyped(KeyEvent e) {
+                            char c = e.getKeyChar();
+                            if (!Character.isDigit(c)) {
+                                e.consume(); // ignore the event
+                            }
+                        }
+                    });
+                    
+                    frame.add(textField);
+                    frame.setVisible(true);
+                }
+            }
+        `
+    },
+    "Program 20": { 
+        "output": "0000", 
+        "code": `
+            import javax.swing.*;
+            import java.awt.event.*;
+
+            public class EmailValidation {
+                public static void main(String[] args) {
+                    JFrame frame = new JFrame("Email Validation");
+                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    frame.setSize(300, 200);
+                    
+                    JTextField textField = new JTextField(20);
+                    textField.addKeyListener(new KeyAdapter() {
+                        public void keyTyped(KeyEvent e) {
+                            char c = e.getKeyChar();
+                            if (!(Character.isLetterOrDigit(c) || c == '@' || c == '.')) {
+                                e.consume(); // ignore the event
+                            }
+                        }
+                    });
+                    
+                    frame.add(textField);
+                    frame.setVisible(true);
+                }
+            }
+        `
+    }
+
+
+        };
+
+        function showProgram(programName) {
+            const program = programs[programName];
+            if (program) {
+                if(program.output == "0000"){
+                    document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                `;
+                }
+                else{
+                document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                    <h2>Output:</h2>
+                    <div class="code-block">${program.output}</div>
+                `;
+            }    
+                }
+                 else {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>Program not found</h2>
+                    <p>Details for this program are not available.</p>
+                `;
+            }
+        }
+    </script>
+
+</body></html>
