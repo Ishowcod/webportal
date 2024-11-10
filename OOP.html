@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <nav class="navbar background">
+        <ul class="navlist">
+            <a href="index.html">Home</a></li> 
+  
+            <a href="Array.html">ARRAYS</a></li>
+            
+            <a href="2Darray.html" >2D-ARRAYS</a></li>
+            
+            <a href="Applet.html">APPLETS</a></li>
+            
+            <a href="bpc.html">BASIC PROGAMMING CONSTRUCTS</a></li>
+            
+            <a href="Data Conversion.html">DATA CONSVERSION</a></li>
+            
+            <a href="DEM.html">DELEGATION EVENT MODEL</a></li>
+            
+            <a href="Exception Handling.html">EXCEPTION HANDLING</a></li>
+            
+            <a href="Functions.html">FUNCTIONS</a></li>
+            
+            <a href="GUI AWT.html">GRAPHICAL USER INTERFACE (AWT)</a></li>
+            
+            <a href="Inheritance.html">INHERITANCE</a></li>
+            
+            <a href="IO.html">INPUT/OUTPUT</a></li>
+            
+            <a href="Interface.html">INTERFACES</a></li>
+            
+            <a href="JDBC.html">JAVA DATABASE CONECTIVITY</a></li>
+            
+            <a href="Threads.html">MULTITHREADING</a></li>
+            
+            <a href="OOP.html">OBJECT ORIENTED PROGRAMMING</a></li>
+            
+            <a href="Packages.html">PACKAGES</a></li>
+          
+            <a href="StringHandling.html">STRING HANDLING</a></li>
+        </ul>
+    </nav>
+    <div style="display: flex; margin: 0; max-height: 100vh;">
+    <div class="sidebar">
+        <h2>Programs</h2>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 1&#39;)">Program 1: Write a Java program to create a class called "Person" with a name and age attribute. Create two instances of the "Person" class, set their attributes using the constructor, and print their name and age.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 2&#39;)">Program 2: Write a Java program to create a class called "Dog" with a name and breed attribute. Create two instances of the "Dog" class, set their attributes using the constructor and modify the attributes using the setter methods and print the updated values.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 3&#39;)">Program 3: Write a Java program to create a class called "Rectangle" with width and height attributes. Calculate the area and perimeter of the rectangle.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 4&#39;)">Program 4: Write a Java program to create a class called "Circle" with a radius attribute. You can access and modify this attribute. Calculate the area and circumference of the circle.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 5&#39;)">Program 5: Write a Java program to create a class called "Book" with attributes for title, author, and ISBN, and methods to add and remove books from a collection.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 6&#39;)">Program 6: Write a Java program to create a class called "Employee" with a name, job title, and salary attributes, and methods to calculate and update salary.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 7&#39;)">Program 7: Write a Java program to create a class called "Bank" with a collection of accounts and methods to add and remove accounts, and to deposit and withdraw money. Also define a class called "Account" to maintain account details of a particular customer.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 8&#39;)">Program 8: Write a Java program to create class called "TrafficLight" with attributes for color and duration, and methods to change the color and check for red or green.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 9&#39;)">Program 9: Write a Java program to create a class called "Employee" with a name, salary, and hire date attributes, and a method to calculate years of service.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 10&#39;)">Program 10: Write a Java program to create a class called "Student" with a name, grade, and courses attributes, and methods to add and remove courses.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 11&#39;)">Program 11: Write a Java program to create a class called "Library" with a collection of books and methods to add and remove books.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 12&#39;)">Program 12: Write a Java program to create a class called "Airplane" with a flight number, destination, and departure time attributes, and methods to check flight status and delay.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 13&#39;)">Program 13: Write a Java program to create a class called "Inventory" with a collection of products and methods to add and remove products, and to check for low inventory.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 14&#39;)">Program 14: Write a Java program to create a class called "School" with attributes for students, teachers, and classes, and methods to add and remove students and teachers, and to create classes.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 15&#39;)">Program 15: Write a Java program to create a class called "MusicLibrary" with a collection of songs and methods to add and remove songs, and to play a random song.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 16&#39;)">Program 16: Write a Java program to create a class called "Shape" with abstract methods for calculating area and perimeter, and subclasses for "Rectangle", "Circle", and "Triangle".</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 17&#39;)">Program 17: Write a Java program to create a class called "Movie" with attributes for title, director, actors, and reviews, and methods for adding and retrieving reviews.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 18&#39;)">Program 18: Write a Java program to create a class called "Restaurant" with attributes for menu items, prices, and ratings, and methods to add and remove items, and to calculate average rating.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 19&#39;)">Program 19: Write a Java program to create a class with methods to search for flights and hotels, and to book and cancel reservations.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 20&#39;)">Program 20: Create a class showing an example of default constructor.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 21&#39;)">Program 21: Create a class showing an example of parameterized constructor.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 22&#39;)">Program 22: Create a class showing an example of copy constructor.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 23&#39;)">Program 23: Create a class entering the rollno, name and class of the student from user but rollno should be automatically generated as we enter the information of 10 students.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 24&#39;)">Program 24: Create a class showing the area of circle and rectangle by method overloading.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 25&#39;)">Program 25: Create a class, entering the command line arguments from the user and show all the arguments as output.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 26&#39;)">Program 26: Write a Java program to create a class called Person with private instance variables name, age, and country. Provide public getter and setter methods to access and modify these variables.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 27&#39;)">Program 27: Write a Java program to create a class called BankAccount with private instance variables accountNumber and balance. Provide public getter and setter methods to access and modify these variables.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 28&#39;)">Program 28: Write a Java program to create a class called Rectangle with private instance variables length and width. Provide public getter and setter methods to access and modify these variables.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 29&#39;)">Program 29: Write a Java program to create a class called Employee with private instance variables employee_id, employee_name, and employee_salary. Provide public getter and setter methods to access and modify the id and name variables, but provide a getter method for the salary variable that returns a formatted string.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 30&#39;)">Program 30: Write a Java program to create a class called Circle with a private instance variable radius. Provide public getter and setter methods to access and modify the radius variable. However, provide two methods called calculateArea() and calculatePerimeter() that return the calculated area and perimeter based on the current radius value.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 31&#39;)">Program 31: Write a Java program to create a class called Car with private instance variables company_name, model_name, year, and mileage. Provide public getter and setter methods to access and modify the company_name, model_name, and year variables. However, only provide a getter method for the mileage variable.</div>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 32&#39;)">Program 32: Write a Java program to create a class called Student with private instance variables student_id, student_name, and grades. Provide public getter and setter methods to access and modify the student_id and student_name variables. However, provide a method called addGrade() that allows adding a grade to the grades variable while performing additional validation.</div>
+        
+
+    </div>
+
+    <div class="content" id="programContent">
+        <h2>Please select program from the list!</h2>
+    </div>
+</div>
+    
+    <script>
+        const programs = {
+    "Program 1": { 
+        "output": "Alice, 30\nBob, 25",
+        "code": `
+class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Person person1 = new Person("Alice", 30);
+        Person person2 = new Person("Bob", 25);
+        
+        System.out.println(person1.getName() + ", " + person1.getAge());
+        System.out.println(person2.getName() + ", " + person2.getAge());
+    }
+}
+`
+    },
+    "Program 2": { 
+        "output": "Max, Golden Retriever\nBuddy, Labrador",
+        "code": `
+class Dog {
+    private String name;
+    private String breed;
+
+    public Dog(String name, String breed) {
+        this.name = name;
+        this.breed = breed;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog1 = new Dog("Rex", "Golden Retriever");
+        Dog dog2 = new Dog("Buddy", "Beagle");
+        
+        dog1.setName("Max");
+        dog2.setBreed("Labrador");
+
+        System.out.println(dog1.getName() + ", " + dog1.getBreed());
+        System.out.println(dog2.getName() + ", " + dog2.getBreed());
+    }
+}
+`
+    },
+    "Program 3": { 
+        "output": "Area: 50.0\nPerimeter: 30.0",
+        "code": `
+class Rectangle {
+    private double width;
+    private double height;
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    public double area() {
+        return width * height;
+    }
+
+    public double perimeter() {
+        return 2 * (width + height);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Rectangle rect = new Rectangle(5, 10);
+        System.out.println("Area: " + rect.area());
+        System.out.println("Perimeter: " + rect.perimeter());
+    }
+}
+`
+    },
+    "Program 4": { 
+        "output": "Area: 78.53981633974483\nCircumference: 31.41592653589793\nUpdated Radius: 10.0",
+        "code": `
+class Circle {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+    public double area() {
+        return Math.PI * radius * radius;
+    }
+
+    public double circumference() {
+        return 2 * Math.PI * radius;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Circle circle = new Circle(5);
+        System.out.println("Area: " + circle.area());
+        System.out.println("Circumference: " + circle.circumference());
+        circle.setRadius(10);
+        System.out.println("Updated Radius: " + circle.getRadius());
+    }
+}
+`
+    },
+    "Program 5": { 
+        "output": "Added book: 1984",
+        "code": `
+import java.util.ArrayList;
+
+class Book {
+    private String title;
+    private String author;
+    private String ISBN;
+
+    public Book(String title, String author, String ISBN) {
+        this.title = title;
+        this.author = author;
+        this.ISBN = ISBN;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getISBN() {
+        return ISBN;
+    }
+}
+
+class Library {
+    private ArrayList<Book> books = new ArrayList<>();
+
+    public void addBook(Book book) {
+        books.add(book);
+    }
+
+    public void removeBook(String ISBN) {
+        books.removeIf(book -> book.getISBN().equals(ISBN));
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Library library = new Library();
+        Book book1 = new Book("1984", "George Orwell", "123456789");
+        library.addBook(book1);
+        System.out.println("Added book: " + book1.getTitle());
+    }
+}
+`
+    },
+    "Program 6": { 
+        "output": "Updated Salary: 55000.0",
+        "code": `
+class Employee {
+    private String name;
+    private String jobTitle;
+    private double salary;
+
+    public Employee(String name, String jobTitle, double salary) {
+        this.name = name;
+        this.jobTitle = jobTitle;
+        this.salary = salary;
+    }
+
+    public void updateSalary(double amount) {
+        salary += amount;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee emp = new Employee("John Doe", "Developer", 50000);
+        emp.updateSalary(5000);
+        System.out.println("Updated Salary: " + emp.getSalary());
+    }
+}
+`
+    },
+    "Program 7": { 
+        "output": "0000",
+        "code": `
+import java.util.ArrayList;
+
+class Account {
+    private String accountNumber;
+    private double balance;
+
+    public Account(String accountNumber, double balance) {
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+    }
+
+    public void deposit(double amount) {
+        balance += amount;
+    }
+
+    public void withdraw(double amount) {
+        if (balance >= amount) {
+            balance -= amount;
+        }
+    }
+}
+
+class Bank {
+    private ArrayList<Account> accounts = new ArrayList<>();
+
+    public void addAccount(Account account) {
+        accounts.add(account);
+    }
+
+    public void removeAccount(String accountNumber) {
+        accounts.removeIf(account -> account.accountNumber.equals(accountNumber));
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Bank bank = new Bank();
+        Account acc1 = new Account("ACC123", 1000);
+        bank.addAccount(acc1);
+        acc1.deposit(200);
+    }
+}
+`
+    },
+    "Program 8": { 
+        "output": "Is Red: true\nIs Green: true",
+        "code": `
+class TrafficLight {
+    private String color;
+    private int duration;
+
+    public TrafficLight(String color, int duration) {
+        this.color = color;
+        this.duration = duration;
+    }
+
+    public void changeColor(String newColor) {
+        this.color = newColor;
+    }
+
+    public boolean isRed() {
+        return color.equalsIgnoreCase("red");
+    }
+
+    public boolean isGreen() {
+        return color.equalsIgnoreCase("green");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        TrafficLight light = new TrafficLight("red", 30);
+        System.out.println("Is Red: " + light.isRed());
+        light.changeColor("green");
+        System.out.println("Is Green: " + light.isGreen());
+    }
+}
+`
+    },
+    "Program 9": { 
+        "output": "Years of Service: 9",
+        "code": `
+import java.time.LocalDate;
+
+class Employee {
+    private String name;
+    private double salary;
+    private LocalDate hireDate;
+
+    public Employee(String name, double salary, LocalDate hireDate) {
+        this.name = name;
+        this.salary = salary;
+        this.hireDate = hireDate;
+    }
+
+    public int yearsOfService() {
+        return LocalDate.now().getYear() - hireDate.getYear();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee emp = new Employee("Alice", 50000, LocalDate.of(2015, 1, 1));
+        System.out.println("Years of Service: " + emp.yearsOfService());
+    }
+}
+`
+    },
+    "Program 10": { 
+        "output": "0000",
+        "code": `
+import java.util.ArrayList;
+
+class Student {
+    private String name;
+    private char grade;
+    private ArrayList<String> courses;
+
+    public Student(String name, char grade) {
+        this.name = name;
+        this.grade = grade;
+        this.courses = new ArrayList<>();
+    }
+
+    public void addCourse(String course) {
+        courses.add(course);
+    }
+
+    public void removeCourse(String course) {
+        courses.remove(course);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student student = new Student("Bob", 'A');
+        student.addCourse("Math");
+        student.addCourse("Science");
+    }
+}
+`},
+    "Program 11": { 
+        "output": "0000",
+        "code": `
+import java.util.ArrayList;
+
+class Library {
+    private ArrayList<Book> books = new ArrayList<>();
+
+    public void addBook(Book book) {
+        books.add(book);
+    }
+
+    public void removeBook(String title) {
+        books.removeIf(book -> book.getTitle().equals(title));
+    }
+}
+
+class Book {
+    private String title;
+    private String author;
+    private String ISBN;
+
+    public Book(String title, String author, String ISBN) {
+        this.title = title;
+        this.author = author;
+        this.ISBN = ISBN;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getISBN() {
+        return ISBN;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Library library = new Library();
+        Book book1 = new Book("To Kill a Mockingbird", "Harper Lee", "111222333");
+        library.addBook(book1);
+    }
+}`
+    },
+    "Program 12": { 
+        "output": "0000",
+        "code": `
+class Airplane {
+    private String flightNumber;
+    private String destination;
+    private String departureTime;
+
+    public Airplane(String flightNumber, String destination, String departureTime) {
+        this.flightNumber = flightNumber;
+        this.destination = destination;
+        this.departureTime = departureTime;
+    }
+
+    public void checkFlightStatus() {
+        // Logic for checking flight status
+    }
+
+    public void delayFlight() {
+        // Logic for delaying flight
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Airplane flight = new Airplane("AA101", "New York", "10:00 AM");
+    }
+}`
+    },
+    "Program 13": { 
+        "output": "0000",
+        "code": `
+import java.util.ArrayList;
+
+class Product {
+    private String name;
+    private double price;
+
+    public Product(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+}
+
+class Inventory {
+    private ArrayList<Product> products = new ArrayList<>();
+
+    public void addProduct(Product product) {
+        products.add(product);
+    }
+
+    public void removeProduct(String name) {
+        products.removeIf(product -> product.name.equals(name));
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Inventory inventory = new Inventory();
+        Product product1 = new Product("Laptop", 1000);
+        inventory.addProduct(product1);
+    }
+}`
+    },
+    "Program 14": { 
+        "output": "0000",
+        "code": `
+import java.util.ArrayList;
+
+class Student {}
+class Teacher {}
+
+class School {
+    private ArrayList<Student> students = new ArrayList<>();
+    private ArrayList<Teacher> teachers = new ArrayList<>();
+
+    public void addStudent(Student student) {
+        students.add(student);
+    }
+
+    public void removeStudent(Student student) {
+        students.remove(student);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        School school = new School();
+    }
+}`
+    },
+    "Program 15": { 
+        "output": "0000",
+        "code": `
+import java.util.ArrayList;
+
+class Song {
+    private String title;
+    private String artist;
+
+    public Song(String title, String artist) {
+        this.title = title;
+        this.artist = artist;
+    }
+}
+
+class MusicLibrary {
+    private ArrayList<Song> songs = new ArrayList<>();
+
+    public void addSong(Song song) {
+        songs.add(song);
+    }
+
+    public void removeSong(Song song) {
+        songs.remove(song);
+    }
+
+    public void playRandomSong() {
+        // Logic for playing a random song
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MusicLibrary library = new MusicLibrary();
+        Song song1 = new Song("Song Title", "Artist Name");
+        library.addSong(song1);
+    }
+}`
+    },
+    "Program 16": { 
+        "output": "0000",
+        "code": `
+abstract class Shape {
+    abstract double area();
+    abstract double perimeter();
+}
+
+class Rectangle extends Shape {
+    private double width;
+    private double height;
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    double area() {
+        return width * height;
+    }
+
+    @Override
+    double perimeter() {
+        return 2 * (width + height);
+    }
+}
+
+class Circle extends Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    double area() {
+        return Math.PI * radius * radius;
+    }
+
+    @Override
+    double perimeter() {
+        return 2 * Math.PI * radius;
+    }
+}`
+    },
+    "Program 17": { 
+        "output": "0000",
+        "code": `
+import java.util.ArrayList;
+
+class Movie {
+    private String title;
+    private String director;
+    private ArrayList<String> actors;
+    private ArrayList<String> reviews;
+
+    public Movie(String title, String director) {
+        this.title = title;
+        this.director = director;
+        this.actors = new ArrayList<>();
+        this.reviews = new ArrayList<>();
+    }
+
+    public void addReview(String review) {
+        reviews.add(review);
+    }
+
+    public ArrayList<String> getReviews() {
+        return reviews;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Movie movie = new Movie("Inception", "Christopher Nolan");
+        movie.addReview("Great Movie!");
+    }
+}`
+    },
+    "Program 18": { 
+        "output": "0000",
+        "code": `
+import java.util.ArrayList;
+
+class MenuItem {
+    private String name;
+    private double price;
+
+    public MenuItem(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+}
+
+class Restaurant {
+    private ArrayList<MenuItem> menuItems = new ArrayList<>();
+    private double averageRating;
+
+    public void addItem(MenuItem item) {
+        menuItems.add(item);
+    }
+
+    public void removeItem(MenuItem item) {
+        menuItems.remove(item);
+    }
+
+    public void calculateAverageRating() {
+        // Logic to calculate average rating
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Restaurant restaurant = new Restaurant();
+        MenuItem item = new MenuItem("Burger", 5.99);
+        restaurant.addItem(item);
+    }
+}`
+    },
+    "Program 19": { 
+        "output": "0000",
+        "code": `
+class TravelService {
+    public void searchFlights(String destination) {
+        // Logic to search for flights
+    }
+
+    public void searchHotels(String location) {
+        // Logic to search for hotels
+    }
+
+    public void bookReservation() {
+        // Logic to book reservation
+    }
+
+    public void cancelReservation() {
+        // Logic to cancel reservation
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        TravelService service = new TravelService();
+        service.searchFlights("Paris");
+    }
+}`
+    },
+    "Program 20": { 
+        "output": "0000",
+        "code": `
+class DefaultConstructorExample {
+    public DefaultConstructorExample() {
+        System.out.println("Default Constructor Called!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        DefaultConstructorExample example = new DefaultConstructorExample();
+    }
+}`
+    },
+    "Program 21": { 
+        "output": "0000", 
+        "code": "class ParameterizedConstructorExample {\n    private int number;\n\n    public ParameterizedConstructorExample(int number) {\n        this.number = number;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        ParameterizedConstructorExample example = new ParameterizedConstructorExample(10);\n    }\n}"
+    },
+    "Program 22": { 
+        "output": "0000", 
+        "code": "class CopyConstructorExample {\n    private int number;\n\n    public CopyConstructorExample(int number) {\n        this.number = number;\n    }\n\n    public CopyConstructorExample(CopyConstructorExample other) {\n        this.number = other.number;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        CopyConstructorExample original = new CopyConstructorExample(10);\n        CopyConstructorExample copy = new CopyConstructorExample(original);\n    }\n}"
+    },
+    "Program 23": { 
+        "output": "0000", 
+        "code": "import java.util.Scanner;\n\nclass Student {\n    private static int rollNumberCounter = 1;\n    private int rollNo;\n    private String name;\n    private String studentClass;\n\n    public Student(String name, String studentClass) {\n        this.rollNo = rollNumberCounter++;\n        this.name = name;\n        this.studentClass = studentClass;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        for (int i = 0; i < 10; i++) {\n            System.out.println(\"Enter name and class of student \" + (i + 1) + \":\");\n            String name = scanner.next();\n            String studentClass = scanner.next();\n            Student student = new Student(name, studentClass);\n        }\n        scanner.close();\n    }\n}"
+    },
+    "Program 24": { 
+        "output": "0000", 
+        "code": "class Area {\n    public double calculateArea(double radius) {\n        return Math.PI * radius * radius; // Area of circle\n    }\n\n    public double calculateArea(double length, double width) {\n        return length * width; // Area of rectangle\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Area area = new Area();\n        double circleArea = area.calculateArea(5);\n        double rectangleArea = area.calculateArea(4, 6);\n    }\n}"
+    },
+    "Program 25": { 
+        "output": "0000", 
+        "code": "public class CommandLineArgsExample {\n    public static void main(String[] args) {\n        System.out.println(\"Command Line Arguments:\");\n        for (String arg : args) {\n            System.out.println(arg);\n        }\n    }\n}"
+    },
+    "Program 26": { 
+        "output": "0000", 
+        "code": "class Person {\n    private String name;\n    private int age;\n    private String country;\n\n    public String getName() {\n        return name;\n    }\n\n    public void setName(String name) {\n        this.name = name;\n    }\n\n    public int getAge() {\n        return age;\n    }\n\n    public void setAge(int age) {\n        this.age = age;\n    }\n\n    public String getCountry() {\n        return country;\n    }\n\n    public void setCountry(String country) {\n        this.country = country;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Person person = new Person();\n        person.setName(\"Alice\");\n        person.setAge(30);\n        person.setCountry(\"USA\");\n    }\n}"
+    },
+    "Program 27": { 
+        "output": "0000", 
+        "code": "class BankAccount {\n    private String accountNumber;\n    private double balance;\n\n    public String getAccountNumber() {\n        return accountNumber;\n    }\n\n    public void setAccountNumber(String accountNumber) {\n        this.accountNumber = accountNumber;\n    }\n\n    public double getBalance() {\n        return balance;\n    }\n\n    public void setBalance(double balance) {\n        this.balance = balance;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        BankAccount account = new BankAccount();\n        account.setAccountNumber(\"12345\");\n        account.setBalance(1000.0);\n    }\n}"
+    },
+    "Program 28": { 
+        "output": "0000", 
+        "code": "class Rectangle {\n    private double length;\n    private double width;\n\n    public double getLength() {\n        return length;\n    }\n\n    public void setLength(double length) {\n        this.length = length;\n    }\n\n    public double getWidth() {\n        return width;\n    }\n\n    public void setWidth(double width) {\n        this.width = width;\n    }\n\n    public double calculateArea() {\n        return length * width;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Rectangle rectangle = new Rectangle();\n        rectangle.setLength(5);\n        rectangle.setWidth(3);\n        double area = rectangle.calculateArea();\n    }\n}"
+    },
+    "Program 29": { 
+        "output": "0000", 
+        "code": "class Employee {\n    private int employee_id;\n    private String employee_name;\n    private double employee_salary;\n\n    public int getEmployeeId() {\n        return employee_id;\n    }\n\n    public void setEmployeeId(int employee_id) {\n        this.employee_id = employee_id;\n    }\n\n    public String getEmployeeName() {\n        return employee_name;\n    }\n\n    public void setEmployeeName(String employee_name) {\n        this.employee_name = employee_name;\n    }\n\n    public String getEmployeeSalary() {\n        return String.format(\"$%.2f\", employee_salary);\n    }\n\n    public void setEmployeeSalary(double employee_salary) {\n        this.employee_salary = employee_salary;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Employee employee = new Employee();\n        employee.setEmployeeId(101);\n        employee.setEmployeeName(\"John Doe\");\n        employee.setEmployeeSalary(50000);\n    }\n}"
+    },
+    "Program 30": { 
+        "output": "0000", 
+        "code": "class Circle {\n    private double radius;\n\n    public double getRadius() {\n        return radius;\n    }\n\n    public void setRadius(double radius) {\n        this.radius = radius;\n    }\n\n    public double calculateArea() {\n        return Math.PI * radius * radius;\n    }\n\n    public double calculatePerimeter() {\n        return 2 * Math.PI * radius;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Circle circle = new Circle();\n        circle.setRadius(5);\n        double area = circle.calculateArea();\n        double perimeter = circle.calculatePerimeter();\n    }\n}"
+    },
+    "Program 31": { 
+        "output": "0000", 
+        "code": "class Car {\n    private String company_name;\n    private String model_name;\n    private int year;\n    private double mileage;\n\n    public String getCompanyName() {\n        return company_name;\n    }\n\n    public void setCompanyName(String company_name) {\n        this.company_name = company_name;\n    }\n\n    public String getModelName() {\n        return model_name;\n    }\n\n    public void setModelName(String model_name) {\n        this.model_name = model_name;\n    }\n\n    public int getYear() {\n        return year;\n    }\n\n    public void setYear(int year) {\n        this.year = year;\n    }\n\n    public double getMileage() {\n        return mileage;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Car car = new Car();\n        car.setCompanyName(\"Toyota\");\n        car.setModelName(\"Camry\");\n        car.setYear(2020);\n    }\n}"
+    },
+    "Program 32": { 
+        "output": "0000", 
+        "code": "import java.util.ArrayList;\n\nclass Student {\n    private int student_id;\n    private String student_name;\n    private ArrayList<Integer> grades;\n\n"
+        
+          }  };
+    
+        function showProgram(programName) {
+            const program = programs[programName];
+            if (program) {
+                if(program.output == "0000"){
+                    document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                `;
+                }
+                else{
+                document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                    <h2>Output:</h2>
+                    <div class="code-block">${program.output}</div>
+                `;
+            }    
+                }
+                 else {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>Program not found</h2>
+                    <p>Details for this program are not available.</p>
+                `;
+            }
+        }
+    </script>
+
+</body></html>
