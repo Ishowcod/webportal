@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <nav class="navbar background">
+        <ul class="navlist">
+            <a href="index.html">Home</a></li> 
+  
+            <a href="Array.html">ARRAYS</a></li>
+            
+            <a href="2Darray.html" >2D-ARRAYS</a></li>
+            
+            <a href="Applet.html">APPLETS</a></li>
+            
+            <a href="bpc.html">BASIC PROGAMMING CONSTRUCTS</a></li>
+            
+            <a href="Data Conversion.html">DATA CONSVERSION</a></li>
+            
+            <a href="DEM.html">DELEGATION EVENT MODEL</a></li>
+            
+            <a href="Exception Handling.html">EXCEPTION HANDLING</a></li>
+            
+            <a href="Functions.html">FUNCTIONS</a></li>
+            
+            <a href="GUI AWT.html">GRAPHICAL USER INTERFACE (AWT)</a></li>
+            
+            <a href="Inheritance.html">INHERITANCE</a></li>
+            
+            <a href="IO.html">INPUT/OUTPUT</a></li>
+            
+            <a href="Interface.html">INTERFACES</a></li>
+            
+            <a href="JDBC.html">JAVA DATABASE CONECTIVITY</a></li>
+            
+            <a href="Threads.html">MULTITHREADING</a></li>
+            
+            <a href="OOP.html">OBJECT ORIENTED PROGRAMMING</a></li>
+            
+            <a href="Packages.html">PACKAGES</a></li>
+          
+            <a href="StringHandling.html">STRING HANDLING</a></li>
+    </nav>
+    <div style="display: flex; margin: 0; max-height: 100vh;">
+    <div class="sidebar">
+        <h2>Programs</h2>
+        <div class="program-list-item" onclick="showProgram(&#39;Program 1&#39;)">1. Write a Java method to find the smallest number among three numbers.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 2&#39;)">2. Write a Java method to compute the average of three numbers.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 3&#39;)">3. Write a Java method to display the middle character of a string. (Note: a) If the length of the string is odd, there will be two middle characters. b) If the length of the string is even, there will be one middle character.)</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 4&#39;)">4. Write a Java method to count all the words in a string.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 5&#39;)">5. Write a Java method to compute the future investment value at a given interest rate for a specified number of years.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 6&#39;)">6. Write a Java method to print characters between two characters (i.e., A to P).</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 7&#39;)">7. Write a Java method to check whether a string is a valid password.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 8&#39;)">8. Write a Java method to display the current date and time.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 9&#39;)">9. Write a Java method to find all twin prime numbers less than 100.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 10&#39;)">10. Write a Java method to count the number of digits in an integer with the value 2. The integer may be assumed to be non-negative.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 11&#39;)">11. Write a Java method that accepts three integers and checks whether they are consecutive or not. Returns true or false.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 12&#39;)">12. Write a Java method that accepts three integers and returns true if one is the middle point between the other two integers, otherwise false.</div>
+<div class="program-list-item" onclick="showProgram(&#39;Program 13&#39;)">13. Write a Java method that checks whether all the characters in a given string are vowels (a, e, i, o, u) or not. Return true if each character in the string is a vowel, otherwise return false.</div>
+    </div>
+
+    <div class="content" id="programContent">
+        <h2>Please select program from the list!</h2>
+    </div>
+</div>
+    
+    <script>
+        const programs = {
+    "Program 1": {
+        output: `Smallest number is: 5`,
+        code: `public class SmallestNumber {
+                public static void main(String[] args) {
+                    int num1 = 10;
+                    int num2 = 20;
+                    int num3 = 5;
+                    
+                    int smallest = findSmallest(num1, num2, num3);
+                    System.out.println("Smallest number is: " + smallest);
+                }
+
+                // Method to find the smallest among three numbers
+                public static int findSmallest(int a, int b, int c) {
+                    int smallest = a; // Assume a is the smallest initially
+                    if (b < smallest) {
+                        smallest = b; // Update smallest if b is less
+                    }
+                    if (c < smallest) {
+                        smallest = c; // Update smallest if c is less
+                    }
+                    return smallest; // Return the smallest number
+                }
+            }`
+    },
+    "Program 2": {
+        output: `Average is: 20.0`,
+        code: `public class AverageCalculator {
+                public static void main(String[] args) {
+                    double num1 = 10.0;
+                    double num2 = 20.0;
+                    double num3 = 30.0;
+                    
+                    double average = computeAverage(num1, num2, num3);
+                    System.out.println("Average is: " + average);
+                }
+
+                // Method to compute the average of three numbers
+                public static double computeAverage(double a, double b, double c) {
+                    return (a + b + c) / 3; // Return the average
+                }
+            }`
+    },
+    "Program 3": {
+        output: `Middle character(s): am`,
+        code: `public class MiddleCharacter {
+                public static void main(String[] args) {
+                    String str = "example";
+                    String middleChar = displayMiddleCharacter(str);
+                    System.out.println("Middle character(s): " + middleChar);
+                }
+
+                // Method to display the middle character(s) of a string
+                public static String displayMiddleCharacter(String str) {
+                    int length = str.length();
+                    if (length % 2 == 0) {
+                        return String.valueOf(str.charAt(length / 2 - 1)); // One middle character for even length
+                    } else {
+                        return str.charAt(length / 2 - 1) + "" + str.charAt(length / 2); // Two middle characters for odd length
+                    }
+                }
+            }`
+    },
+    "Program 4": {
+        output: `Number of words: 5`,
+        code: `public class WordCounter {
+                public static void main(String[] args) {
+                    String sentence = "This is a test sentence.";
+                    int count = countWords(sentence);
+                    System.out.println("Number of words: " + count);
+                }
+
+                // Method to count the number of words in a string
+                public static int countWords(String str) {
+                    String[] words = str.trim().split("\\s+"); // Split by whitespace
+                    return words.length; // Return the number of words
+                }
+            }`
+    },
+    "Program 5": {
+        output: `Future investment value: 1628.894626777442`,
+        code: `public class InvestmentCalculator {
+                public static void main(String[] args) {
+                    double principal = 1000.0;
+                    double rate = 5.0; // Annual interest rate
+                    int years = 10;
+
+                    double futureValue = computeFutureInvestment(principal, rate, years);
+                    System.out.println("Future investment value: " + futureValue);
+                }
+
+                // Method to compute the future investment value
+                public static double computeFutureInvestment(double principal, double rate, int years) {
+                    return principal * Math.pow(1 + rate / 100, years); // Compound interest formula
+                }
+            }`
+    },
+    "Program 6": {
+        output: `A B C D E F G H I J K L M N O P`,
+        code: `public class CharacterPrinter {
+                public static void main(String[] args) {
+                    char start = 'A';
+                    char end = 'P';
+                    printCharacters(start, end);
+                }
+
+                // Method to print characters between two characters
+                public static void printCharacters(char start, char end) {
+                    for (char c = start; c <= end; c++) {
+                        System.out.print(c + " "); // Print characters in range
+                    }
+                }
+            }`
+    },
+    "Program 7": {
+        output: `Is valid password: true`,
+        code: `public class PasswordValidator {
+                public static void main(String[] args) {
+                    String password = "Secure123";
+                    boolean isValid = isValidPassword(password);
+                    System.out.println("Is valid password: " + isValid);
+                }
+
+                // Method to check if a password is valid
+                public static boolean isValidPassword(String password) {
+                    return password.length() >= 8; // Password must be at least 8 characters
+                }
+            }`
+    },
+    "Program 8": {
+        output: `Current date and time: 2024-11-02 12:34:56`,
+        code: `import java.time.LocalDateTime;
+            import java.time.format.DateTimeFormatter;
+
+            public class DateTimeDisplay {
+                public static void main(String[] args) {
+                    displayCurrentDateTime();
+                }
+
+                // Method to display current date and time
+                public static void displayCurrentDateTime() {
+                    LocalDateTime now = LocalDateTime.now();
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+                    System.out.println("Current date and time: " + now.format(formatter));
+                }
+            }`
+    },
+    "Program 9": {
+        output: `Twin primes: 3 and 5
+Twin primes: 5 and 7
+Twin primes: 11 and 13
+Twin primes: 17 and 19
+Twin primes: 29 and 31
+Twin primes: 41 and 43
+Twin primes: 59 and 61
+Twin primes: 71 and 73`,
+        code: `public class TwinPrimeFinder {
+                public static void main(String[] args) {
+                    findTwinPrimes(100);
+                }
+
+                // Method to find twin prime numbers less than a specified limit
+                public static void findTwinPrimes(int limit) {
+                    for (int i = 2; i < limit - 2; i++) {
+                        if (isPrime(i) && isPrime(i + 2)) {
+                            System.out.println("Twin primes: " + i + " and " + (i + 2));
+                        }
+                    }
+                }
+
+                // Helper method to check if a number is prime
+                public static boolean isPrime(int num) {
+                    if (num <= 1) return false;
+                    for (int i = 2; i <= Math.sqrt(num); i++) {
+                        if (num % i == 0) return false;
+                    }
+                    return true;
+                }
+            }`
+    },
+    "Program 10": {
+        output: `Number of digits: 6`,
+        code: `public class DigitCounter {
+                public static void main(String[] args) {
+                    int number = 123456;
+                    int digitCount = countDigits(number);
+                    System.out.println("Number of digits: " + digitCount);
+                }
+
+                // Method to count the number of digits in a non-negative integer
+                public static int countDigits(int number) {
+                    return String.valueOf(number).length(); // Convert to string and count length
+                }
+            }`
+    },
+    "Program 11": {
+        output: `Are consecutive: true`,
+        code: `public class ConsecutiveChecker {
+                public static void main(String[] args) {
+                    int a = 5;
+                    int b = 6;
+                    int c = 7;
+                    boolean areConsecutive = areConsecutive(a, b, c);
+                    System.out.println("Are consecutive: " + areConsecutive);
+                }
+
+                // Method to check if three integers are consecutive
+                public static boolean areConsecutive(int a, int b, int c) {
+                    return (a + 1 == b && b + 1 == c) || (c + 1 == b && b + 1 == a) || (a + 1 == c && c + 1 == b);
+                }
+            }`
+    },
+    "Program 12": {
+        output: `Is middle point: true`,
+        code: `public class MiddlePointChecker {
+                public static void main(String[] args) {
+                    int a = 3;
+                    int b = 5;
+                    int c = 4;
+                    boolean isMiddlePoint = isMiddlePoint(a, b, c);
+                    System.out.println("Is middle point: " + isMiddlePoint);
+                }
+
+                // Method to check if one integer is the middle point of two others
+                public static boolean isMiddlePoint(int a, int b, int c) {
+                    return (a < b && b < c) || (c < b && b < a); // b is the middle point
+                }
+            }`
+    },
+    "Program 13": {
+        output: `All characters are vowels: true`,
+        code: `public class VowelChecker {
+                public static void main(String[] args) {
+                    String str = "aeiou";
+                    boolean allVowels = areAllVowels(str);
+                    System.out.println("All characters are vowels: " + allVowels);
+                }
+
+                // Method to check if all characters in a string are vowels
+                public static boolean areAllVowels(String str) {
+                    for (char c : str.toCharArray()) {
+                        if ("aeiou".indexOf(Character.toLowerCase(c)) == -1) {
+                            return false; // Return false if a character is not a vowel
+                        }
+                    }
+                    return true; // Return true if all characters are vowels
+                }
+            }`
+    }
+
+        };
+
+        function showProgram(programName) {
+            const program = programs[programName];
+            if (program) {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>${programName}</h2>
+                    
+                    <div class="code-block">${program.code}</div>
+                    <h2>Output:</h2>
+                    <div class="code-block">${program.output}</div>
+                `;
+            } else {
+                document.getElementById('programContent').innerHTML = `
+                    <h2>Program not found</h2>
+                    <p>Details for this program are not available.</p>
+                `;
+            }
+        }
+    </script>
+
+</body></html>
